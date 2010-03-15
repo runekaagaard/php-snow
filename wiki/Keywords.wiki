@@ -62,4 +62,21 @@
 || *Snow*       || * Comment * ||
 || when         || Postfix "if" sentence. ||
 || overflow     || Disable default "break" in "case" sentences. ||
-|| in           || Used with the new "for" loop type. ||
+|| in           || Used with the new "for" loop. ||
+
+= Language constructs =
+|| *PHP*          || *Snow*       || * Comment * ||
+|| die()          || _unchanged_  || ||
+|| echo()         || _unchanged_  || ||
+|| empty()        || _unchanged_  || ||
+|| exit()         || _unchanged_  || ||
+|| eval()         || _unchanged_  || ||
+|| include()      || _unchanged_  || ||
+|| include_once() || _unchanged_  || ||
+|| isset()        || _unchanged_  || ||
+|| list()         || _unchanged_  || ||
+|| require()      || _unchanged_  || ||
+|| require_once() || _unchanged_  || ||
+|| return()       || _unchanged_  || ||
+|| print()        || _unchanged_  || ||
+|| unset()        || _unchanged_  || ||
