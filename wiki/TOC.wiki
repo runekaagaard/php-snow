@@ -1,4 +1,2 @@
 #summary Table of contents.
-
-= TOC =
  * [Keywords]
