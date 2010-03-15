@@ -1,0 +1,22 @@
+#summary The use of the comma character - or lack thereof.
+
+The normal use of the comma as a separator in function / method calls and definitions, array is disabled:
+{{{
+# Array definition.
+a = [1 2 3]
+# Method definition.
+a = {a:1 b:2 c:3}
+# Function call.
+b = foo(1 bar() 3)
+# Function / Method definition.
+fn foo (x y z)
+# Multiple connotations on a single line. 
+@get @set
+# Multiple variable assignment.
+a b = 3 4
+}}}
+
+Instead the comma character is used as a string concatenator replacing good old trusty ".":
+{{{
+echo "foo" , "bar"
+}}} 
