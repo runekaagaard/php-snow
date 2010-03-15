@@ -89,3 +89,18 @@
 || `__FUNCTION__`  || _unchanged_ || ||
 || `__METHOD__`    || _unchanged_ || ||
 || `__NAMESPACE__` || _unchanged_ || ||
+
+= Standard Defined Classes =
+|| *PHP*                  || *Snow*             || * Comment * ||
+|| Directory              || _unchanged_        || ||
+|| stdClass               || Object             || ||
+|| exception              || Exception          || ||
+|| php_user_filter        || PhpUserFilter      || ||
+|| Closure                || _unchanged_        || ||
+|| __PHP_Incomplete_Class || PhpIncompleteClass || ||
+
+= Identifiers used inside a class =
+Following identifiers may not be used as a class name as they have special purpose.
+|| *PHP*  || *Snow*      || * Comment * ||
+|| self   || _unchanged_ || ||
+|| parent || _unchanged_ || ||
