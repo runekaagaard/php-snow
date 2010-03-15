@@ -1,0 +1,65 @@
+#summary List of available keywords and how they compares to their PHP counterparts.
+
+= Deleted Keywords =
+|| *PHP*         || *Snow*       || * Comment * ||                                   
+|| as            || _deleted_    || ||
+|| break         || _deleted_    || ||
+|| foreach       || _deleted_    || ||
+|| var           || _deleted_    || ||
+
+= Changed Keywords =
+|| *PHP*         || *Snow*       || * Comment * ||
+|| elseif        || elif         || ||            
+|| enddeclare    || end          || ||            
+|| endfor        || end          || ||            
+|| endforeach    || end          || ||             
+|| endif         || end          || ||   
+|| endswitch     || end          || ||             
+|| endwhile      || end          || ||
+|| array()       || `[]`         || ||
+|| instanceof    || isa          || ||
+|| function      || fn           || ||
+
+= Unchanged Keywords =
+|| *PHP*         || *Snow*       || * Comment * ||
+|| abstract      || _unchanged_  || ||
+|| and           || _unchanged_  || ||                  
+|| case          || _unchanged_  || ||          
+|| catch         || _unchanged_  || ||
+|| class         || _unchanged_  || ||
+|| clone         || _unchanged_  || ||
+|| const         || _unchanged_  || || 
+|| continue      || _unchanged_  || ||
+|| declare       || _unchanged_  || ||
+|| default       || _unchanged_  || ||
+|| do            || _unchanged_  || ||
+|| else          || _unchanged_  || || 
+|| extends       || _unchanged_  || ||
+|| final         || _unchanged_  || ||
+|| for           || _unchanged_  || ||
+|| if            || _unchanged_  || ||
+|| implements    || _unchanged_  || ||
+|| interface     || _unchanged_  || ||
+|| namespace     || _unchanged_  || ||
+|| new           || _unchanged_  || ||
+|| or            || _unchanged_  || ||          
+|| switch        || _unchanged_  || ||
+|| throw         || _unchanged_  || ||
+|| try           || _unchanged_  || ||
+|| use           || _unchanged_  || ||
+|| while         || _unchanged_  || ||
+|| xor           || _unchanged_  || ||
+
+= Shortened Access Modifier Keywords =
+|| *PHP*         || *Snow*       || * Comment * ||
+|| global        || glo          || ||
+|| private       || pri          || ||
+|| protected     || pro          || ||
+|| public        || pub          || ||
+|| static        || sta          || ||
+
+= New keywords =
+|| *Snow*       || * Comment * ||
+|| when         || Postfix if sentence. ||
+|| overflow     || Disable default break in case sentences. ||
+|| in           || Used with the new for loop type. ||
