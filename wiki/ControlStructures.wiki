@@ -78,4 +78,64 @@ switch a
 # prints: 12
 }}}
 
+Switch can also be used with the [Putin putin] keyword.
+{{{
+# Example #3: Usage of the putin keyword
+a = 2
+switch a putin b = 2
+    case 1
+        += 1
+    case 2
+        += 2
+    case 3
+        += 3
+# b == 4
+}}}
+{{{
+# Example #4: return from a switch statement
+a = 2
+return switch putin dummy
+    case 1
+        += 1
+    case 2
+        += 2
+        fallthru
+    case 3
+        += 3
+# returns 5
+}}}
+
+
 = Loops =
+
+== `for` ==
+Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`.
+
+`for` has become a powerful construct and can take many forms.
+We'll start with a basic example and work our way done to some more advanced stuff.
+{{{
+# Example #5:
+a = [1 2 3]
+for v in a
+    echo v, "\n"
+}}}
+Pretty basic example. It iterates over all the elements in a and prints the value
+{{{
+# Example #6:
+a = [1 2 3]
+for k v in a
+    echo k, ":", v, "\n
+}}}
+In this way it takes both the key and the value from the array, resulting in the output:
+{{{
+0: 1
+1: 2
+2: 3
+}}}
+And of course, the [Putin putin] keyword can be used:
+{{{
+# Example #7: Factorial implementation using putin keyword
+fn factorial(int i)
+    return for i to 2 step -1 putin a=i: *= i-1
+# print fn(5) # prints: 120
+}}}
