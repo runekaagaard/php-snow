@@ -2,8 +2,8 @@
 
 = Deleted Keywords =
 || *PHP*         || *Snow*       || * Comment * ||                                   
-|| as            || _deleted_    || ||
-|| break         || _deleted_    || ||
+|| as            || _deleted_    || See "in". ||
+|| break         || _deleted_    || See "overflow". ||
 || foreach       || _deleted_    || ||
 || var           || _deleted_    || ||
 
@@ -19,6 +19,7 @@
 || array()       || `[]`         || ||
 || instanceof    || isa          || ||
 || function      || fn           || ||
+|| continue      || next         || ||
 
 = Unchanged Keywords =
 || *PHP*         || *Snow*       || * Comment * ||
@@ -28,7 +29,6 @@
 || catch         || _unchanged_  || ||
 || class         || _unchanged_  || ||
 || clone         || _unchanged_  || || 
-|| continue      || _unchanged_  || ||
 || declare       || _unchanged_  || ||
 || default       || _unchanged_  || ||
 || do            || _unchanged_  || ||
@@ -60,6 +60,6 @@
 
 = New keywords =
 || *Snow*       || * Comment * ||
-|| when         || Postfix if sentence. ||
-|| overflow     || Disable default break in case sentences. ||
-|| in           || Used with the new for loop type. ||
+|| when         || Postfix "if" sentence. ||
+|| overflow     || Disable default "break" in "case" sentences. ||
+|| in           || Used with the new "for" loop type. ||
