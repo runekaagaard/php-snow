@@ -100,7 +100,10 @@
 || `__PHP_Incomplete_Class` || `PhpIncompleteClass` || ||
 
 = Identifiers used inside a class =
-Following identifiers may not be used as a class name as they have special purpose.
 || *PHP*  || *Snow*      || * Comment * ||
 || self   || _unchanged_ || ||
 || parent || _unchanged_ || ||
+
+= References =
+  * http://www.php.net/manual/en/reserved.keywords.php
+  * http://www.php.net/manual/en/reserved.classes.php
