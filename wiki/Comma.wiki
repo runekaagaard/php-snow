@@ -1,6 +1,6 @@
 #summary The use of the comma character - or lack thereof.
 
-The normal use of the comma as a separator in function / method calls and definitions, array is disabled:
+The normal use of the comma as a separator in array definitions and function / method calls and definitions is disabled:
 {{{
 # Array definition.
 a = [1 2 3]
