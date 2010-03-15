@@ -1,4 +1,4 @@
-#summary List of available keywords and how they compares to their PHP counterparts.
+#summary List of available keywords and how they compare to their PHP counterparts.
 
 = Deleted Keywords =
 || *PHP*         || *Snow*       || * Comment * ||                                   
