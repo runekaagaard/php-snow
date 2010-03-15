@@ -80,3 +80,12 @@
 || return()       || _unchanged_  || ||
 || print()        || _deleted_    || Use "echo" instead. ||
 || unset()        || _unchanged_  || ||
+
+= Compile-time constants =
+|| *PHP*         || *Snow*      || * Comment * ||
+|| __CLASS__     || _unchanged_ || ||
+|| __DIR__       || _unchanged_ || ||
+|| __FILE__      || _unchanged_ || ||
+|| __FUNCTION__  || _unchanged_ || ||
+|| __METHOD__    || _unchanged_ || ||
+|| __NAMESPACE__ || _unchanged_ || ||
