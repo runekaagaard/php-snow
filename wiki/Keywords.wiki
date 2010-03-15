@@ -66,11 +66,11 @@
 
 = Language constructs =
 || *PHP*          || *Snow*       || * Comment * ||
-|| die()          || _unchanged_  || ||
+|| die()          || _deleted_    || Use "exit" instead. ||
 || echo()         || _unchanged_  || ||
 || empty()        || _unchanged_  || ||
 || exit()         || _unchanged_  || ||
-|| eval()         || _unchanged_  || ||
+|| eval()         || _deleted_    || Use "<?php ?>" injection instead. ||
 || include()      || _unchanged_  || ||
 || include_once() || _unchanged_  || ||
 || isset()        || _unchanged_  || ||
@@ -78,5 +78,5 @@
 || require()      || _unchanged_  || ||
 || require_once() || _unchanged_  || ||
 || return()       || _unchanged_  || ||
-|| print()        || _unchanged_  || ||
+|| print()        || _deleted_    || Use "echo" instead. ||
 || unset()        || _unchanged_  || ||
