@@ -63,6 +63,7 @@
 || when         || Postfix "if" sentence. ||
 || overflow     || Disable default "break" in "case" sentences. ||
 || in           || Used with the new "for" loop. ||
+|| putin        || Used with the new "for" loop. And more. ||
 
 = Language constructs =
 || *PHP*          || *Snow*       || * Comment * ||
