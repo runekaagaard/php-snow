@@ -9,7 +9,7 @@
 
 = Changed Keywords =
 || *PHP*         || *Snow*       || * Comment * ||
-|| elseif        || elif         || ||            
+|| elseif        || elif         || "else if" is disabled. ||            
 || enddeclare    || end          || ||            
 || endfor        || end          || ||            
 || endforeach    || end          || ||             
