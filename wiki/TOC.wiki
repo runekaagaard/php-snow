@@ -2,3 +2,5 @@
  * [Keywords]
  * [Comma]
  * [ControlStructures]
+ * [Putin]
+ * [MoSCoW]

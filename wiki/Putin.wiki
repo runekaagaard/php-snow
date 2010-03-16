@@ -1,0 +1,27 @@
+#summary Description of the `putin` keyword
+
+<wiki:toc/>
+
+`putin` can be used on all [ControlStructures] as a collector and supplies a return value for that control structure.
+
+Below are some examples of the use of the `putin` keyword.
+
+{{{
+# Example #1: Factorial implementation using putin keyword
+fn factorial(int i)
+    return for i downto 3 putin a = i: *= i - 1
+# print fn(5) # prints: 120
+}}}
+Let's walk through the steps that apply here
+  # First, `a` get's initialized with the value of `i`, in this case `5`.
+    * Value of `a`: 5
+  # First iteration, `i = 5`
+    * `a` gets 'multiply-assign'-ed with `i - 1`. Written out: `a *= i - 1`
+    * Value of `a`: 20
+  # Second iteration, `i = 4`
+    * `a *= i - 1`
+    * Value of `a`: 60
+  # Third (and final) iteration, `i = 3`
+    * `a *= i - 1`
+    * Value of `a`: 120
+  # The loop ends and the variable specified (`a`) is returned by the for-loop which in turn returns it to the function

@@ -66,6 +66,8 @@
 || fallthru     || Disable default "break" in "case" sentences. ||
 || in           || Used with the new "for" loop. ||
 || putin        || Used with the new "for" loop. And more. ||
+|| to           || Used with the new "for" loop. for i = 1 to 5 ||
+|| downto       || Used with the new "for" loop. for i = 5 downto 1 ||
 
 = Language constructs =
 || *PHP*          || *Snow*       || * Comment * ||
