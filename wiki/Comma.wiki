@@ -18,5 +18,6 @@ a b = 3 4
 
 Instead the comma character is used as a string concatenator replacing good old trusty ".":
 {{{
-echo "foo" , "bar"
+a = "foo" , "bar"
+echo a # Will output "foobar".
 }}} 
