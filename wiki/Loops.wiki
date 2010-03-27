@@ -1,22 +1,24 @@
 #summary "for" and "while" loops.
 
 == `for` ==
-Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`.
-
-`for` has become a powerful construct and can take many forms.
+Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`. `for` can take the following forms:
+ * for i = a to b # "a" and "b" are ints. 
+ * for i = b downto a # "a" and "b" are ints.
+ * for v = a # "a" is an array or an object. "v" will be the value.
+ * for k v = a # "a" is an array or an object. "k" will be the key. "v" will be the value.
 
 We'll start with a basic example and work our way done to some more advanced stuff.
 {{{
 # Example #1:
 a = [1 2 3]
-for v in a
+for v = a
     echo v, "\n"
 }}}
 Pretty basic example. It iterates over all the elements in a and prints the value
 {{{
 # Example #2:
 a = [1 2 3]
-for k v in a
+for k v = a
     echo k, ":", v, "\n
 }}}
 In this way it takes both the key and the value from the array, resulting in the output:
@@ -30,6 +32,6 @@ And of course, the [Putin putin] keyword can be used:
 {{{
 # Example #3: Factorial implementation using putin keyword
 fn factorial(int i)
-    return for i to 2 step -1 putin a=i: *= i-1
+    return for i = i to 2 step -1 putin a=i: *= i-1
 # print fn(5) # prints: 120
 }}}
