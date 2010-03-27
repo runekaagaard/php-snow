@@ -4,7 +4,7 @@ The normal use of the comma as a separator in array definitions and function / m
 {{{
 # Array definition.
 a = [1 2 3]
-# Method definition.
+# Object definition.
 a = {a:1 b:2 c:3}
 # Function call.
 b = foo(1 bar() 3)
@@ -16,8 +16,12 @@ fn foo (x y z)
 a b = 3 4
 }}}
 
-Instead the comma character is used as a string concatenator replacing good old trusty ".":
+Instead the comma character replaces "." as a string concatenator.
 {{{
 a = "foo" , "bar"
-echo a # Will output "foobar".
-}}} 
+echo a
+}}}
+Output:
+{{{
+foobar
+}}}
