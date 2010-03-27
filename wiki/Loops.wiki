@@ -1,37 +1,47 @@
 #summary "for" and "while" loops.
+<wiki:toc/>
 
-== `for` ==
-Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`. `for` can take the following forms:
- * for i = a to b # "a" and "b" are ints. 
- * for i = b downto a # "a" and "b" are ints.
- * for v = a # "a" is an array or an object. "v" will be the value.
- * for k v = a # "a" is an array or an object. "k" will be the key. "v" will be the value.
+== Introduction ===
+Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`.
 
-We'll start with a basic example and work our way done to some more advanced stuff.
+== Definition ==
 {{{
-# Example #1:
+for_stmt ::=  "for" variable [variable] "in" expression_list ["putin" variable=expression_list]
+for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [step expression_list] ["putin" variable=expression_list]
+}}}
+
+== Examples ==
+We'll start with a basic example and work our way done to some more advanced stuff.
+=== 1) ===
+Iterate over all the elements in a and print each value on a separate line.
+{{{
 a = [1 2 3]
-for v = a
+for v in a
     echo v, "\n"
 }}}
-Pretty basic example. It iterates over all the elements in a and prints the value
+
+=== 2) ===
+Iterate over all the elements in a and prints each elements key and value on seperate lines.
 {{{
-# Example #2:
-a = [1 2 3]
-for k v = a
+a = [5:1 6:2 7:3]
+for k v in a
     echo k, ":", v, "\n
 }}}
-In this way it takes both the key and the value from the array, resulting in the output:
+Output:
 {{{
-0: 1
-1: 2
-2: 3
+5: 1
+6: 2
+7: 3
 }}}
 
-And of course, the [Putin putin] keyword can be used:
+=== 3) ===
+Factorial implementation using the [Putin putin] keyword.
 {{{
-# Example #3: Factorial implementation using putin keyword
 fn factorial(int i)
     return for i = i downto 2 putin a=i: *= i-1
-# print fn(5) # prints: 120
+echo fn(5)
+}}}
+Output:
+{{{
+120
 }}}
