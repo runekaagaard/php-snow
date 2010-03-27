@@ -104,3 +104,6 @@ return switch putin dummy
         += 3
 # returns 5
 }}}
+
+== `for` ==
+`for` has is own wiki page at ForLoop.
