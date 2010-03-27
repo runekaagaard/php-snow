@@ -1,0 +1,47 @@
+#summary "for" loop documentation.
+<wiki:toc/>
+
+== Introduction ===
+Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`.
+
+== Definition ==
+{{{
+for_stmt ::=  "for" variable [variable] "in" expression_list ["putin" variable=expression_list]
+for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [step expression_list] ["putin" variable=expression_list]
+}}}
+
+== Examples ==
+We'll start with a basic example and work our way done to some more advanced stuff.
+=== 1) ===
+Iterate over all the elements in a and print each value on a separate line.
+{{{
+a = [1 2 3]
+for v in a
+    echo v, "\n"
+}}}
+
+=== 2) ===
+Iterate over all the elements in a and prints each elements key and value on seperate lines.
+{{{
+a = [5:1 6:2 7:3]
+for k v in a
+    echo k, ":", v, "\n
+}}}
+Output:
+{{{
+5: 1
+6: 2
+7: 3
+}}}
+
+=== 3) ===
+Factorial implementation using the [Putin putin] keyword.
+{{{
+fn factorial(int i)
+    return for i = i downto 2 putin a=i: *= i-1
+echo fn(5)
+}}}
+Output:
+{{{
+120
+}}}
