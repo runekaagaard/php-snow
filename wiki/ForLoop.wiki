@@ -31,7 +31,7 @@ Iterate over all the elements in a and prints each elements key and value on sep
 {{{
 a = [5:1 6:2 7:3]
 for k v in a
-    echo k, ":", v, "\n
+    echo k, " :", v, "\n
 }}}
 Output:
 {{{
