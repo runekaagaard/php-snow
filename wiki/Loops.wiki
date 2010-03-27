@@ -32,6 +32,6 @@ And of course, the [Putin putin] keyword can be used:
 {{{
 # Example #3: Factorial implementation using putin keyword
 fn factorial(int i)
-    return for i = i to 2 step -1 putin a=i: *= i-1
+    return for i = i downto 2 putin a=i: *= i-1
 # print fn(5) # prints: 120
 }}}
