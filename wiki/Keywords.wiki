@@ -5,7 +5,6 @@
 = Deleted Keywords =
 || *PHP*         || *Snow*       || * Comment * ||                                   
 || as            || _deleted_    || See "in". ||
-|| break         || _deleted_    || See "passthru". ||
 || foreach       || _deleted_    || ||
 || var           || _deleted_    || ||
 
@@ -27,6 +26,7 @@
 || *PHP*         || *Snow*       || * Comment * ||
 || abstract      || _unchanged_  || ||
 || and           || _unchanged_  || ||                  
+|| break         || break is the default in switches    || See "passthru". ||
 || case          || _unchanged_  || ||          
 || catch         || _unchanged_  || ||
 || class         || _unchanged_  || ||

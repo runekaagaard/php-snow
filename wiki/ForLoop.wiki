@@ -44,10 +44,24 @@ Output:
 Factorial implementation using the [Putin putin] keyword.
 {{{
 fn factorial(int i)
-    return for i = i downto 2 putin a=i: *= i-1
+    return 1 when i == 0
+    return for i downto 3 putin a = i: *= i - 1
 echo fn(5)
 }}}
 Output:
 {{{
 120
+}}}
+
+=== 4) ===
+Specifying character ranges
+{{{
+for char in 'a' to 'c'
+    print char,"\n"
+}}}
+Output:
+{{{
+a
+b
+c
 }}}

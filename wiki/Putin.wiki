@@ -9,6 +9,7 @@ Below are some examples of the use of the `putin` keyword.
 {{{
 # Example #1: Factorial implementation using putin keyword
 fn factorial(int i)
+    return 1 when i == 0
     return for i downto 3 putin a = i: *= i - 1
 # print fn(5) # prints: 120
 }}}
