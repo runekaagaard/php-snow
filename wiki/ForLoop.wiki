@@ -10,6 +10,15 @@ for_stmt ::=  "for" variable [variable] "in" expression_list ["putin" variable=e
 for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [step expression_list] ["putin" variable=expression_list]
 }}}
 
+== Matrix ==
+|| *Snow*                      || *PHP*                                      ||
+|| for v in arr                || foreach ($array as $v) {                   ||
+|| for v k in arr              || foreach ($array as $v => $k) {             ||
+|| for v k in 'a' to 'b'       || foreach (range('a', 'b') as $v => $k) {    ||
+|| for v k in 1 to 10          || foreach (range(1, 10) as $v => $k) {       ||
+|| for v = 1 to 10             || for ($v=1, $v<11, ++$i) {                  ||
+|| for v = 10 downto 1         || for ($v=10, $v<-1, --$i) {                 ||
+
 == Examples ==
 We'll start with a basic example and work our way done to some more advanced stuff.
 === 1) ===
