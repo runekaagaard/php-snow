@@ -11,6 +11,7 @@ for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [
 }}}
 
 == Matrix ==
+=== Oneliners ===
 || *Snow*                      || *PHP*                                      ||
 || *in*                        || *foreach*                                  ||
 || for v in arr                || foreach ($array as $v) {                   ||
@@ -21,6 +22,34 @@ for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [
 || for v = 1 to 10             || for ($v=1, $v<11, ++$i) {                  ||
 || for v = 10 downto 1         || for ($v=10, $v<-1, --$i) {                 ||
 || for v = 'a' to 'b'          || ERROR                                      ||
+
+=== Using "putin" ===
+
+==== Snow ====
+{{{
+for v k in arr putin a=''
+    .= "%k: %v"
+}}}
+==== PHP ====
+{{{
+$a = '';
+foreach ($arr as $k => $v) {
+    $a .= "%k: %v";
+}
+}}}
+==== Snow ====
+{{{
+return for v k in arr putin a=''
+    .= "%k: %v"
+}}}
+==== PHP ====
+{{{
+$a = '';
+foreach ($arr as $k => $v) {
+    $a .= "%k: %v";
+}
+return $a;
+}}}
 
 == Examples ==
 We'll start with a basic example and work our way done to some more advanced stuff.
