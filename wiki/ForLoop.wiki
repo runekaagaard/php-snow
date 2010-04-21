@@ -11,46 +11,83 @@ for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [
 }}}
 
 == Matrix ==
-=== Oneliners ===
-|| *Snow*                      || *PHP*                                      ||
-|| *in*                        || *foreach*                                  ||
-|| for v in arr                || foreach ($array as $v) {                   ||
-|| for v k in arr              || foreach ($array as $v => $k) {             ||
-|| for v k in 'a' to 'b'       || foreach (range('a', 'b') as $v => $k) {    ||
-|| for v k in 1 to 10          || foreach (range(1, 10) as $v => $k) {       ||
-|| *=*                         || *for* (numeric only)                       ||
-|| for i = 1 to 10             || for ($i=1; $i<11; ++$i) {                  ||
-|| for i = 10 downto 1         || for ($i=10; $i>0; --$i) {                 ||
-|| for i = a to somefunc()     || for ($i=$a; $i<somefunc()+1; ++$i) {       ||
-|| for i = 'a' to 'b'          || ERROR                                      ||
+<table border="1" cellpadding="5">
+    <tr>
+        <td><strong>Snow</strong></td>
+        <td><strong>PHP</strong></td>
+    </tr>
+    <tr>
+        <td><strong>in</strong></td>
+        <td><strong>foreach</strong></td>
+    </tr>
+    <tr>
+        <td>for v in arr</td>
+        <td>foreach ($array as $v) {</td>
+    </tr>
+    <tr>
+        <td>for v k in arr</td>
+        <td>foreach ($array as $v =&gt;$k) {</td>
+    </tr>
 
-=== Using "putin" ===
+    <tr>
+        <td>for v k in 'a' to 'b'</td>
+        <td>foreach (range('a', 'b') as $v =&gt; $k) {</td>
+    </tr>
 
-==== Snow ====
-{{{
-for v k in arr putin a=''
-    .= "%k: %v"
-}}}
-==== PHP ====
-{{{
-$a = '';
-foreach ($arr as $k => $v) {
+    <tr>
+        <td>for v k in 1 to 10</td>
+        <td>foreach (range(1, 10) as $v =&gt; $k) {</td>
+    </tr>
+
+    <tr>
+        <td><strong>=</strong></td>
+        <td><strong>for</strong>(numeric only)</td>
+    </tr>
+
+    <tr>
+        <td>for i = 1 to 10</td>
+        <td>for ($i=1; $i&lt;11; ++$i) {</td>
+    </tr>
+
+    <tr>
+        <td>for i = 10 downto 1</td>
+        <td>for ($i=10; $i&gt;0; --$i) {</td>
+    </tr>
+
+    <tr>
+        <td>for i = a to somefunc()</td>
+        <td>for ($i=$a; $i&lt;somefunc()+1; ++$i) {</td>
+    </tr>
+    <tr>
+        <td>for i = 'a' to 'b'</td>
+        <td>ERROR</td>
+    </tr>
+    <tr>
+        <td><strong>Using "putin"</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+<td valign="top" cellpadding="0"><code language="php">for v k in arr putin a=''
+    .= "%k: %v"</code>
+        </td>
+<td valign="top" cellpadding="0"><code language="php">$a = '';
+foreach ($arr as $k =&gt; $v) {
+    $a .= "%k: %v";
+}</code>
+        </td>
+    </tr>
+    <tr>
+<td valign="top" cellpadding="0"><code language="php">return for v k in arr putin a=''
+    .= "%k: %v"</code>
+        </td>
+<td valign="top" cellpadding="0"><code language="php">$a = '';
+foreach ($arr as $k =&gt; $v) {
     $a .= "%k: %v";
 }
-}}}
-==== Snow ====
-{{{
-return for v k in arr putin a=''
-    .= "%k: %v"
-}}}
-==== PHP ====
-{{{
-$a = '';
-foreach ($arr as $k => $v) {
-    $a .= "%k: %v";
-}
-return $a;
-}}}
+return $a;</code>
+        </td>
+    </tr>
+</table>
 
 == Examples ==
 We'll start with a basic example and work our way done to some more advanced stuff.
