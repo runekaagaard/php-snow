@@ -86,38 +86,38 @@
 
     <tr>
         <td valign="top">
-<pre class="prettyprint">
+<code language="php">
 for v k in arr putin a=''
     .= "%k: %v"
-</pre>
+</code>
         </td>
 
         <td valign="top">
-<pre class="prettyprint">
+<code language="php">
 $a = '';
 foreach ($arr as $k =&gt; $v) {
     $a .= "%k: %v";
 }
-</pre>
+</code>
         </td>
     </tr>
 
     <tr>
         <td valign="top">
-<pre class="prettyprint">
+<code language="php">
 return for v k in arr putin a=''
     .= "%k: %v"
-</pre>
+</code>
         </td>
 
         <td valign="top">
-<pre class="prettyprint">
+<code language="php">
 $a = '';
 foreach ($arr as $k =&gt; $v) {
     $a .= "%k: %v";
 }
 return $a;
-</pre>
+</code>
         </td>
     </tr>
     
