@@ -4,7 +4,7 @@
 == Introduction ===
 Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`. 
 
-`for` comes in two variants. The first is of the form "for x *in* a to b" or "for x *in* arr" and compiles as `foreach`. The "a to b" part compiles to "range(a,b)". The second is of the form "for x *=* a to b" or "for x *=* b downto a" and compiles to `for`. _Notice that this only works with numeric values._ Both variants can be used together with the `putin` keyword. When the `putin` keyword is used the variable assigned with "putin variable_name=''" can be returned by adding `return` before the `for` keyword.
+`for` comes in two variants. The first is of the form "for v *in* a to b" or "for k v *in* arr" and compiles as `foreach`. The "a to b" part compiles to "range(a,b)". The second is of the form "for i *=* a to b" or "for i *=* b downto a" and compiles to `for`. _Notice that this only works with numeric values._ Both variants can be used together with the `putin` keyword. When the `putin` keyword is used the variable assigned with "putin variable_name=''" can be returned by adding `return` before the `for` keyword.
 
 == Definition ==
 {{{
@@ -27,18 +27,18 @@ for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [
         <td>foreach ($array as $v) {</td>
     </tr>
     <tr>
-        <td>for v k in arr</td>
-        <td>foreach ($array as $v =>$k) {</td>
+        <td>for k v in arr</td>
+        <td>foreach ($array as $k => $v) {</td>
     </tr>
 
     <tr>
-        <td>for v k in 'a' to 'b'</td>
-        <td>foreach (range('a', 'b') as $v => $k) {</td>
+        <td>for v in 'a' to 'b'</td>
+        <td>foreach (range('a', 'b') as $v) {</td>
     </tr>
 
     <tr>
-        <td>for v k in 1 to 10</td>
-        <td>foreach (range(1, 10) as $v => $k) {</td>
+        <td>for k v in 1 to 10</td>
+        <td>foreach (range(1, 10) as $k => $v) {</td>
     </tr>
 
     <tr>
@@ -69,7 +69,7 @@ for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [
         <td></td>
     </tr>
     <tr>
-<td valign="top" cellpadding="0"><code language="php">for v k in arr putin a=''
+<td valign="top" cellpadding="0"><code language="php">for k v in arr putin a=''
     .= "%k: %v"</code>
         </td>
 <td valign="top" cellpadding="0"><code language="php">$a = '';
@@ -79,7 +79,7 @@ foreach ($arr as $k => $v) {
         </td>
     </tr>
     <tr>
-<td valign="top" cellpadding="0"><code language="php">return for v k in arr putin a=''
+<td valign="top" cellpadding="0"><code language="php">return for k v in arr putin a=''
     .= "%k: %v"</code>
         </td>
 <td valign="top" cellpadding="0"><code language="php">$a = '';
