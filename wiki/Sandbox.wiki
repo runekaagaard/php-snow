@@ -1,98 +1,98 @@
 #summary Experiments with wiki formatting
 
-<table>
+<table border="1" cellpadding="5">
     <tr>
-        <td border="1" cellpadding="5"><strong>Snow</strong></td>
+        <td><strong>Snow</strong></td>
 
-        <td border="1" cellpadding="5"><strong>PHP</strong></td>
+        <td><strong>PHP</strong></td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5"><strong>in</strong></td>
+        <td><strong>in</strong></td>
 
-        <td border="1" cellpadding="5">
+        <td>
         <strong>foreach</strong></td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5">for v in arr</td>
+        <td>for v in arr</td>
 
-        <td border="1" cellpadding="5">foreach ($array as $v)
+        <td>foreach ($array as $v)
         {</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5">for v k in arr</td>
+        <td>for v k in arr</td>
 
-        <td border="1" cellpadding="5">foreach ($array as $v =&gt;
+        <td>foreach ($array as $v =&gt;
         $k) {</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5">for v k in 'a' to 'b'</td>
+        <td>for v k in 'a' to 'b'</td>
 
-        <td border="1" cellpadding="5">foreach (range('a', 'b') as
+        <td>foreach (range('a', 'b') as
         $v =&gt; $k) {</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5">for v k in 1 to 10</td>
+        <td>for v k in 1 to 10</td>
 
-        <td border="1" cellpadding="5">foreach (range(1, 10) as $v
+        <td>foreach (range(1, 10) as $v
         =&gt; $k) {</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5"><strong>=</strong></td>
+        <td><strong>=</strong></td>
 
-        <td border="1" cellpadding="5"><strong>for</strong>
+        <td><strong>for</strong>
         (numeric only)</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5">for i = 1 to 10</td>
+        <td>for i = 1 to 10</td>
 
-        <td border="1" cellpadding="5">for ($i=1; $i&lt;11; ++$i)
+        <td>for ($i=1; $i&lt;11; ++$i)
         {</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5">for i = 10 downto 1</td>
+        <td>for i = 10 downto 1</td>
 
-        <td border="1" cellpadding="5">for ($i=10; $i&gt;0; --$i)
+        <td>for ($i=10; $i&gt;0; --$i)
         {</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5">for i = a to
+        <td>for i = a to
         somefunc()</td>
 
-        <td border="1" cellpadding="5">for ($i=$a;
+        <td>for ($i=$a;
         $i&lt;somefunc()+1; ++$i) {</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5">for i = 'a' to 'b'</td>
+        <td>for i = 'a' to 'b'</td>
 
-        <td border="1" cellpadding="5">ERROR</td>
+        <td>ERROR</td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5"><strong>Using "putin"</strong></td>
+        <td><strong>Using "putin"</strong></td>
 
-        <td border="1" cellpadding="5">
+        <td>
         </td>
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5" valign="top">
+        <td valign="top">
 <pre class="prettyprint">
 for v k in arr putin a=''
     .= "%k: %v"
 </pre>
         </td>
 
-        <td border="1" cellpadding="5" valign="top">
+        <td valign="top">
 <pre class="prettyprint">
 $a = '';
 foreach ($arr as $k =&gt; $v) {
@@ -103,14 +103,14 @@ foreach ($arr as $k =&gt; $v) {
     </tr>
 
     <tr>
-        <td border="1" cellpadding="5" valign="top">
+        <td valign="top">
 <pre class="prettyprint">
 return for v k in arr putin a=''
     .= "%k: %v"
 </pre>
         </td>
 
-        <td border="1" cellpadding="5" valign="top">
+        <td valign="top">
 <pre class="prettyprint">
 $a = '';
 foreach ($arr as $k =&gt; $v) {
