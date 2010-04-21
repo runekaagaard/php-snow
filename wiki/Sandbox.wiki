@@ -1,6 +1,6 @@
 #summary Experiments with wiki formatting
 
-<table border="1">
+<table border="1" cellpadding="5">
     <tr>
         <td><strong>Snow</strong></td>
         <td><strong>PHP</strong></td>
@@ -56,11 +56,11 @@
         <td></td>
     </tr>
     <tr>
-        <td valign="top"><code language="php">
+        <td valign="top" cellpadding="0"><code language="php">
 for v k in arr putin a=''
     .= "%k: %v"</code>
         </td>
-        <td valign="top"><code language="php">
+        <td valign="top" cellpadding="0"><code language="php">
 $a = '';
 foreach ($arr as $k =&gt; $v) {
     $a .= "%k: %v";
@@ -68,11 +68,11 @@ foreach ($arr as $k =&gt; $v) {
         </td>
     </tr>
     <tr>
-        <td valign="top"><code language="php">
+        <td valign="top" cellpadding="0"><code language="php">
 return for v k in arr putin a=''
     .= "%k: %v"</code>
         </td>
-        <td valign="top"><code language="php">
+        <td valign="top" cellpadding="0"><code language="php">
 $a = '';
 foreach ($arr as $k =&gt; $v) {
     $a .= "%k: %v";
