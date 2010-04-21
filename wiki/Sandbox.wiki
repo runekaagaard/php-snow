@@ -1,6 +1,6 @@
 #summary Experiments with wiki formatting
 
-<table border="1" cellpadding="5">
+<<table border="1" cellpadding="5">
     <tr>
         <td><strong>Snow</strong></td>
         <td><strong>PHP</strong></td>
@@ -51,8 +51,9 @@
         <td>for i = 'a' to 'b'</td>
         <td>ERROR</td>
     </tr>
-    <tr colspan="2">
+    <tr>
         <td><strong>Using "putin"</strong></td>
+        <td></td>
     </tr>
     <tr>
         <td valign="top"><code language="php">
