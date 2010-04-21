@@ -1,6 +1,6 @@
 #summary Experiments with wiki formatting
 
-<table border="1" cellpadding="5">
+<table border="1">
     <tr>
         <td><strong>Snow</strong></td>
 
