@@ -56,24 +56,20 @@
         <td></td>
     </tr>
     <tr>
-        <td valign="top" cellpadding="0"><code language="php">
-for v k in arr putin a=''
+<td valign="top" cellpadding="0"><code language="php">for v k in arr putin a=''
     .= "%k: %v"</code>
         </td>
-        <td valign="top" cellpadding="0"><code language="php">
-$a = '';
+<td valign="top" cellpadding="0"><code language="php">$a = '';
 foreach ($arr as $k =&gt; $v) {
     $a .= "%k: %v";
 }</code>
         </td>
     </tr>
     <tr>
-        <td valign="top" cellpadding="0"><code language="php">
-return for v k in arr putin a=''
+<td valign="top" cellpadding="0"><code language="php">return for v k in arr putin a=''
     .= "%k: %v"</code>
         </td>
-        <td valign="top" cellpadding="0"><code language="php">
-$a = '';
+<td valign="top" cellpadding="0"><code language="php">$a = '';
 foreach ($arr as $k =&gt; $v) {
     $a .= "%k: %v";
 }
