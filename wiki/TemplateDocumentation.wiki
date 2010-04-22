@@ -16,8 +16,8 @@ Definition.
         <td><strong>PHP</strong></td>
     </tr>
     <tr>
-        <td><strong>Second headline Snow</strong></td>
-        <td><strong>Second headline PHP</strong></td>
+        <td><strong>Second headline</strong></td>
+        <td><strong>Second headline</strong></td>
     </tr>
     <tr>
         <td>Single line</td>
