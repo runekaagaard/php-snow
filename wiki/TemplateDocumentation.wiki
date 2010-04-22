@@ -2,7 +2,7 @@
 <wiki:toc/>
 
 == Introduction ===
-Introduktion to topic.
+Introduction to topic.
 
 == Definition ==
 {{{
@@ -35,10 +35,10 @@ line</code>
 </table>
 
 == Examples ==
-Introduktion to examples.
+Introduction to examples.
 
 === 1) ===
-Introduktion example one.
+Introduction example one.
 {{{
 code
 }}}
