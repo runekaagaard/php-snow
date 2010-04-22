@@ -2,9 +2,11 @@
 <wiki:toc/>
 
 == Introduction ===
+Introduktion to topic.
 
 == Definition ==
 {{{
+Definition.
 }}}
 
 == Matrix ==
@@ -14,20 +16,20 @@
         <td><strong>PHP</strong></td>
     </tr>
     <tr>
-        <td><strong>Second headline snow.</strong></td>
+        <td><strong>Second headline Snow</strong></td>
         <td><strong>Second headline PHP</strong></td>
     </tr>
     <tr>
-        <td>Normal cell</td>
-        <td>Normal cell</td>
+        <td>Single line</td>
+        <td>Single line</td>
     </tr>
     
     <tr>
-<td valign="top" cellpadding="0"><code language="php">Multiline
-code</code>
+<td valign="top" cellpadding="0"><code language="php">Multi
+line</code>
         </td>
-<td valign="top" cellpadding="0"><code language="php">Multiline
-code</code>
+<td valign="top" cellpadding="0"><code language="php">Multi
+line</code>
         </td>
     </tr>
 </table>
