@@ -4,7 +4,7 @@
 == Introduction ===
 Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`. 
 
-`for` comes in two variants. The first is of the form "for v *in* a to b" or "for k v *in* arr" and compiles as `foreach`. The "a to b" part compiles to "range(a,b)". The second is of the form "for i *=* a to b" or "for i *=* b downto a" and compiles to `for`. _Notice that this only works with numeric values._ Both variants can be used together with the `putin` keyword. When the `putin` keyword is used the variable assigned with "putin variable_name=''" can be returned by adding `return` before the `for` keyword.
+`for` comes in two variants. The first is of the form "`for v *in* a to b`" or "`for k v *in* arr`" and compiles as `foreach`. The "`a to b`" part compiles to "{{{range(a,b)}}}". The second is of the form "`for i *=* a to b`" or "`for i *=* b downto a`" and compiles to `for`. _Notice that this only works with numeric values._ Both variants can be used together with the `putin` keyword. When the `putin` keyword is used the variable assigned with "`putin variable_name=''`" can be returned by adding `return` before the `for` keyword.
 
 == Definition ==
 {{{
