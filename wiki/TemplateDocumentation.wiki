@@ -2,7 +2,7 @@
 <wiki:toc/>
 
 == Introduction ===
-Introduction to topic. `"inline code"`.
+Introduction to topic. `inline code`.
 
 == Definition ==
 {{{
