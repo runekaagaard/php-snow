@@ -7,7 +7,11 @@ Snow renames the return keyword to `<-` and introduces `<--` as an inner return 
 == Matrix ==
 <table border="1" cellpadding="5">
     <tr>
-        <td><strong><- some_var</strong></td>
-        <td><strong>return $some_var</strong></td>
+        <td><strong>Snow</strong></td>
+        <td><strong>PHP</strong></td>
+    </tr>
+    <tr>
+        <td><- some_var</td>
+        <td>return $some_var</td>
     </tr>
 </table>
