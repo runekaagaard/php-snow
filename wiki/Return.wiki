@@ -1,4 +1,4 @@
-#Inner and outer returns.
+#summary Inner and outer returns.
 <wiki:toc/>
 
 == Introduction ===
@@ -15,3 +15,5 @@ Snow renames the return keyword to `<-` and introduces `<--` as an inner return 
         <td>return $some_var</td>
     </tr>
 </table>
+
+More will follow.
