@@ -2,47 +2,12 @@
 <wiki:toc/>
 
 == Introduction ===
-Introduction to topic. `inline code`.
-
-== Definition ==
-{{{
-Definition.
-}}}
+Snow renames the return keyword to `<-` and introduces `<--` as an inner return that works inside all control structures.
 
 == Matrix ==
 <table border="1" cellpadding="5">
     <tr>
-        <td><strong>Snow</strong></td>
-        <td><strong>PHP</strong></td>
-    </tr>
-    <tr>
-        <td><strong>Second headline</strong></td>
-        <td><strong>Second headline</strong></td>
-    </tr>
-    <tr>
-        <td>Single line</td>
-        <td>Single line</td>
-    </tr>
-    
-    <tr>
-<td valign="top" cellpadding="0"><code language="php">Multi
-line</code>
-        </td>
-<td valign="top" cellpadding="0"><code language="php">Multi
-line</code>
-        </td>
+        <td><strong><- some_var</strong></td>
+        <td><strong>return $some_var</strong></td>
     </tr>
 </table>
-
-== Examples ==
-Introduction to examples.
-
-=== 1) ===
-Introduction example one.
-{{{
-code
-}}}
-Output:
-{{{
-output
-}}}
