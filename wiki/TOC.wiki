@@ -1,7 +1,9 @@
 #summary Table of contents.
+#labels Featured
  * [Keywords]
  * [Comma]
  * [ControlStructures]
  * [ForLoop]
  * [Putin]
+ * [Return]
  * [MoSCoW]
