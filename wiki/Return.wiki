@@ -1,4 +1,5 @@
 #summary Inner and outer returns.
+#labels _
 <wiki:toc/>
 
 == Introduction ===
@@ -13,6 +14,43 @@ Snow renames the return keyword to `<-` and introduces `<--` as an inner return 
     <tr>
         <td><- some_var</td>
         <td>return $some_var</td>
+    </tr>
+    <tr>
+    <td valign="top" cellpadding="0">
+<code language="php">fn double(int n): <- n ∗ n</code>
+    </td><td valign="top" cellpadding="0">
+<code language="php">function double($n) {
+    return $n ∗ $n;
+}</code>
+        </td>
+    </tr>
+    <tr>
+    <td valign="top" cellpadding="0">
+<code language="php">a = if b > 3
+    <-- 42
+else
+    <-- 666</code>
+    </td><td valign="top" cellpadding="0">
+<code language="php">if ($b > 3) {
+    $a = 42;
+} else {
+    $a = 666;
+}</code>
+        </td>
+    </tr>
+    <tr>
+    <td valign="top" cellpadding="0">
+<code language="php"><- if b > 3
+    <-- 42
+else
+    <-- 666</code>
+    </td><td valign="top" cellpadding="0">
+<code language="php">if ($b > 3) {
+    return 42;
+} else {
+    return 666;
+}</code>
+        </td>
     </tr>
 </table>
 
