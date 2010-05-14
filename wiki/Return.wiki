@@ -67,6 +67,39 @@ if ($b > 3) {
 }}}
         </td>
     </tr>
+    <tr>
+        <td valign="top" cellpadding="0">
+{{{
+fn process_ints(ints)
+    return_code = for i in ints putin new_ints=[]
+        if i->empty: <-- HAS_EMPTY
+        if i > 50: <-- HAS_OUTOF_RANGE
+        []= i->do_stuff_to
+    <- ['return_code': return_code or IS_OK, 'ints': new_ints]
+}}}
+        </td>
+        <td valign="top" cellpadding="0">
+{{{
+function process_ints(ints)
+    $new_ints = array();
+    foreach($ints as $i) {
+        if (empty($i)) {
+            $return_code = HAS_EMPTY;
+            break;
+        }
+        if ($i > 50) {
+            $return_code = HAS_OUT_OF_RANGE;
+            break;
+        }
+        $new_ints []= do_stuff_to($i);
+    }
+    return array(
+        'return_code': isset($return_code) ? $return_code : IS_OK,
+        'ints': $new_ints,
+    );
+}}}
+        </td>
+    </tr>
 </table>
 
 More will follow.
