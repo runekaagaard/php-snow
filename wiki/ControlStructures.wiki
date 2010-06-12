@@ -78,32 +78,5 @@ switch a
 # prints: 12
 }}}
 
-Switch can also be used with the [Putin putin] keyword.
-{{{
-# Example #3: Usage of the putin keyword
-a = 2
-switch a putin b = 2
-    case 1
-        += 1
-    case 2
-        += 2
-    case 3
-        += 3
-# b == 4
-}}}
-{{{
-# Example #4: return from a switch statement
-a = 2
-return switch putin dummy
-    case 1
-        += 1
-    case 2
-        += 2
-        fallthru
-    case 3
-        += 3
-# returns 5
-}}}
-
 == `for` ==
 `for` has is own wiki page at ForLoop.

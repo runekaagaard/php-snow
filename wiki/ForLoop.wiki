@@ -4,12 +4,12 @@
 == Introduction ===
 Good old (t)rusty `foreach` has left the building, welcome the new and improved `for`. 
 
-`for` comes in two variants. The first is of the form `for v in a to b` or `for k v in arr` and compiles as `foreach`. The `a to b` part compiles to `range(a,b)`. The second is of the form `for i = a to b` or `for i = b downto a` and compiles to `for`. _Notice that this only works with numeric values._ Both variants can be used together with the `putin` keyword. When the `putin` keyword is used the variable assigned with `putin variable_name=''` can be returned by adding `return` before the `for` keyword.
+`for` comes in two variants. The first is of the form `for v in a to b` or `for k v in arr` and compiles as `foreach`. The `a to b` part compiles to `range(a,b)`. The second is of the form `for i = a to b` or `for i = b downto a` and compiles to `for`. _Notice that this only works with numeric values._
 
 == Definition ==
 {{{
-for_stmt ::=  "for" variable [variable] "in" expression_list ["putin" variable=expression_list]
-for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [step expression_list] ["putin" variable=expression_list]
+for_stmt ::=  "for" variable [variable] "in" expression_list 
+for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [step expression_list]
 }}}
 
 == Matrix ==
@@ -64,31 +64,6 @@ for_stmt ::=  "for" variable "=" expression_list "to"|"downto" expression_list [
         <td>for i = 'a' to 'b'</td>
         <td>ERROR</td>
     </tr>
-    <tr>
-        <td><strong>Using "putin"</strong></td>
-        <td></td>
-    </tr>
-    <tr>
-<td valign="top" cellpadding="0"><code language="php">for k v in arr putin a=''
-    .= "%k: %v"</code>
-        </td>
-<td valign="top" cellpadding="0"><code language="php">$a = '';
-foreach ($arr as $k => $v) {
-    $a .= "%k: %v";
-}</code>
-        </td>
-    </tr>
-    <tr>
-<td valign="top" cellpadding="0"><code language="php">return for k v in arr putin a=''
-    .= "%k: %v"</code>
-        </td>
-<td valign="top" cellpadding="0"><code language="php">$a = '';
-foreach ($arr as $k => $v) {
-    $a .= "%k: %v";
-}
-return $a;</code>
-        </td>
-    </tr>
 </table>
 
 == Examples ==
@@ -122,11 +97,13 @@ Output:
 }}}
 
 === 3) ===
-Factorial implementation using the [Putin putin] keyword.
+Factorial implementation.
 {{{
-fn factorial(int i)
-    return 1 when i == 0
-    return for i downto 3 putin a = i: *= i - 1
+fn factorial(int n)
+    <- 1 when n == 0
+    a = n
+    for i=n downto 2: a *= i
+    <- a
 echo fn(5)
 }}}
 Output:

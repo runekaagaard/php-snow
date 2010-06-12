@@ -4,6 +4,5 @@
  * [Comma]
  * [ControlStructures]
  * [ForLoop]
- * [Putin]
  * [Return]
  * [MoSCoW]

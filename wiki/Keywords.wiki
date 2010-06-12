@@ -65,9 +65,9 @@
 || when         || Postfix "if" sentence. ||
 || fallthru     || Disable default "break" in "case" sentences. ||
 || in           || Used with the new "for" loop. ||
-|| putin        || Used with the new "for" loop. And more. ||
 || to           || Used with the new "for" loop. for i = 1 to 5 ||
 || downto       || Used with the new "for" loop. for i = 5 downto 1 ||
+|| <--          || Inner return, used inside control structures. ||
 
 = Language constructs =
 || *PHP*          || *Snow*       || * Comment * ||
@@ -82,7 +82,7 @@
 || list()         || _unchanged_  || ||
 || require()      || _unchanged_  || ||
 || require_once() || _unchanged_  || ||
-|| return()       || _unchanged_  || ||
+|| return         || <-           || ||
 || print()        || _deleted_    || Use "echo" instead. ||
 || unset()        || _unchanged_  || ||
 
