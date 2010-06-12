@@ -71,7 +71,8 @@ if ($b > 3) {
         <td valign="top" cellpadding="0">
 {{{
 fn process_ints(ints)
-    return_code = for i in ints putin new_ints=[]
+    new_ints=[]
+    return_code = for i in ints
         if i->empty: <-- HAS_EMPTY
         if i > 50: <-- HAS_OUTOF_RANGE
         []= i->do_stuff_to
