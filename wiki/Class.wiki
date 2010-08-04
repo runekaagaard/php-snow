@@ -34,26 +34,26 @@ foo::staticMethod("bup");
         </td>
 <td valign="top" cellpadding="0"><code language="php">
 class foo
-    # Nested under public, protected and private keywords.
-    public
+    # Nested under public (pub), protected(pro) and private(pri) keywords.
+    pub
         # Members of same type can be nested as well.
-        @string
+        @str
             biz = "foz"
             baz = "faz"
         @int tip = 42
     # If only one, one line must be used.
-    protected @string pro = "pro"
-    private
-        @string
+    pro @str pro = "pro"
+    pri
+        @str
             pri1 = "pri1"
             pri2 = "pri2"
 
-    @string bar
-    @string baz
+    @str bar
+    @str baz
     fn __construct
         echo this.biz , bar , baz
 
-    @string zup
+    @str zup
     public static staticMethod
         echo zup
 
