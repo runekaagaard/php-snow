@@ -1,0 +1,68 @@
+#summary Description of classes and objects.
+<wiki:toc/>
+
+== Introduction ===
+Stub
+
+== Matrix ==
+<table border="1" cellpadding="5">
+    <tr>
+        <td><strong>Snow</strong></td>
+        <td><strong>PHP</strong></td>
+    </tr>
+
+    <tr>
+<td valign="top" cellpadding="0"><code language="php">
+class foo {
+    public $biz = "foz";
+    public $baz = "faz";
+    public $tip = "top";
+    protected $pro = "pro";
+    private $pri1 = "pri1";
+    private $pri2 = "pri2";
+    public function __construct($bar, $baz) {
+        echo $this->biz . $bar . $baz;
+    }
+
+    public static function staticMethod($zup) {
+        echo $zup;
+    }
+}
+$foo = new foo("kit", "kat");
+foo::staticMethod("bup");
+</code>
+        </td>
+<td valign="top" cellpadding="0"><code language="php">
+class foo
+    # Nested under public, protected and private keywords.
+    public
+        # Members of same type can be nested as well.
+        @string
+            biz = "foz"
+            baz = "faz"
+        @int tip = 42
+    # If only one, one line must be used.
+    protected @string pro = "pro"
+    private
+        @string
+            pri1 = "pri1"
+            $pri2 = "pri2"
+
+    @string bar
+    @string baz
+    fn __construct
+        echo this.biz , $bar , $baz
+
+    @string zup
+    public static staticMethod
+        echo zup
+
+foo = new foo('kit' 'kat')
+foo::staticMethod('bup')
+</code>
+        </td>
+    </tr>
+</table>
+
+== Examples ==
+Stub

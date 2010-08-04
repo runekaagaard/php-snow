@@ -5,4 +5,5 @@
  * [ControlStructures]
  * [ForLoop]
  * [Return]
+ * [Class]
  * [MoSCoW]
