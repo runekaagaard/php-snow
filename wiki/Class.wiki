@@ -46,12 +46,12 @@ class foo
     private
         @string
             pri1 = "pri1"
-            $pri2 = "pri2"
+            pri2 = "pri2"
 
     @string bar
     @string baz
     fn __construct
-        echo this.biz , $bar , $baz
+        echo this.biz , bar , baz
 
     @string zup
     public static staticMethod
