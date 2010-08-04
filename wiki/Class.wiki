@@ -27,6 +27,10 @@ class foo {
     public static function staticMethod($zup) {
         echo $zup;
     }
+
+    private function privateMethod() {
+        echo "private";
+    }
 }
 $foo = new foo("kit", "kat");
 foo::staticMethod("bup");
@@ -48,14 +52,18 @@ class foo
             pri1 = "pri1"
             pri2 = "pri2"
 
+    # Public(pub) scope is default and should not be written in method
+    # declarations.
     @str bar
     @str baz
     fn __construct
         echo this.biz , bar , baz
 
     @str zup
-    public static staticMethod
+    sta fn static_method
         echo zup
+
+    pri fn private_method: echo "private"
 
 foo = new foo('kit' 'kat')
 foo::staticMethod('bup')
