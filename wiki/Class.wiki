@@ -2,75 +2,102 @@
 <wiki:toc/>
 
 == Introduction ===
-Stub
+Classes an objects works the same way as in PHP, but the syntax has been dried
+up and made a lot faster to type and easier to look at.
 
-== Matrix ==
-<table border="1" cellpadding="5">
-    <tr>
-        <td><strong>Snow</strong></td>
-        <td><strong>PHP</strong></td>
-    </tr>
+Some things have new names:
+ * The single arrow `->` is been replaced by the comma `.`.
+ * `this.` is now just a single prefixing comma `.`.
+ * `self::` is now just two prefixing colons `::`.
+ * `public`, `protected`, `private`, `static` and `const` have been shortened to
+   `pub`, `pro`, `pri`, `sta` and `con`.
 
-    <tr>
-<td valign="top" cellpadding="0"><code language="php">
-class foo {
-    public $biz = "foz";
-    public $baz = "faz";
-    public $tip = "top";
-    protected $pro = "pro";
-    private $pri1 = "pri1";
-    private $pri2 = "pri2";
-    public function __construct($bar, $baz) {
-        echo $this->biz . $bar . $baz;
-    }
+`public`, `protected`, `private` and `const` are no longer declared for each
+class variable but are grouped in the top of the class.
 
-    public static function staticMethod($zup) {
-        echo $zup;
-    }
+The constructor `__construct()` method is removed and instead constructor code
+is placed below the `pub`, `pro`, `pri` and `con` keywords and above the first
+method. The arguments to the constructor are moved above the class definition
+and have the same syntax as a normal function.
 
-    private function privateMethod() {
-        echo "private";
-    }
-}
-$foo = new foo("kit", "kat");
-foo::staticMethod("bup");
-</code>
-        </td>
-<td valign="top" cellpadding="0"><code language="php">
-class foo
-    # Nested under public (pub), protected(pro) and private(pri) keywords.
-    pub
-        # Members of same type can be nested as well.
-        @str
-            biz = "foz"
-            baz = "faz"
-        @int tip = 42
-    # If only one, one line must be used.
-    pro @str pro = "pro"
-    pri
-        @str
-            pri1 = "pri1"
-            pri2 = "pri2"
-
-    # Public(pub) scope is default and should not be written in method
-    # declarations.
-    @str bar
-    @str baz
-    fn __construct
-        echo this.biz , bar , baz
-
-    @str zup
-    sta fn static_method
-        echo zup
-
-    pri fn private_method: echo "private"
-
-foo = new foo('kit' 'kat')
-foo::staticMethod('bup')
-</code>
-        </td>
-    </tr>
-</table>
+The `pub` keyword can not be used in front of methods but `pro`, `pri`, and
+`sta` still can.
 
 == Examples ==
-Stub
+Below is an example of a FTP class.
+{{{
+# Class handling FTP operations.
+    Wrapper on top of FTP protocol that enables file/directory listing,
+    upload/download, etc.
+@str host
+    # The ftp host to connect to.
+    !%->empty
+@int port=21
+    # The port to connect to.
+    0 < % < 65536
+@int timeout=30
+    # Connect timeout, bail out if exceeded. 0 means wait forever.
+    0 <= %
+class Ftp
+    con int
+        OPT_TRANS_ASCII = FTP_ASCII
+        OPT_TRANS_BINARY = FTP_BINARY
+        OPT_TRANS_AUTO = 3
+    pro
+        arr
+            ascii_types = ["text" "csv"]
+            binary_types = ["jpg" "jpeg" "gif" "psd"]
+        int default_transmode = ::OPT_TRANS_ASCII
+        ConnectionResource conn # Instance of the class ConnectionResource.
+
+    # Constructor.
+        Tries to connect to server or throws an exception.
+    .conn = ftp_connect(host port timeout) or throw Exception(
+        "Couldn't connect to host '%host'")
+
+    @str user
+    @str pass
+    fn login: return ftp_login(.conn user pass)
+
+    @str local
+    @str remote
+    @int trans_mode
+    fn put
+        trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
+        ftp_put(.conn local remote trans_mode) or throw Exception(
+            "Couldn't get file '%remote'")
+
+    @str local
+    @str remote
+    @int trans_mode
+    fn get
+        trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
+        ftp_get(.conn local remote trans_mode) or throw Exception(
+            "Couldn't get file '%remote'")
+
+    # Checks whether a file exists on the remote side.
+    @str file
+        # The filename to check for.
+        !%->empty
+    fn file_exists
+        list = ftp_nlist(.conn file->dirname)
+        return list->in_array(file->basename)
+
+    # Determine transfermode to use.
+    @str file
+    fn get_trans_mode
+        for ext in .ascii_types
+            return ::OPT_TRANS_ASCII when file->substr(-ext->strlen) == ext
+        for ext in .binary_types
+            return ::OPT_TRANS_BINARY when file->substr(-ext->strlen) == ext
+        return default_transmode
+
+    fn close: return ftp_close(.conn)
+
+try
+    ftp = Ftp("my.host")
+    ftp.login("user" "pass")
+    ftp.get("/remote/file" "/local/file")
+catch(Exception e)
+    e->var_dump
+}}}
