@@ -10,6 +10,7 @@ Some things have new names:
  * `this.` is now just a single prefixing comma `.`.
  * `self::` is now just two prefixing colons `::`.
  * `public`, `protected`, `private`, `static` and `const` have been shortened to `pub`, `pro`, `pri`, `sta` and `con`.
+ * `__callStatic`, and `__toString` is now `__call_static`, and `__to_string`
 
 `public`, `protected`, `private` and `const` are no longer declared for each
 class variable but are grouped in the top of the class.
@@ -17,7 +18,8 @@ class variable but are grouped in the top of the class.
 The constructor `__construct()` method is removed and instead constructor code
 is placed below the `pub`, `pro`, `pri` and `con` keywords and above the first
 method. The arguments to the constructor are moved above the class definition
-and have the same syntax as a normal function.
+and have the same syntax as a normal function. An extra feature is the
+`@toclass` annotation that saves the argument to the class as a public variable.
 
 The `pub` keyword can not be used in front of methods but `pro`, `pri`, and
 `sta` still can.
@@ -28,13 +30,13 @@ Below is an example of a FTP class.
 # Class handling FTP operations.
     Wrapper on top of FTP protocol that enables file/directory listing,
     upload/download, etc.
-@str host
+@str @toclass host
     # The ftp host to connect to.
     !%->empty
-@int port=21
+@int @toclass port=21
     # The port to connect to.
     0 < % < 65536
-@int timeout=30
+@int @toclass timeout=30
     # Connect timeout, bail out if exceeded. 0 means wait forever.
     0 <= %
 class Ftp
@@ -92,6 +94,8 @@ class Ftp
         return default_transmode
 
     fn close: return ftp_close(.conn)
+
+    fn __to_string: return "Ftp connection to {.host} on port {.port}."
 
 try
     ftp = Ftp("my.host")
