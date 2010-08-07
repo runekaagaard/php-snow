@@ -30,13 +30,13 @@ Below is an example of a FTP class.
 # Class handling FTP operations.
     Wrapper on top of FTP protocol that enables file/directory listing,
     upload/download, etc.
-@str @toclass host
+@str host
     # The ftp host to connect to.
     !%->empty
-@int @toclass port=21
+@int port=21
     # The port to connect to.
     0 < % < 65536
-@int @toclass timeout=30
+@int timeout=30
     # Connect timeout, bail out if exceeded. 0 means wait forever.
     0 <= %
 class Ftp
@@ -44,6 +44,11 @@ class Ftp
         OPT_TRANS_ASCII = FTP_ASCII
         OPT_TRANS_BINARY = FTP_BINARY
         OPT_TRANS_AUTO = 3
+    pub
+        str
+            host = host
+            port = port
+        int timeout = timeout
     pro
         arr
             ascii_types = ["text" "csv"]
