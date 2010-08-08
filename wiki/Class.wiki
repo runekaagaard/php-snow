@@ -109,7 +109,7 @@ class Foo extends Bar {
 }}}
 </td></tr>
     <tr>
-        <td><strong>Forbidden code</strong></td>
+        <td colspan="2"><strong>Forbidden code</strong></td>
     </tr>
     
 <wiki:comment>Snow example</wiki:comment>
