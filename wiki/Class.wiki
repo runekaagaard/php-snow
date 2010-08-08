@@ -60,8 +60,7 @@ class Foo
         int foo = 2 * x * ::BAZ
         int bar = .foo * 2
         str s = s
-    pro
-        int x = x
+    pro int x = x
     pri int privar = 23
 }}}
 </td>
