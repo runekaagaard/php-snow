@@ -64,11 +64,11 @@ echo $this->myvar . self::myconst;</code></td></tr>
 @int x
 @str s
 class Foo extends Bar
-    con
-        int BAZ = 35
+    con int BAZ = 35
     pub
-        int foo = 2 * x * ::BAZ
-        int bar = .foo * 2
+        int
+            foo = 2 * x * ::BAZ
+            bar = .foo * 2
         str s = s
     pro
         int x = x
