@@ -25,7 +25,7 @@
 = Unchanged Keywords =
 || *PHP*         || *Snow*       || * Comment * ||
 || abstract      || _unchanged_  || ||
-|| and           || _unchanged_  || ||                  
+|| and           || _unchanged_  ||  Only in the form `&&`. `and` has a new meaning. ||                  
 || break         || break is the default in switches    || See `passthru`. ||
 || case          || _unchanged_  || ||          
 || catch         || _unchanged_  || ||
@@ -43,13 +43,13 @@
 || interface     || _unchanged_  || ||
 || namespace     || _unchanged_  || ||
 || new           || _unchanged_  || ||
-|| or            || _unchanged_  || ||          
+|| or            || _unchanged_  || Only in the form `||`. `or` has a new meaning. ||          
 || switch        || _unchanged_  || ||
 || throw         || _unchanged_  || ||
 || try           || _unchanged_  || ||
 || use           || _unchanged_  || ||
 || while         || _unchanged_  || ||
-|| xor           || _unchanged_  || ||
+|| xor           || _unchanged_  || Only in the form `^` ||
 
 = Shortened Access Modifier Keywords =
 || *PHP*         || *Snow*       || * Comment * ||
