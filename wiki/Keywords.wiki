@@ -43,7 +43,7 @@
 || interface     || _unchanged_  || ||
 || namespace     || _unchanged_  || ||
 || new           || _unchanged_  || ||
-|| or            || _unchanged_  || Only in the form `\|\|`. `or` has a new meaning. ||          
+|| or            || _unchanged_  || Only in the form `<span>|</span>|`. `or` has a new meaning. ||          
 || switch        || _unchanged_  || ||
 || throw         || _unchanged_  || ||
 || try           || _unchanged_  || ||
