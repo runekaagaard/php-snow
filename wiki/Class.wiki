@@ -40,32 +40,27 @@ and `sta` still can.
         <td><strong>Second headline</strong></td>
     </tr>
     -->
-<!-- Snow example -->
+<wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar , ::myconst
-</code></td>
-<!-- PHP example -->
+echo .myvar , ::myconst</code></td>
+<wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
-echo $this->myvar . self::myconst;
-</code></td></tr>
+echo $this->myvar . self::myconst;</code></td></tr>
 
-<!-- Snow example -->
+<wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar , ::myconst
-</code></td>
-<!-- PHP example -->
+echo .myvar , ::myconst</code></td>
+<wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
-echo $this->myvar . self::myconst;
-</code></td></tr>
+echo $this->myvar . self::myconst;</code></td></tr>
 
-<!-- Snow example -->
+<wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar , ::myconst
-</code></td>
-<!-- PHP example -->
+echo .myvar , ::myconst</code></td>
+<wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
-echo $this->myvar . self::myconst;
-</code></td></tr>
+echo $this->myvar . self::myconst;</code></td></tr>
+
 </table>
 
 == Examples ==
