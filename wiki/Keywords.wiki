@@ -109,6 +109,8 @@
 || $this. || . || `$this` is removed for brevity. ||
 || self:: || :: || `self ` is removed for brevity. ||
 || parent || _unchanged_ || ||
+|| __callStatic || ___call_static_ || ||
+|| __toString || ___to_string_ || ||
 
 = References =
   * http://www.php.net/manual/en/reserved.keywords.php
