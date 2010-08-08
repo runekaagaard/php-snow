@@ -63,7 +63,7 @@ class Foo
         int x = x
     pri int privar = 23</code></td>
 <wiki:comment>PHP example</wiki:comment>
-<td valign="top" cellpadding="0"><code language="php">
+<td valign="top" cellpadding="0"><code language="php">{{{
 @int x
 @str s
 // Docblocks omitted.
@@ -81,7 +81,8 @@ class Foo {
         $this->foo = 2 * $x * self::BAZ;
         $this->bar = $this->foo * 2;
     }
-}</code></td></tr>
+}
+}}}</code></td></tr>
 </table>
 
 == Examples ==
