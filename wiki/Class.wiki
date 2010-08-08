@@ -68,15 +68,13 @@ class Foo
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0">
 {{{
-@int x
-@str s
 // Docblocks omitted.
 class Foo {
-    const BAZ = 35
-    public foo = 2 * x * ::BAZ
-    public bar = .foo * 2
-    public s = s
-    protected x = x
+    const BAZ = 35;
+    public foo;
+    public bar;
+    public s;
+    protected x;
     private privar = 23
     
     public function __construct($x, $s) {
