@@ -3,7 +3,7 @@
 <wiki:toc/>
 
 == Introduction ===
-Snow renames the return keyword to `<-` and introduces `<--` as an inner return that works inside all control structures.
+Snow renames the return keyword to `<-` and introduces `<--` as an inner return that works inside all control structures. The inner return allows for an control structure to return a value which can either be stored to a variable or returned from function.
 
 == Matrix ==
 <table border="1" cellpadding="5">
@@ -102,5 +102,3 @@ function process_ints(ints)
         </td>
     </tr>
 </table>
-
-More will follow.
