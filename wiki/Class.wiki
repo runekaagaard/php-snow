@@ -49,7 +49,8 @@ echo .myvar , ::myconst</code></td>
 echo $this->myvar . self::myconst;</code></td></tr>
 
 <wiki:comment>Snow example</wiki:comment>
-<tr><td valign="top" cellpadding="0"><code language="php">
+<tr><td valign="top" cellpadding="0">
+{{{
 @int x
 @str s
 class Foo
@@ -61,7 +62,9 @@ class Foo
         str s = s
     pro
         int x = x
-    pri int privar = 23</code></td>
+    pri int privar = 23
+}}}
+</td>
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">{{{
 @int x
