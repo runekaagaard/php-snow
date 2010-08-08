@@ -85,7 +85,7 @@ class Foo extends Bar
 <td valign="top" cellpadding="0">
 {{{
 // Docblocks omitted.
-class Foo {
+class Foo extends Bar {
     const BAZ = 35;
     public foo;
     public bar;
