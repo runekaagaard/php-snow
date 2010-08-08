@@ -65,9 +65,6 @@ class Foo extends Bar
         float y = get_my_float(.x)
     pri int privar = 23
     
-    # Constructor
-        All after the "con", "pub", "pro", "pri" group and before the first
-        method is compiled to the constructor.
     echo "pure as snow"
     parent::__construct(x, s)
     
