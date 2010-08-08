@@ -101,4 +101,30 @@ function process_ints(ints)
 }}}
         </td>
     </tr>
+    
+    <tr>
+        <td valign="top" cellpadding="0">
+{{{
+b = switch myvar
+    case "zoo"
+        <- "uber"
+    default
+        <- "nice"
+echo b
+}}}
+        </td>
+        <td valign="top" cellpadding="0">
+{{{
+switch ($myvar) {
+    case "zoo":
+        $b = "uber";
+        break;
+    default:
+        $b = "nice";
+        break;
+}
+echo $b;
+}}}
+        </td>
+    </tr>
 </table>
