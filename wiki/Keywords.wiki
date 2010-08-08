@@ -106,7 +106,8 @@
 
 = Identifiers used inside a class =
 || *PHP*  || *Snow*      || * Comment * ||
-|| self   || _unchanged_ || ||
+|| $this. || . || `$this` is removed for brevity ||
+|| self:: || :: || `self ` is removed for brevity ||
 || parent || _unchanged_ || ||
 
 = References =

@@ -6,7 +6,7 @@ Classes an objects works the same way as in PHP, but the syntax has been dried
 up and made a lot faster to type and easier to look at.
 
 Some things have new names:
- * The single arrow `->` is replaced by the comma `.`.
+ * The single arrow `->` is replaced by the comma '`.`'.
  * `this.` is now just a single prefixing comma '`.`'.
  * `self::` is now just two prefixing colons `::`.
  * `public`, `protected`, `private`, `static` and `const` have been shortened to `pub`, `pro`, `pri`, `sta` and `con`.
