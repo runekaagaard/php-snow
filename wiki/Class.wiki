@@ -185,7 +185,7 @@ class Ftp
 
     @str user
     @str pass
-    fn login: return ftp_login(.conn user pass)
+    fn login: <- ftp_login(.conn user pass)
 
     @str local
     @str remote
@@ -209,20 +209,20 @@ class Ftp
         !%->empty
     fn file_exists
         list = ftp_nlist(.conn file->dirname)
-        return list->in_array(file->basename)
+        <- list->in_array(file->basename)
 
     # Determine transfermode to use.
     @str file
     fn get_trans_mode
         for ext in .ascii_types
-            return ::OPT_TRANS_ASCII when file->substr(-ext->strlen) == ext
+            <- ::OPT_TRANS_ASCII when file->substr(-ext->strlen) == ext
         for ext in .binary_types
-            return ::OPT_TRANS_BINARY when file->substr(-ext->strlen) == ext
-        return default_transmode
+            <- ::OPT_TRANS_BINARY when file->substr(-ext->strlen) == ext
+        <- default_transmode
 
-    fn close: return ftp_close(.conn)
+    fn close: <- ftp_close(.conn)
 
-    fn __to_string: return "Ftp connection to {.host} on port {.port}."
+    fn __to_string: <- "Ftp connection to {.host} on port {.port}."
 
 try
     ftp = Ftp("my.host")
