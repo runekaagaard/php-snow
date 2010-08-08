@@ -75,8 +75,9 @@ class Foo extends Bar
         flo y = get_my_float(.x)
     pri int privar = 23
     
-    echo "pure as snow"
     parent::__construct(x, s)
+    
+    pri fn output: echo "pure as snow"
     
 }}}
 </td>
@@ -99,8 +100,11 @@ class Foo {
         $this->foo = 2 * $x * self::BAZ;
         $this->bar = $this->foo * 2;
         $this->y = get_my_float($this->x);
-        echo "pure as snow";
         parent::__construct($x, $s);
+    }
+    
+    private function output() {
+        echo "pure as snow";
     }
 }
 }}}
