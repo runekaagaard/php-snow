@@ -1,4 +1,3 @@
-ls
 #summary Description of classes and objects.
 <wiki:toc/>
 
@@ -34,18 +33,13 @@ and `sta` still can.
         <td><strong>Snow</strong></td>
         <td><strong>PHP</strong></td>
     </tr>
-    <!--
-    <tr>
-        <td><strong>Second headline</strong></td>
-        <td><strong>Second headline</strong></td>
-    </tr>
-    -->
+    
 <wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar , ::myconst</code></td>
+.num = .min - 2</code></td>
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
-echo $this->myvar . self::myconst;</code></td></tr>
+$this->num = $this->min - 2;</code></td></tr>
 
 <wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
@@ -56,11 +50,38 @@ echo $this->myvar . self::myconst;</code></td></tr>
 
 <wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar , ::myconst</code></td>
+@int x
+@str s
+class Foo
+    con
+        int BAZ = 35
+    pub
+        int foo = 2 * x * ::BAZ
+        int bar = .foo * 2
+        str s = s
+    pro
+        int x = x
+    pri int privar = 23</code></td>
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
-echo $this->myvar . self::myconst;</code></td></tr>
-
+@int x
+@str s
+// Docblocks omitted.
+class Foo {
+    const BAZ = 35
+    public foo = 2 * x * ::BAZ
+    public bar = .foo * 2
+    public s = s
+    protected x = x
+    private privar = 23
+    
+    public function __construct($x, $s) {
+        $this->x = $x;
+        $this->s = $s;
+        $this->foo = 2 * $x * self::BAZ;
+        $this->bar = $this->foo * 2;
+    }
+}</code></td></tr>
 </table>
 
 == Examples ==
