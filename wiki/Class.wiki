@@ -53,15 +53,24 @@ echo $this->myvar . self::myconst;</code></td></tr>
 {{{
 @int x
 @str s
-class Foo
+class Foo extends Bar
     con
         int BAZ = 35
     pub
         int foo = 2 * x * ::BAZ
         int bar = .foo * 2
         str s = s
-    pro int x = x
+    pro
+        int x = x
+        float y = get_my_float(.x)
     pri int privar = 23
+    
+    # Constructor
+        All after the "con", "pub", "pro", "pri" group and before the first
+        method is compiled to the constructor.
+    echo "pure as snow"
+    parent::__construct(x, s)
+    
 }}}
 </td>
 <wiki:comment>PHP example</wiki:comment>
@@ -74,6 +83,7 @@ class Foo {
     public bar;
     public s;
     protected x;
+    protected y;
     private privar = 23
     
     public function __construct($x, $s) {
@@ -81,6 +91,9 @@ class Foo {
         $this->s = $s;
         $this->foo = 2 * $x * self::BAZ;
         $this->bar = $this->foo * 2;
+        $this->y = get_my_float($this->x);
+        echo "pure as snow";
+        parent::__construct($x, $s);
     }
 }
 }}}
