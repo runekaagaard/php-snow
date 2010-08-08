@@ -10,8 +10,6 @@ a = {'a':1 'b':2 'c':3}
 b = foo(1 bar() 3)
 # Function / Method definition.
 fn foo (x y z)
-# Multiple connotations on a single line. 
-@get @set
 # Multiple variable assignment.
 a b = 3 4
 }}}
