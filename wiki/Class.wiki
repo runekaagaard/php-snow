@@ -12,8 +12,18 @@ Some things have new names:
  * `public`, `protected`, `private`, `static` and `const` have been shortened to `pub`, `pro`, `pri`, `sta` and `con`.
  * Magic methods `__callStatic`, and `__toString` are now `__call_static`, and `__to_string`
 
-`pub`, `pro`, `pri` and `con` are no longer declared for each class variable but 
-are only used a maximum of one each with variables grouped below.
+`con`, `pub`, `pro` and `pri` are no longer declared for each class variable but 
+are only used a maximum of one each with variables grouped below. The order of
+them must be `con`, `pub`, `pro` and `pri` and other orderings will throw a
+compile error.
+
+Nested below `con`, `pub`, `pro` and `pri` keywords are an optional `sta` level.
+Below that are groups of variable names nested under similar types. The types
+are written without the "@" like `str`, `flo`, etc.
+
+Common for the grouping of `con`, `pub`, `pro`, `pri`, `sta`, variable type and
+variable name is that when their is only one of a subgroup, the content below
+is moved to the same line.
 
 Class variable declarations have access to constructor arguments, e.g. `myvar` 
 and each other, e.g. `.myvar`. Circular dependencies will throw a compile error.
@@ -62,7 +72,7 @@ class Foo extends Bar
         str s = s
     pro
         int x = x
-        float y = get_my_float(.x)
+        flo y = get_my_float(.x)
     pri int privar = 23
     
     echo "pure as snow"
