@@ -1,0 +1,42 @@
+#summary Overview of some special operators defined in Snow
+#labels operators
+<wiki:toc/>
+
+== Introduction ===
+Snow defines some special operators which are outlined in this document.
+
+== 'Apply' operator (`*`) ==
+The apply operator tells the parser to apply a function to some variable.
+
+=== Definition ===
+
+{{{
+function(*variable)
+*variable->function()
+}}}
+
+=== Matrix ===
+<table border="1" cellpadding="5">
+    <tr>
+        <td><strong>Snow</strong></td>
+        <td><strong>PHP</strong></td>
+    </tr>
+    <tr>
+        <td>`*`string->trim</td>
+        <td>$string = trim($string)</td>
+    </tr>
+</table>
+
+=== Examples ===
+
+=== 1) ===
+Introduction example one.
+{{{
+ar1 = ["el1" "el2"]
+ar2 = ["el3" "el4"]
+*ar1->array_merge(ar2)
+}}}
+Output:
+{{{
+# ar1 == ["el1" "el2" "el3" "el4"]
+}}}
