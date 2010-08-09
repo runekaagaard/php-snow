@@ -7,3 +7,4 @@
  * [Return]
  * [Class]
  * [MoSCoW]
+ * [SpecialOperators]
