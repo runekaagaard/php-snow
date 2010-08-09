@@ -11,8 +11,7 @@ The apply operator tells the parser to apply a function to some variable.
 === Definition ===
 
 {{{
-function(*variable)
-*variable->function()
+<apply-operator> ::= "*"
 }}}
 
 === Matrix ===
