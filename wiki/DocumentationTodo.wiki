@@ -1,0 +1,94 @@
+#summary Todo of whats left to document.
+<wiki:toc/>
+
+{{{
+The use of comma 
+        100% 
+        Nice documentation at [1]. 
+Control structures 
+        95% 
+        Todo: Final fixups.
+For Loop 
+        100% 
+        Long discussion at [4] and documention at [5]. 
+The Basics 
+        65% 
+        Take the still valid bits from [6] and [13] and put in the wiki. 
+The use of % as a magic variable [7]. 
+        90% 
+        My view: 
+                I like it but I would like to change <% snowcode %> to <? snowcode ?> to 
+                avoid any future problems with %>3 and 3<%<10. 
+        Todo: 
+                We need to agree on this and write the documentation. 
+Grouping of similar type of class variables [8]. 
+        100% 
+Implicit duck typing [9]. 
+        Off the table for now?
+Support for snow as a template language [10] 
+        40% 
+        Todo: 
+                Should be discussed at [10], a decision should be made and documentation 
+                should be written. 
+Import keyword [12] 
+        60% 
+        My view: 
+                I like but its going to have an entry in the "Project settings file" 
+                because each project have different ways of including files. 
+        Todo: 
+                We need to agree on this and write the documentation. 
+Project settings file 
+        0% 
+        Should we have a file with compiler settings specific to the project? 
+        My view: 
+                I think so. 
+        Todo: 
+                Should be discussed, a decision should be made and documentation 
+                should be written. 
+Postfix '||'s 
+        50% 
+        Todo: 
+                Should be discussed at [14], a decision should be made and documentation 
+                should be written. 
+Functions with inner functions [15] 
+        99% 
+        My view: 
+                This is partially solved with lambda functions in 5.3 so drop it. 
+        Todo: 
+                We should agree on dropping this feature. 
+Multiple assignments [16] 
+        75% 
+        My view: 
+                I like this. 
+        Todo: 
+                We need to agree on this and write the documentation. 
+String interpolation and variable variables [17] 
+        75% 
+        Todo: 
+                Documentation should be written. 
+Receiver functions 
+        75% 
+        Todo: 
+                Documentation should be written. 
+Classes 
+        95% 
+        Todo: Final fixups.
+}}}
+= References =
+* [1] http://code.google.com/p/php-snow/wiki/Comma         
+* [2] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/e583e967f1edd41b&usg=AFQjCNGJ5wzwz_fk-LaQ9EhBJ6Kxb0JXLQ
+* [3] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/f1e1886f4f857b14&usg=AFQjCNFyqaJyzwFtI19ngYNb2qkzBRhTww
+* [4] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/cc0fbd997a1323e7/1c4cb9dd39758d65&usg=AFQjCNGCUyueMH3vRK4FkRvRl5XWPumDnA
+* [5] http://www.google.com/url?sa=D&q=http://code.google.com/p/php-snow/wiki/ForLoop&usg=AFQjCNFb3eQBqyFfVKnEhurED372s5Cqog
+* [6] http://www.google.com/url?sa=D&q=http://code.google.com/p/php-snow/source/browse/trunk/docs/snow.snow&usg=AFQjCNGjekYI3PQoQfvRhidXSjtlksDAlg
+* [7] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/d87c04151e042159&usg=AFQjCNERP4IVRtdYVIghfJk9JUvfK_HDhw
+* [8] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/4ab330872ad59e6b&usg=AFQjCNF8Cys5IBd9iTi2Cv1JnrEbD9d4_g
+* [9] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/789bf1e6ba42afc9&usg=AFQjCNFiee7y1WrxBLfcKSse8HFrNBRmzA
+* [10] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/0977d6dacc7a69ac&usg=AFQjCNH4X7xdp2tfHFw1qZM0SaYkEngAHA
+* [11] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/498e082d7c7cef97&usg=AFQjCNE9mxcYrziBRov3iIEG9x9qgNPdqw
+* [12] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/c0df17d38bd4a7ab&usg=AFQjCNGYScpPQn-K7yncmKMzNWQS7Oeq0A
+* [13] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/1e09b0e51bbb5cba&usg=AFQjCNHTihKw3_DaJaaZ7aODjuSe0QeVow
+* [14] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/81385fbe1cf076ed&usg=AFQjCNHXjOehLRiudDRp-AQu0Up6QF3Utw
+* [15] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/da00d9eee116362c&usg=AFQjCNGt4gHEw-XqAIHZTkfGE7t3eBSFtg
+* [16] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/db33a1dd3734d5b2&usg=AFQjCNHcil0LDd9PEvthN84v5hcmF01-Yw
+* [17] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/1016f6a460d7c6d7&usg=AFQjCNFgdBFG08huqDiFgACBM2BlF_flpg
