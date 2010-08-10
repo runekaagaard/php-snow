@@ -77,20 +77,20 @@ Classes
         Todo: Final fixups.
 }}}
 = References =
- * [[1]] [Comma]
- * [2] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/e583e967f1edd41b&usg=AFQjCNGJ5wzwz_fk-LaQ9EhBJ6Kxb0JXLQ
- * [3] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/f1e1886f4f857b14&usg=AFQjCNFyqaJyzwFtI19ngYNb2qkzBRhTww
- * [4] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/cc0fbd997a1323e7/1c4cb9dd39758d65&usg=AFQjCNGCUyueMH3vRK4FkRvRl5XWPumDnA
- * [5] http://www.google.com/url?sa=D&q=http://code.google.com/p/php-snow/wiki/ForLoop&usg=AFQjCNFb3eQBqyFfVKnEhurED372s5Cqog
- * [6] http://www.google.com/url?sa=D&q=http://code.google.com/p/php-snow/source/browse/trunk/docs/snow.snow&usg=AFQjCNGjekYI3PQoQfvRhidXSjtlksDAlg
- * [7] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/d87c04151e042159&usg=AFQjCNERP4IVRtdYVIghfJk9JUvfK_HDhw
- * [8] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/4ab330872ad59e6b&usg=AFQjCNF8Cys5IBd9iTi2Cv1JnrEbD9d4_g
- * [9] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/789bf1e6ba42afc9&usg=AFQjCNFiee7y1WrxBLfcKSse8HFrNBRmzA
- * [10] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/0977d6dacc7a69ac&usg=AFQjCNH4X7xdp2tfHFw1qZM0SaYkEngAHA
- * [11] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/498e082d7c7cef97&usg=AFQjCNE9mxcYrziBRov3iIEG9x9qgNPdqw
- * [12] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/c0df17d38bd4a7ab&usg=AFQjCNGYScpPQn-K7yncmKMzNWQS7Oeq0A
- * [13] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/1e09b0e51bbb5cba&usg=AFQjCNHTihKw3_DaJaaZ7aODjuSe0QeVow
- * [14] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/81385fbe1cf076ed&usg=AFQjCNHXjOehLRiudDRp-AQu0Up6QF3Utw
- * [15] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/da00d9eee116362c&usg=AFQjCNGt4gHEw-XqAIHZTkfGE7t3eBSFtg
- * [16] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/db33a1dd3734d5b2&usg=AFQjCNHcil0LDd9PEvthN84v5hcmF01-Yw
- * [17] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/1016f6a460d7c6d7&usg=AFQjCNFgdBFG08huqDiFgACBM2BlF_flpg
+ * 1 [Comma]
+ * 2 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/e583e967f1edd41b&usg=AFQjCNGJ5wzwz_fk-LaQ9EhBJ6Kxb0JXLQ
+ * 3 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/f1e1886f4f857b14&usg=AFQjCNFyqaJyzwFtI19ngYNb2qkzBRhTww
+ * 4 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/cc0fbd997a1323e7/1c4cb9dd39758d65&usg=AFQjCNGCUyueMH3vRK4FkRvRl5XWPumDnA
+ * 5 http://www.google.com/url?sa=D&q=http://code.google.com/p/php-snow/wiki/ForLoop&usg=AFQjCNFb3eQBqyFfVKnEhurED372s5Cqog
+ * 6 http://www.google.com/url?sa=D&q=http://code.google.com/p/php-snow/source/browse/trunk/docs/snow.snow&usg=AFQjCNGjekYI3PQoQfvRhidXSjtlksDAlg
+ * 7 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/d87c04151e042159&usg=AFQjCNERP4IVRtdYVIghfJk9JUvfK_HDhw
+ * 8 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/4ab330872ad59e6b&usg=AFQjCNF8Cys5IBd9iTi2Cv1JnrEbD9d4_g
+ * 9 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/789bf1e6ba42afc9&usg=AFQjCNFiee7y1WrxBLfcKSse8HFrNBRmzA
+ * 10 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/0977d6dacc7a69ac&usg=AFQjCNH4X7xdp2tfHFw1qZM0SaYkEngAHA
+ * 11 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/498e082d7c7cef97&usg=AFQjCNE9mxcYrziBRov3iIEG9x9qgNPdqw
+ * 12 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/c0df17d38bd4a7ab&usg=AFQjCNGYScpPQn-K7yncmKMzNWQS7Oeq0A
+ * 13 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/1e09b0e51bbb5cba&usg=AFQjCNHTihKw3_DaJaaZ7aODjuSe0QeVow
+ * 14 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/81385fbe1cf076ed&usg=AFQjCNHXjOehLRiudDRp-AQu0Up6QF3Utw
+ * 15 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/da00d9eee116362c&usg=AFQjCNGt4gHEw-XqAIHZTkfGE7t3eBSFtg
+ * 16 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/db33a1dd3734d5b2&usg=AFQjCNHcil0LDd9PEvthN84v5hcmF01-Yw
+ * 17 http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/1016f6a460d7c6d7&usg=AFQjCNFgdBFG08huqDiFgACBM2BlF_flpg
