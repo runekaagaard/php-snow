@@ -77,7 +77,7 @@ Classes
         Todo: Final fixups.
 }}}
 = References =
- * [1] http://code.google.com/p/php-snow/wiki/Comma
+ * [[1]] [Comma]
  * [2] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/e583e967f1edd41b&usg=AFQjCNGJ5wzwz_fk-LaQ9EhBJ6Kxb0JXLQ
  * [3] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/f1e1886f4f857b14&usg=AFQjCNFyqaJyzwFtI19ngYNb2qkzBRhTww
  * [4] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/cc0fbd997a1323e7/1c4cb9dd39758d65&usg=AFQjCNGCUyueMH3vRK4FkRvRl5XWPumDnA
@@ -94,6 +94,3 @@ Classes
  * [15] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/da00d9eee116362c&usg=AFQjCNGt4gHEw-XqAIHZTkfGE7t3eBSFtg
  * [16] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/db33a1dd3734d5b2&usg=AFQjCNHcil0LDd9PEvthN84v5hcmF01-Yw
  * [17] http://www.google.com/url?sa=D&q=http://groups.google.com/group/php-snow-devel/browse_thread/thread/1016f6a460d7c6d7&usg=AFQjCNFgdBFG08huqDiFgACBM2BlF_flpg
-
-
-http://www.google.com/
