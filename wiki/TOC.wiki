@@ -1,11 +1,12 @@
 #summary Table of contents.
 #labels Featured
+ * [LanguageBasics Language basics]
  * [Keywords]
  * [Comma]
- * [ControlStructures]
- * [ForLoop]
+ * [ControlStructures Control structures]
+ * [ForLoop For loop]
  * [Return]
  * [Class]
- * [SpecialOperators]
+ * [SpecialOperators Special operators]
  * [MoSCoW]
- * [DocumentationTodo]
+ * [DocumentationTodo Documentation TODO]

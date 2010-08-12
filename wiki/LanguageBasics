@@ -1,0 +1,106 @@
+#summary Language basics
+#labels Featured
+<wiki:toc/>
+
+=Basics=
+
+==Toggling Snow/HTML mode==
+All Snow files are implied to contain only code. To escape Snow mode you can use `%>` and subsequently `<%` to enter Snow mode again.
+
+Example:
+
+`example.snow`
+{{{
+# This is snow code
+%> 
+Now we're talking HTML!
+<%
+print 'And back to snow again...'
+}}}
+
+The details of using Snow as a template language are not yet defined.
+
+==Instruction separation==
+In Snow, instructions are separated by a newline (\n, \r or \r\n depending on system).
+
+Valid syntax example:
+{{{
+print "Hello, "
+print "World!\n"
+}}}
+Invalid syntax example:
+{{{
+print "Hello, " print "World!\n"
+}}}
+
+==Quotation==
+Snow uses PHP's default quotation rules:
+ * Single quotes (') don't have variable expansion
+ * Double quotes (") have variable expansion
+ * Heredoc (<<<LABEL or <<<"LABEL") have variable expansion
+ * Nowdoc (<<<'LABEL') doesn't have variable expansion
+
+Backslash (\) is the universal escape character.
+
+Details can be viewed at: http://php.net/manual/en/language.types.string.php
+
+
+=Functions=
+
+Like in most languages, in Snow functions are basic building blocks.
+
+==Calling functions==
+
+There are several ways to make a function call in Snow.
+
+===Conventional method===
+
+Definition:
+{{{
+[ <identifier> "=" ] <function-identifier> "(" [ <parameter-list> ] ")"
+<parameter-list> ::= ( <identifier> | <constant> ) ( [ " " ( <identifier> | <constant> ) ] )*
+}}}
+
+Some examples:
+
+Examples without return value:
+{{{
+someFunction()          # function call without specifying parameters
+someOtherFunction(42)   # function call with constant parameter
+a = 42                  # assign the value `42` to the variable `a` 
+someOtherFunction(a)    # pass `a` as parameter to function `someOtherFunction`
+}}}
+
+Examples with return value:
+{{{
+a = someFunction()          # call function `someFunction` and assign its return value to variable `a`
+b = someOtherFunction(42)
+}}}
+
+As you can see, even when no parameters are specified, the trailing parenthesis are mandatory.
+
+===Receiver functions===
+
+A common paradigm in Snow is to use so-called `receiver functions`.
+It is not so much the functions themselves that differ from normal functions but their way of being called.
+
+Definition:
+{{{
+[ <identifier> "=" ] ( <identifier> | <constant> ) "->" <function-identifier> [ "(" [ <parameter-list> ] ")" ]
+}}}
+
+Examples:
+{{{
+str = "Hello, World!\n"
+str = str->strtolower       # call the function `strtolower` with parameter `str` and assign the result to `str`
+                                As there are no extra parameters specified, the parentheses can be omitted
+len = str->strlen           # assign the length of `str` to `len`
+hello = str->substr(0 5)    # assign the characters 0-5 of `str` to `hello`
+}}}
+The above examples can be written in the conventional as follows:
+{{{
+str = "Hello, World!\n"
+str = strtolower(str)
+len = strlen(str)
+hello = substr(str 0 5)
+}}}
