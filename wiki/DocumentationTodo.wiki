@@ -10,9 +10,6 @@ The use of comma
 Control structures 
         95% 
         Todo: Final fixups.
-For Loop 
-        100% 
-        Long discussion at [4] and documention at [5]. 
 The Basics 
         65% 
         Take the still valid bits from [6] and [13] and put in the wiki. 
@@ -23,10 +20,6 @@ The use of % as a magic variable [7].
                 avoid any future problems with %>3 and 3<%<10. 
         Todo: 
                 We need to agree on this and write the documentation. 
-Grouping of similar type of class variables [8]. 
-        100% 
-Implicit duck typing [9]. 
-        Off the table for now?
 Support for snow as a template language [10] 
         40% 
         Todo: 
@@ -80,12 +73,8 @@ Classes
  * 1 [Comma]
  * 2 http://groups.google.com/group/php-snow-devel/browse_thread/thread/e583e967f1edd41b
  * 3 http://groups.google.com/group/php-snow-devel/browse_thread/thread/f1e1886f4f857b14
- * 4 http://groups.google.com/group/php-snow-devel/browse_thread/thread/cc0fbd997a1323e7/1c4cb9dd39758d65
- * 5 [ForLoop]
  * 6 http://code.google.com/p/php-snow/source/browse/trunk/docs/snow.snow
  * 7 http://groups.google.com/group/php-snow-devel/browse_thread/thread/d87c04151e042159
- * 8 http://groups.google.com/group/php-snow-devel/browse_thread/thread/4ab330872ad59e6b
- * 9 http://groups.google.com/group/php-snow-devel/browse_thread/thread/789bf1e6ba42afc9
  * 10 http://groups.google.com/group/php-snow-devel/browse_thread/thread/0977d6dacc7a69ac
  * 11 http://groups.google.com/group/php-snow-devel/browse_thread/thread/498e082d7c7cef97
  * 12 http://groups.google.com/group/php-snow-devel/browse_thread/thread/c0df17d38bd4a7ab
