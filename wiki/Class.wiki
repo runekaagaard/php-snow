@@ -6,8 +6,8 @@ Classes an objects works the same way as in PHP, but the syntax has been dried
 up and made a lot faster to type and easier to look at.
 
 Some things have new names:
- * The single arrow `->` is replaced by the comma '`.`'.
- * `this.` is now just a single prefixing comma '`.`'.
+ * The single arrow `->` is replaced by the dot '`.`'.
+ * `this.` is now just a single prefixing dot '`.`'.
  * `self::` is now just two prefixing colons `::`.
  * `public`, `protected`, `private`, `static` and `const` have been shortened to `pub`, `pro`, `pri`, `sta` and `con`.
  * Magic methods `__callStatic`, and `__toString` are now `__call_static`, and `__to_string`
@@ -22,7 +22,7 @@ Below that are groups of variable names optionally nested under similar types.
 The types are written without the "@" like `str`, `flo`, etc.
 
 Common for the grouping of `con`, `pub`, `pro`, `pri`, `sta`, variable type and
-variable name is that when their is only one of a subgroup, the content below
+variable name is that when there is only one of a subgroup, the content below
 is moved to the same line.
 
 Class variable declarations have access to constructor arguments, e.g. `myvar` 
@@ -33,6 +33,8 @@ The constructor `__construct()` method is removed and instead constructor code
 is placed below the `pub`, `pro`, `pri` and `con` keywords and above the first
 method. The arguments to the constructor are moved above the class definition
 and have the same syntax as a normal function.
+The destructor method `__destruct()` is unchanged, but should be the last
+method declaration in the class. Any other location will throw a compile error.
 
 The default `pub` keyword can not be used in front of methods but `pro`, `pri`,
 and `sta` still can.
@@ -166,22 +168,17 @@ class Ftp
         OPT_TRANS_ASCII = FTP_ASCII
         OPT_TRANS_BINARY = FTP_BINARY
         OPT_TRANS_AUTO = 3
-    pub
-        str
-            host = host
-            port = port
-        int timeout = timeout
     pro
         arr
             ascii_types = ["text" "csv"]
             binary_types = ["jpg" "jpeg" "gif" "psd"]
         int default_transmode = ::OPT_TRANS_ASCII
-        ConnectionResource conn # Instance of the class ConnectionResource.
+        res conn
 
     # Constructor.
         Tries to connect to server or throws an exception.
     .conn = ftp_connect(host port timeout) or throw Exception(
-        "Couldn't connect to host '%host'")
+        "Couldn't connect to host '{host}'")
 
     @str user
     @str pass
@@ -189,27 +186,26 @@ class Ftp
 
     @str local
     @str remote
-    @int trans_mode
+    @int trans_mode = ::OPT_TRANS_AUTO
     fn put
         trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
         ftp_put(.conn local remote trans_mode) or throw Exception(
-            "Couldn't get file '%remote'")
+            "Couldn't get file '{remote}'")
 
     @str local
     @str remote
-    @int trans_mode
+    @int trans_mode = ::OPT_TRANS_AUTO
     fn get
         trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
         ftp_get(.conn local remote trans_mode) or throw Exception(
-            "Couldn't get file '%remote'")
+            "Couldn't get file '{remote}'")
 
     # Checks whether a file exists on the remote side.
     @str file
         # The filename to check for.
         !%->empty
     fn file_exists
-        list = ftp_nlist(.conn file->dirname)
-        <- list->in_array(file->basename)
+        <- .conn->ftp_nlist(file->dirname)->in_array(file->basename)
 
     # Determine transfermode to use.
     @str file
@@ -221,8 +217,6 @@ class Ftp
         <- default_transmode
 
     fn close: <- ftp_close(.conn)
-
-    fn __to_string: <- "Ftp connection to {.host} on port {.port}."
 
 try
     ftp = Ftp("my.host")
