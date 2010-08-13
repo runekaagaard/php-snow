@@ -138,8 +138,8 @@ The order must be `con`, `pub`, `pro` and `pri`.
 class Foo
     pub
         str
-            a = b , "abc"
-            b = a , "abc"
+            a = .b , "abc"
+            b = .a , "abc"
 }}}
 </td>
 <wiki:comment>PHP example</wiki:comment>
