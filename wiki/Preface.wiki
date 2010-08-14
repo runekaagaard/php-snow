@@ -1,0 +1,30 @@
+#labels Featured
+<wiki:toc/>
+
+=This page is a Stub=
+
+So, what exactly _is_ Snow? How does it work? And why do it need it?
+
+==What Snow is==
+
+Snow is a metalanguage used for [http://en.wikipedia.org/wiki/Metaprogramming Metaprogramming] [http://www.php.net/ PHP]. 
+If you haven't read the whole wikipage, this is what it boils down to:
+ Metaprogramming is the writing of computer programs that write or manipulate other programs (or themselves) as their data, or that do part of the work at compile time that would otherwise be done at runtime. In many cases, this allows programmers to get more done in the same amount of time as they would take to write all the code manually, or it gives programs greater flexibility to efficiently handle new situations without recompilation.
+
+ Source: Wikipedia
+
+Basically what it boils down to is that we have created a new syntax for a metalanguage that compiles down to PHP.
+The main objectives designing Snow are:
+ * De-ugly-fy PHP's syntax
+ * Create a syntax that allows for greater expressive power
+ * Create a syntax that is more concise
+
+How did we go about doing that? We looked at several languages we deem interesting. Most notably: [http://www.python.org/ Python], [http://www.ruby-lang.org/en/ Ruby], [http://www.scala-lang.org/ Scala] and [http://golang.org/ Go].
+We took bits and pieces of each them and created a syntax that is miles away from PHP's while still being true to it's nature so as not to undermine the PHP paradigm. 
+
+The best part of using Snow is that it still fits in the PHP paradigm, the complete PHP landscape is still applicable (think serverstack, documentation, community etc.), there is just one thin layer added which is the Snow compiler.
+
+==Why we have created Snow==
+There are several reasons why we have created Snow. The first and foremost being that we think PHP's syntax is ugly and it makes our eyes bleed.
+Sure, the language itself is great, it has a very gradual learning curve while still allowing for serious webdevelopment.
+
