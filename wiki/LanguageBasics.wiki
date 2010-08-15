@@ -32,6 +32,28 @@ Invalid syntax example:
 print "Hello, " print "World!\n"
 }}}
 
+==Whitespace==
+Snow, as does python, operates with significant whitespace, meaning that
+the grouping of code is managed by indenting/dedenting and not by using brackets
+"{}". The indentation size is fixed to 4 spaces and all lines must start with
+a number of spaces to which 4 is a divisor.
+
+Valid syntax example:
+{{{
+if a = 42
+    echo "a is 42"
+else
+    echo "a is wrong"
+}}}
+Invalid syntax example:
+{{{
+if a = 42
+   echo "a is 42"
+else
+   echo "a is wrong"
+}}}
+
+
 ==Quotation==
 Snow uses PHP's default quotation rules:
  * Single quotes (') don't have variable expansion
