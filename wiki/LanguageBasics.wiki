@@ -64,7 +64,7 @@ Variable variables are defined by enclosing the variable in curly brackets:
 {{{
 fn myfunc: return 42
 a = "myfunc"
-echo {a} # Echos '42'.
+echo {a}() # Echos '42'.
 }}}
 
 == Constants ==
