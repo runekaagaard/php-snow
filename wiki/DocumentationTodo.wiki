@@ -2,36 +2,15 @@
 <wiki:toc/>
 
 == Todo ==
-{{{
-The Basics 
-        65% 
-        Take the still valid bits from [6] and [13] and put in the wiki. 
-The use of % as a magic variable [7]. 
-        90% 
-        My view: 
-                I like it but I would like to change <% snowcode %> to <? snowcode ?> to 
-                avoid any future problems with %>3 and 3<%<10. 
-        Todo: 
-                We need to agree on this and write the documentation.
-Project settings file 
-        0% 
-        Should we have a file with compiler settings specific to the project? 
-        My view: 
-                I think so. 
-        Todo: 
-                Should be discussed, a decision should be made and documentation 
-                should be written.
-String interpolation and variable variables [17] 
-        75% 
-        Todo: 
-                Documentation should be written.
-}}}
+ * The use of % as a magic variable [7](90%): Decide if we would like to change <% snowcode %> to <? snowcode ?> to avoid any future problems with %>3 and 3<%<10 first. Then write the docs.
 
 == Done ==
  * The use of comma: Nice documentation at [1].
  * Control structures.
  * Receiver functions.
  * Classes.
+ * The Basics: [6] and [13].
+ * String interpolation and variable variables [17].
 
 == Suspended ==
  * Support for snow as a template language [10].
@@ -39,7 +18,7 @@ String interpolation and variable variables [17]
  * Postfix '||'s [14].
  * Functions with inner functions [15].
  * Multiple assignments [16].
-
+ * Project settings file, a file with compiler settings specific to the project? We will have to fake it with this one in the beginning.
 = References =
  * 1 [Comma]
  * 2 http://groups.google.com/group/php-snow-devel/browse_thread/thread/e583e967f1edd41b
