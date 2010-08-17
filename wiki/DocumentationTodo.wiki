@@ -1,15 +1,8 @@
 #summary Todo of whats left to document.
 <wiki:toc/>
 
-This page is a stub.
+= Todo =
 
-{{{
-The use of comma 
-        100% 
-        Nice documentation at [1]. 
-Control structures 
-        95% 
-        Todo: Final fixups.
 The Basics 
         65% 
         Take the still valid bits from [6] and [13] and put in the wiki. 
@@ -20,12 +13,12 @@ The use of % as a magic variable [7].
                 avoid any future problems with %>3 and 3<%<10. 
         Todo: 
                 We need to agree on this and write the documentation. 
-Support for snow as a template language [10] 
+
         40% 
         Todo: 
                 Should be discussed at [10], a decision should be made and documentation 
                 should be written. 
-Import keyword [12] 
+
         60% 
         My view: 
                 I like but its going to have an entry in the "Project settings file" 
@@ -40,18 +33,7 @@ Project settings file
         Todo: 
                 Should be discussed, a decision should be made and documentation 
                 should be written. 
-Postfix '||'s 
-        50% 
-        Todo: 
-                Should be discussed at [14], a decision should be made and documentation 
-                should be written. 
-Functions with inner functions [15] 
-        99% 
-        My view: 
-                This is partially solved with lambda functions in 5.3 so drop it. 
-        Todo: 
-                We should agree on dropping this feature. 
-Multiple assignments [16] 
+ 
         75% 
         My view: 
                 I like this. 
@@ -60,15 +42,22 @@ Multiple assignments [16]
 String interpolation and variable variables [17] 
         75% 
         Todo: 
-                Documentation should be written. 
-Receiver functions 
-        75% 
-        Todo: 
-                Documentation should be written. 
-Classes 
-        95% 
-        Todo: Final fixups.
+                Documentation should be written.
 }}}
+
+= Done =
+ * The use of comma: Nice documentation at [1].
+ * Control structures.
+ * Receiver functions.
+ * Classes.
+
+= Suspended =
+ * Support for snow as a template language [10].
+ * Import keyword [12].
+ * Postfix '||'s [14].
+ * Functions with inner functions [15].
+ * Multiple assignments [16].
+
 = References =
  * 1 [Comma]
  * 2 http://groups.google.com/group/php-snow-devel/browse_thread/thread/e583e967f1edd41b
