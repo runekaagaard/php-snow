@@ -12,19 +12,7 @@ The use of % as a magic variable [7].
                 I like it but I would like to change <% snowcode %> to <? snowcode ?> to 
                 avoid any future problems with %>3 and 3<%<10. 
         Todo: 
-                We need to agree on this and write the documentation. 
-
-        40% 
-        Todo: 
-                Should be discussed at [10], a decision should be made and documentation 
-                should be written. 
-
-        60% 
-        My view: 
-                I like but its going to have an entry in the "Project settings file" 
-                because each project have different ways of including files. 
-        Todo: 
-                We need to agree on this and write the documentation. 
+                We need to agree on this and write the documentation.
 Project settings file 
         0% 
         Should we have a file with compiler settings specific to the project? 
