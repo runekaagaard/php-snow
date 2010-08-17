@@ -1,8 +1,8 @@
 #summary Todo of whats left to document.
 <wiki:toc/>
 
-= Todo =
-
+== Todo ==
+{{{
 The Basics 
         65% 
         Take the still valid bits from [6] and [13] and put in the wiki. 
@@ -32,26 +32,20 @@ Project settings file
                 I think so. 
         Todo: 
                 Should be discussed, a decision should be made and documentation 
-                should be written. 
- 
-        75% 
-        My view: 
-                I like this. 
-        Todo: 
-                We need to agree on this and write the documentation. 
+                should be written.
 String interpolation and variable variables [17] 
         75% 
         Todo: 
                 Documentation should be written.
 }}}
 
-= Done =
+== Done ==
  * The use of comma: Nice documentation at [1].
  * Control structures.
  * Receiver functions.
  * Classes.
 
-= Suspended =
+== Suspended ==
  * Support for snow as a template language [10].
  * Import keyword [12].
  * Postfix '||'s [14].
