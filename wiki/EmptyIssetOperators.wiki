@@ -89,6 +89,24 @@ if (empty($b)) {
 }}}
         </td>
     </tr>
+    <tr>
+<td>
+{{{
+authors['fans'] ??
+    for fan in get_fans()
+        authors['fans']:='' .= "<li>{fan}</li>"
+}}}
+        </td>
+        <td>
+{{{
+if (!isset(authors['fans'])) {
+    authors['fans'] = '';
+    foreach (get_fans() as $fan) {
+        authors['fans'] .= "<li>$fan</li>";
+    }
+}
+}}}        </td>
+    </tr>
 </table>
 
 == Examples ==
