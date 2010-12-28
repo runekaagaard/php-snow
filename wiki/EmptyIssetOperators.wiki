@@ -102,7 +102,7 @@ if (!isset($authors['fans'])) {
     foreach (get_fans() as $fan) {
         $authors['fans'] .= "<li>$fan</li>";
     }
-    $authors['fans'] = '</ul>';
+    $authors['fans'] .= '</ul>';
 }
 }}}        
         </td>
