@@ -92,7 +92,7 @@ if (empty($b)) {
 {{{
 authors['fans'] ??
     for fan in get_fans()
-        authors['fans']:'' .= "<li>{fan}</li>"
+        authors['fans'] .= '' then "<li>{fan}</li>"
 }}}
         </td>
         <td>
