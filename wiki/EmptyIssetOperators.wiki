@@ -55,6 +55,19 @@ if (!isset($a)) {
 }
 }}}
         </td>
+<td>
+{{{
+a = get_stuff('foo') ?! 42
+}}}
+        </td>
+        <td>
+{{{
+$a = get_stuff('foo');
+if (empty($a)) {
+    $a = 42;
+}
+}}}
+        </td>
     </tr>
     <tr>
 <td valign="top" cellpadding="0"><code language="php">Multi
