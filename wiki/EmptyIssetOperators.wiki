@@ -55,6 +55,8 @@ if (!isset($a)) {
 }
 }}}
         </td>
+    </tr>
+    <tr>
 <td>
 {{{
 a = get_stuff('foo') ?! 42
