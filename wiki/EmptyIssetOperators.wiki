@@ -72,11 +72,21 @@ if (empty($a)) {
         </td>
     </tr>
     <tr>
-<td valign="top" cellpadding="0"><code language="php">Multi
-line</code>
+        <td><strong>Flow control</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+<td>
+{{{
+b ?! throw InvalidArgumentException
+}}}
         </td>
-<td valign="top" cellpadding="0"><code language="php">Multi
-line</code>
+        <td>
+{{{
+if (empty($b)) {
+    throw new InvalidArgumentException;
+}
+}}}
         </td>
     </tr>
 </table>
@@ -91,5 +101,5 @@ code
 }}}
 Output:
 {{{
-output
+outputb 
 }}}
