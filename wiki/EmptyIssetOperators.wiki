@@ -1,0 +1,80 @@
+#summary Shortcut operators to common operations with isset() and empty()
+<wiki:toc/>
+
+This page is a stub.
+
+== Introduction ===
+A common pattern in PHP is checking if a variable or the return of a function is set or is empty and then performing assignments or changing the control flow. The operators `??` and `?!` provides shortcuts for this.
+
+
+== Matrix ==
+<table border="1" cellpadding="5">
+    <tr>
+        <td><strong>Snow</strong></td>
+        <td><strong>PHP</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Assignment</strong></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+{{{
+a = b ?? 42
+}}}
+        </td>
+        <td>
+{{{
+$a = isset($b) ? $b : 42;
+}}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+{{{
+a = b ?! 42
+}}}
+        </td>
+        <td>
+{{{
+$a = !empty($b) ? $b : 42;
+}}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+{{{
+a = get_stuff('foo') ?? 42
+}}}
+        </td>
+        <td>
+{{{
+$a = get_stuff('foo');
+if (!isset($a)) {
+    $a = 42;
+}
+}}}
+        </td>
+    </tr>
+    <tr>
+<td valign="top" cellpadding="0"><code language="php">Multi
+line</code>
+        </td>
+<td valign="top" cellpadding="0"><code language="php">Multi
+line</code>
+        </td>
+    </tr>
+</table>
+
+== Examples ==
+Introduction to examples.
+
+=== 1) ===
+Introduction example one.
+{{{
+code
+}}}
+Output:
+{{{
+output
+}}}
