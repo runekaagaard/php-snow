@@ -105,7 +105,8 @@ if (!isset(authors['fans'])) {
         authors['fans'] .= "<li>$fan</li>";
     }
 }
-}}}        </td>
+}}}        
+        </td>
     </tr>
 </table>
 
