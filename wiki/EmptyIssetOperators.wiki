@@ -1,10 +1,8 @@
 #summary Shortcut operators to common operations with isset() and empty()
 <wiki:toc/>
 
-This page is a stub.
-
 == Introduction ===
-A common pattern in PHP is checking if a variable or the return of a function is set or is empty and then performing assignments or changing the control flow. The operators `??` and `?!` provides shortcuts for this.
+A common pattern in PHP is checking if a variable or the return of a function is set or is empty and then performing assignments or changing the control flow. The postfix operators `??` and `?!` provides shortcuts for this. `??` and `?!` resembles `isset()` and `!empty()` respectively.
 
 
 == Matrix ==
@@ -99,26 +97,13 @@ authors['fans'] ??
         </td>
         <td>
 {{{
-if (!isset(authors['fans'])) {
-    authors['fans'] = '';
+if (!isset($authors['fans'])) {
+    $authors['fans'] = '';
     foreach (get_fans() as $fan) {
-        authors['fans'] .= "<li>$fan</li>";
+        $authors['fans'] .= "<li>$fan</li>";
     }
 }
 }}}        
         </td>
     </tr>
 </table>
-
-== Examples ==
-Introduction to examples.
-
-=== 1) ===
-Introduction example one.
-{{{
-code
-}}}
-Output:
-{{{
-outputb 
-}}}
