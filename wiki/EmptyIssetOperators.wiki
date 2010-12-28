@@ -92,16 +92,17 @@ if (empty($b)) {
 {{{
 authors['fans'] ??
     for fan in get_fans()
-        authors['fans'] |= '' % "<li>{fan}</li>"
+        authors['fans'] |= '<ul>' % "<li>{fan}</li>" % '</ul>'
 }}}
         </td>
         <td>
 {{{
 if (!isset($authors['fans'])) {
-    $authors['fans'] = '';
+    $authors['fans'] = '<ul>';
     foreach (get_fans() as $fan) {
         $authors['fans'] .= "<li>$fan</li>";
     }
+    $authors['fans'] = '</ul>';
 }
 }}}        
         </td>
