@@ -1,5 +1,4 @@
-
-#summary Changed operators
+#summary Changed operators.
 <wiki:toc/>
 
 == Introduction ===
