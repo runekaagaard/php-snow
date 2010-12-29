@@ -1,3 +1,4 @@
+
 #summary Changed operators
 <wiki:toc/>
 
@@ -8,8 +9,8 @@ Some operators have been changed from symbols to text. This frees up these symbo
 || *Snow*      || *PHP* ||
 || and         || &&    ||
 || or          || `|``|`    ||
-|| removed     || and   ||
-|| removed     || or    ||
+|| _deleted_   || and   ||
+|| _deleted_   || or    ||
 || mod         || %     ||
 || a mod= b    || $a %= $b ||
 || `|`         || .     ||
