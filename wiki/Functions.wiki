@@ -11,7 +11,7 @@ Like in most languages, in Snow functions are basic building blocks. Listed belo
 <parameter-list> ::= ( <identifier> | <constant> ) ( [ " " ( <identifier> | <constant> ) ] )*
 }}}
 
-Some examples:
+===Some examples===
 
 Examples without return value:
 {{{
@@ -39,7 +39,7 @@ It is not so much the functions themselves that differ from normal functions but
 [ <identifier> "=" ] ( <identifier> | <constant> ) "->" <function-identifier> [ "(" [ <parameter-list> ] ")" ]
 }}}
 
-Examples:
+===Examples===
 {{{
 str = "Hello, World!\n"
 str = str->strtolower       # call the function `strtolower` with parameter `str` and assign the result to `str`
