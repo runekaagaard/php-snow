@@ -95,10 +95,10 @@ mystring = "I am {$A_CONSTANT} with {a_string} and {obj.method()} and {obj::stat
 Arrays can be created only by defining keys and and values separated by a colon inside square brackets. Example:
 
 {{{
-my_array = ['foo': 32 'bar': 52 boz: [1 2 3: 123]]
+my_array = ['foo':32 'bar':52 boz:[1 2 3:123]]
 my_array = [
     'foo': 32 
     'bar': 52 
-    boz: [1 2 3: 123]
+    boz: [1 2 3:123]
 ]
 }}}
