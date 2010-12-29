@@ -14,7 +14,7 @@ Example:
 %> 
 Now we're talking HTML!
 <%
-print 'And back to snow again...'
+echo 'And back to snow again...'
 }}}
 
 The details of using Snow as a template language are not yet defined.
@@ -24,12 +24,12 @@ In Snow, instructions are separated by a newline (\n, \r or \r\n depending on sy
 
 Valid syntax example:
 {{{
-print "Hello, "
-print "World!\n"
+echo "Hello, "
+echo "World!\n"
 }}}
 Invalid syntax example:
 {{{
-print "Hello, " print "World!\n"
+echo "Hello, " echo "World!\n"
 }}}
 
 ==Whitespace==
