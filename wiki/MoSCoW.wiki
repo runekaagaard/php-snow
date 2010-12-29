@@ -13,8 +13,6 @@
 ==Should have==
 
 ==Could have==
-  * Python-like range implementation
-    * for s in 'a' to 'c': echo s # prints abc
 
 ==Won't have==
   * HAML-style inline HTML
