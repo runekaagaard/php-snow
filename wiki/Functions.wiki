@@ -36,7 +36,7 @@ As you can see, even when no parameters are specified, the trailing parenthesis 
 ===Receiver functions===
 
 A common paradigm in Snow is to use so-called `receiver functions`.
-It is not so much the functions themselves that differ from normal functions but their way of being called.
+It is not so much the functions themselves that differ from normal functions but their way of being called. The trailing parenthesis can be omitted for functions calls without arguments.
 
 ====Definition====
 {{{
