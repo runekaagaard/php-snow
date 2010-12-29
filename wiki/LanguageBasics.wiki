@@ -68,7 +68,7 @@ echo {a}() # Echos '42'.
 }}}
 
 == Constants ==
-Constants are prefix a dollar sign and can be assigned using the "=" operator:
+Constants on the other hand are prefixed a dollar sign and can be assigned using the "=" operator:
 {{{
 $I_AM_CONSTANT = 42
 echo $I_AM_CONSTANT
