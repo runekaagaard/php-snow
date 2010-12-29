@@ -9,7 +9,7 @@ There are several ways to make a function call in Snow.
 
 ===Conventional method===
 
-Definition:
+====Definition====
 {{{
 [ <identifier> "=" ] <function-identifier> "(" [ <parameter-list> ] ")"
 <parameter-list> ::= ( <identifier> | <constant> ) ( [ " " ( <identifier> | <constant> ) ] )*
@@ -38,7 +38,7 @@ As you can see, even when no parameters are specified, the trailing parenthesis 
 A common paradigm in Snow is to use so-called `receiver functions`.
 It is not so much the functions themselves that differ from normal functions but their way of being called.
 
-Definition:
+====Definition====
 {{{
 [ <identifier> "=" ] ( <identifier> | <constant> ) "->" <function-identifier> [ "(" [ <parameter-list> ] ")" ]
 }}}
