@@ -1,0 +1,21 @@
+#summary Changed operators
+<wiki:toc/>
+
+== Introduction ===
+Some operators have been changed from symbols to text. This frees up these symbols to be used for other and more frequently used patterns. See the changes in the matrix below.
+
+== Matrix ==
+|| *Snow*      || *PHP* ||
+|| and         || &&    ||
+|| or          || `|``|`    ||
+|| removed     || and   ||
+|| removed     || or    ||
+|| mod         || %     ||
+|| a mod= b    || $a %= $b ||
+|| `|`         || .     ||
+|| a |= b      || $a .= $b ||
+|| band        || &        ||
+|| bor         || `|`       ||
+|| bxor        || ^      ||
+|| bleft       || <<     ||
+|| bright      || >>     ||
