@@ -3,18 +3,14 @@
 <wiki:toc/>
 
 == Introduction ===
-Snow defines some special operators which are outlined in this document.
+The apply operator `*` tells the parser to apply a function to some variable.
 
-== 'Apply' operator (`*`) ==
-The apply operator tells the parser to apply a function to some variable.
-
-=== Definition ===
-
+== Definition ==
 {{{
 <apply-operator> ::= "*"
 }}}
 
-=== Matrix ===
+== Matrix ==
 <table border="1" cellpadding="5">
     <tr>
         <td><strong>Snow</strong></td>
@@ -26,7 +22,7 @@ The apply operator tells the parser to apply a function to some variable.
     </tr>
 </table>
 
-=== Examples ===
+== Examples ==
 
 === 1) ===
 Introduction example one.
