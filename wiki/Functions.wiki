@@ -47,7 +47,7 @@ str = str->strtolower       # call the function `strtolower` with parameter `str
 len = str->strlen           # assign the length of `str` to `len`
 hello = str->substr(0 5)    # assign the characters 0-5 of `str` to `hello`
 }}}
-The above examples can be written in the conventional as follows:
+The above examples can be written using the standard syntax as follows:
 {{{
 str = "Hello, World!\n"
 str = strtolower(str)
