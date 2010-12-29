@@ -1,6 +1,7 @@
 #summary Table of contents.
 #labels Featured
  * [LanguageBasics Language basics]
+ * [Functions]
  * [Keywords]
  * [Comma]
  * [ControlStructures Control structures]
