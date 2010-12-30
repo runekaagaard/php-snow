@@ -2,16 +2,16 @@
 
 <wiki:toc/>
 
-== Introduction ==
+==Introduction==
 All Snow keywords are listed below. Of interest maybe also be the list of changed [Operators].
 
-= Deleted Keywords =
+==Deleted Keywords==
 || *PHP*         || *Snow*       || * Comment * ||                                   
 || as            || _deleted_    || See `in`. ||
 || foreach       || _deleted_    || ||
 || var           || _deleted_    || ||
 
-= Changed Keywords =
+==Changed Keywords==
 || *PHP*         || *Snow*       || * Comment * ||
 || elseif        || elif         || `else if` is disabled. ||            
 || enddeclare    || end          || ||            
@@ -25,7 +25,7 @@ All Snow keywords are listed below. Of interest maybe also be the list of change
 || function      || fn           || ||
 || continue      || next         || ||
 
-= Unchanged Keywords =
+==Unchanged Keywords==
 || *PHP*         || *Snow*       || * Comment * ||
 || abstract      || _unchanged_  || ||
 || and           || _unchanged_  || ||                  
@@ -54,7 +54,7 @@ All Snow keywords are listed below. Of interest maybe also be the list of change
 || while         || _unchanged_  || ||
 || xor           || _unchanged_  || ||
 
-= Shortened Access Modifier Keywords =
+==Shortened Access Modifier Keywords==
 || *PHP*         || *Snow*       || * Comment * ||
 || global        || glo          || ||
 || private       || pri          || ||
@@ -63,7 +63,7 @@ All Snow keywords are listed below. Of interest maybe also be the list of change
 || static        || sta          || ||
 || const         || con          || ||
 
-= New keywords =
+==New keywords==
 || *Snow*       || * Comment * ||
 || when         || Postfix `if` sentence. ||
 || fallthru     || Disable default `break` in `case` sentences. ||
@@ -72,7 +72,7 @@ All Snow keywords are listed below. Of interest maybe also be the list of change
 || downto       || Used with the new `for` loop. `for i = 5 downto 1` ||
 || <--          || Inner return, used inside control structures. ||
 
-= Language constructs =
+==Language constructs==
 || *PHP*          || *Snow*       || * Comment * ||
 || die()          || _deleted_    || Use `exit` instead. ||
 || echo()         || _unchanged_  || ||
@@ -89,7 +89,7 @@ All Snow keywords are listed below. Of interest maybe also be the list of change
 || print()        || _deleted_    || Use `echo` instead. ||
 || unset()        || _unchanged_  || ||
 
-= Compile-time constants =
+==Compile-time constants==
 || *PHP*           || *Snow*      || * Comment * ||
 || `__CLASS__`     || _unchanged_ || ||
 || `__DIR__`       || _unchanged_ || ||
@@ -98,7 +98,7 @@ All Snow keywords are listed below. Of interest maybe also be the list of change
 || `__METHOD__`    || _unchanged_ || ||
 || `__NAMESPACE__` || _unchanged_ || ||
 
-= Standard Defined Classes =
+==Standard Defined Classes==
 || *PHP*                    || *Snow*               || * Comment * ||
 || Directory                || _unchanged_          || ||
 || stdClass                 || _unchanged_          || ||
@@ -107,7 +107,7 @@ All Snow keywords are listed below. Of interest maybe also be the list of change
 || Closure                  || _unchanged_          || ||
 || `__PHP_Incomplete_Class` || _unchanged_          || ||
 
-= Identifiers used inside a class =
+==Identifiers used inside a class==
 || *PHP*  || *Snow*      || * Comment * ||
 || $this-> || . || `$this` is removed for brevity. ||
 || self:: || :: || `self ` is removed for brevity. ||
@@ -115,6 +115,6 @@ All Snow keywords are listed below. Of interest maybe also be the list of change
 || `__callStatic` || _unchanged_ || ||
 || `__toString` || _unchanged_ || ||
 
-= References =
+==References==
   * http://www.php.net/manual/en/reserved.keywords.php
   * http://www.php.net/manual/en/reserved.classes.php

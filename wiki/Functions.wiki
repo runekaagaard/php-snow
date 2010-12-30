@@ -4,7 +4,7 @@
 ==Introduction==
 Like in most languages, in Snow functions are basic building blocks. Listed below are the two different syntaxes for calling functions in Snow.
 
-===Some examples===
+===Examples===
 
 Examples without return value:
 {{{
