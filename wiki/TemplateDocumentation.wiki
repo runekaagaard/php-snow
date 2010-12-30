@@ -4,11 +4,6 @@
 == Introduction ===
 Introduction to topic. `inline code`.
 
-== Definition ==
-{{{
-Definition.
-}}}
-
 == Matrix ==
 <table border="1" cellpadding="5">
     <tr>
