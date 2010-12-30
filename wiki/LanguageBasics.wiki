@@ -4,7 +4,8 @@
 =Basics=
 
 ==Toggling Snow/HTML mode==
-All Snow files are implied to contain only code. To escape Snow mode you can use `%>` and subsequently `<%` to enter Snow mode again.
+All Snow files are implied to contain only code. To escape Snow mode you can use 
+`%>` and subsequently `<%` to enter Snow mode again.
 
 Example:
 
@@ -20,7 +21,8 @@ echo 'And back to snow again...'
 The details of using Snow as a template language are not yet defined.
 
 ==Instruction separation==
-In Snow, instructions are separated by a newline (\n, \r or \r\n depending on system).
+In Snow, instructions are separated by a newline (\n, \r or \r\n depending on 
+system).
 
 Valid syntax example:
 {{{
@@ -35,7 +37,7 @@ echo "Hello, " echo "World!\n"
 ==Whitespace==
 Snow, as does python, operates with significant whitespace, meaning that
 the grouping of code is managed by indenting/dedenting and not by using brackets
-"{}". The indentation size is fixed to 4 spaces and all lines must start with
+`{}`. The indentation size is fixed to 4 spaces and all lines must start with
 a number of spaces to which 4 is a divisor.
 
 Valid syntax example:
@@ -54,7 +56,7 @@ else
 }}}
 
 == Variables ==
-Snow variables are defined without the prefixed "$" known and hated from PHP:
+Snow variables are defined without the prefixed `$` known and hated from PHP:
 {{{
 foo = 24
 echo foo
@@ -68,7 +70,8 @@ echo {a}() # Echos '42'.
 }}}
 
 == Constants ==
-Constants on the other hand are prefixed a dollar sign and can be assigned using the "=" operator:
+Constants on the other hand are prefixed a dollar sign and can be assigned using 
+the "=" operator:
 {{{
 $I_AM_CONSTANT = 42
 echo $I_AM_CONSTANT
@@ -86,19 +89,29 @@ Backslash (\) is the universal escape character.
 Details can be viewed at: http://php.net/manual/en/language.types.string.php
 
 == Variable expansion ==
-Inside Double quotes and Heredoc various code enclosed in curly brackets will add their value to the string. This is true for variables, constants, function calls and method calls:
+Inside Double quotes and Heredoc various code enclosed in curly brackets will 
+add their value to the string. This is true for variables, constants, function 
+calls and method calls:
 {{{
 mystring = "I am {$A_CONSTANT} with {a_string} and {obj.method()} and {obj::static_method()} and a {func_tion()}"
 }}}
 
 ==Arrays==
-Arrays can be created only by defining keys and and values separated by a colon inside square brackets. Example:
+Arrays can be created only by defining keys and and values separated by a colon 
+inside square brackets. The use of comma between array elements is optional but
+must stay the same for the entire array.
+
+Example:
 
 {{{
-my_array = ['foo':32 'bar':52 boz:[1 2 3:123]]
-my_array = [
-    'foo': 32 
-    'bar': 52 
-    boz: [1 2 3:123]
+foo_arr = [1 2 3]
+bar_arr = [
+    'foo': 32,
+    'bar': 52,
+    boz: [1, 2, 3:123]
 ]
 }}}
+
+Invalid example:
+baz_arr = [1,2 3] # Comma not used or omitted consistently.
+
