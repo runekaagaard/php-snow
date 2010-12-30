@@ -13,5 +13,3 @@
  * [Operators]
    * [ApplyOperator Apply Operator]
    * [EmptyIssetOperators Empty and Isset Operators]
- * [MoSCoW]
- * [DocumentationTodo Documentation TODO]
