@@ -38,7 +38,7 @@ line
 Introduction to examples.
 
 === 1) ===
-Introduction example one.
+Introduction to example one.
 {{{
 code
 }}}
