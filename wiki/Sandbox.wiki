@@ -1,4 +1,5 @@
 #summary Experiments with wiki formatting
+#labels Deprecated
 
 <table border="1" cellpadding="5">
     <tr>
