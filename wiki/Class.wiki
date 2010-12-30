@@ -67,10 +67,10 @@ echo $this->myvar . self::myconst;</code></td></tr>
     Description about the class Foo.
 @int x
     # A positive number below 100.
-    0 % < 100
+    0 < % < 100
 @str s
     # A positive number below 10.
-    % < 10
+    0 < % < 10
 class Foo extends Bar
     con int BAZ = 35
         # The bazness.
