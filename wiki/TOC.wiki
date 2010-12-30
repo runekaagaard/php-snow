@@ -2,14 +2,14 @@
 #labels Featured
  * [Preface]
  * [LanguageBasics Language basics]
+   * [Comma]
  * [Functions]
- * [Keywords]
- * [Comma]
+ * [Class]
  * !ControlStructures
    * [Conditionals]
    * [Loops]
- * [Return]
- * [Class]
+   * [Return]
  * [Operators]
    * [ApplyOperator Apply Operator]
    * [EmptyIssetOperators Empty and Isset Operators]
+ * [Keywords]
