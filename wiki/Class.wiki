@@ -188,7 +188,8 @@ class Ftp
     @str remote
     @int trans_mode = ::OPT_TRANS_AUTO
     fn put
-        trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
+        if trans_mode == ::OPT_TRANS_AUTO
+            trans_mode = get_trans_mode(local)
         ftp_put(.conn local remote trans_mode) ?! throw Exception(
             "Couldn't get file '{remote}'")
 
@@ -196,7 +197,8 @@ class Ftp
     @str remote
     @int trans_mode = ::OPT_TRANS_AUTO
     fn get
-        trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
+        if trans_mode = get_trans_mode(local)
+            trans_mode == ::OPT_TRANS_AUTO
         ftp_get(.conn local remote trans_mode) ?! throw Exception(
             "Couldn't get file '{remote}'")
 
@@ -211,9 +213,9 @@ class Ftp
     @str file
     fn get_trans_mode
         for ext in .ascii_types
-            <- ::OPT_TRANS_ASCII when file->substr(-ext->strlen) == ext
+            if file->substr(-ext->strlen) == ext: <- ::OPT_TRANS_ASCII
         for ext in .binary_types
-            <- ::OPT_TRANS_BINARY when file->substr(-ext->strlen) == ext
+            if file->substr(-ext->strlen) == ext: <- ::OPT_TRANS_BINARY
         <- default_transmode
 
     fn close: <- ftp_close(.conn)
