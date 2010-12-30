@@ -4,14 +4,6 @@
 ==Introduction==
 Like in most languages, in Snow functions are basic building blocks. Listed below are the two different syntaxes for calling functions in Snow.
 
-==Standard syntax==
-
-===Definition===
-{{{
-[ <identifier> "=" ] <function-identifier> "(" [ <parameter-list> ] ")"
-<parameter-list> ::= ( <identifier> | <constant> ) ( [ " " ( <identifier> | <constant> ) ] )*
-}}}
-
 ===Some examples===
 
 Examples without return value:
@@ -34,11 +26,6 @@ As you can see, even when no parameters are specified, the trailing parenthesis 
 
 A common paradigm in Snow is to use so-called `receiver functions`.
 It is not so much the functions themselves that differ from normal functions but their way of being called. The trailing parenthesis can be omitted for functions calls without arguments.
-
-===Definition===
-{{{
-[ <identifier> "=" ] ( <identifier> | <constant> ) "->" <function-identifier> [ "(" [ <parameter-list> ] ")" ]
-}}}
 
 ===Examples===
 {{{

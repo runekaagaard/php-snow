@@ -1,0 +1,15 @@
+= Functions =
+
+==Standard syntax==
+===Definition===
+{{{
+[ <identifier> "=" ] <function-identifier> "(" [ <parameter-list> ] ")"
+<parameter-list> ::= ( <identifier> | <constant> ) ( [ " " ( <identifier> | <constant> ) ] )*
+}}}
+
+==Receiver syntax==
+
+===Definition===
+{{{
+[ <identifier> "=" ] ( <identifier> | <constant> ) "->" <function-identifier> [ "(" [ <parameter-list> ] ")" ]
+}}}
