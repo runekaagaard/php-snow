@@ -91,13 +91,13 @@ class Foo extends Bar
     pro
         int x = x
         flo y = get_my_float(.x)
-    pri int privar = 23
+    pri sta str privar = "Pure as Snow"
 
     # The constructor.
         Needs two args that bla.
     parent::__construct(x s)
 
-    pri fn output: echo "pure as snow"
+    pri fn output: echo ::privar
 }}}
 </td>
 <wiki:comment>PHP example</wiki:comment>
@@ -135,7 +135,7 @@ class Foo extends Bar {
     public $s;
     protected $x;
     protected $y;
-    private $privar = 23;
+    private static $privar = "Pure as Snow";
 
     /**
      * The constructor.
@@ -163,7 +163,7 @@ class Foo extends Bar {
     }
 
     private function output() {
-        echo "pure as snow";
+        echo self::$privar;
     }
 }
 }}}
