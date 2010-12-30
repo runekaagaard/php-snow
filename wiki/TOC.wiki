@@ -4,8 +4,9 @@
  * [Functions]
  * [Keywords]
  * [Comma]
- * [ControlStructures Control structures]
- * [ForLoop For loop]
+ * ControlStructures
+   * [Conditionals]
+   * [Loops]
  * [Return]
  * [Class]
  * [Operators]
