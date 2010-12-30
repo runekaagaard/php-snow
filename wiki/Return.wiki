@@ -107,9 +107,9 @@ function process_ints(ints)
 {{{
 b = switch myvar
     case "zoo"
-        <- "uber"
+        <-- "uber"
     default
-        <- "nice"
+        <-- "nice"
 echo b
 }}}
         </td>
