@@ -119,7 +119,7 @@ baz_arr = [1,2 3] # Comma not used or omitted consistently.
 ==Multiple assignements==
 Snow supports multiple assignments as:
 {{{
-a b c = 1 2 3
+a b c = 1 2 3 # a = 1, b = 2 and c = 3.
 arr_a['key'] arr_b['key'] c = ['yo'] ['uber'] get_c()
 }}}
 
