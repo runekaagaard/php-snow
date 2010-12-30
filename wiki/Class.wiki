@@ -88,7 +88,7 @@ class Foo extends Bar
 
     # The constructor.
         Needs two args that bla.
-    parent::__construct(x, s)
+    parent::__construct(x s)
 
     pri fn output: echo "pure as snow"
 }}}
