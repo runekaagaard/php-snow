@@ -102,7 +102,6 @@ inside square brackets. The use of comma between array elements is optional but
 must stay the same for the entire array.
 
 Example:
-
 {{{
 foo_arr = [1 2 3]
 bar_arr = [
@@ -113,5 +112,6 @@ bar_arr = [
 }}}
 
 Invalid example:
+{{{
 baz_arr = [1,2 3] # Comma not used or omitted consistently.
-
+}}}
