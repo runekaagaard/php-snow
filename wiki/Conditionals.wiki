@@ -78,6 +78,7 @@ switch a
 ==When==
 Snow introduces a new keyword `when` that works as a postfix `if` sentence.
 
+===Matrix===
 <table border="1" cellpadding="5">
     <tr>
         <td><strong>Snow</strong></td>
