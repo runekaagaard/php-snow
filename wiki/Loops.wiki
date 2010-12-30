@@ -6,6 +6,8 @@ Good old (t)rusty `foreach` has left the building, welcome the new and improved 
 
 `for` comes in two variants. The first is of the form `for v in a to b` or `for k v in arr` and compiles as `foreach`. The `a to b` part compiles to `range(a,b)`. The second is of the form `for i = a to b` or `for i = b downto a` and compiles to `for`. _Notice that this only works with numeric values._
 
+A new feature compared to PHP is the before-and-after operator `%` that can be
+used inside a loop to assign content to a variable before and after the loop.
 == Matrix ==
 <table border="1" cellpadding="5">
     <tr>
@@ -57,6 +59,23 @@ Good old (t)rusty `foreach` has left the building, welcome the new and improved 
     <tr>
         <td>for i = 'a' to 'b'</td>
         <td>ERROR</td>
+    </tr>
+    <tr>
+        <td>
+{{{
+for k v in array
+    text |= 'before' % "{k}: {v}" % 'after' 
+}}}        
+        </td>
+        <td>
+{{{
+$text = 'before';
+foreach ($array as $k => $v) {
+    $text .= "$k: $v";
+}
+$text .= 'after';
+}}}        
+        </td>
     </tr>
 </table>
 
