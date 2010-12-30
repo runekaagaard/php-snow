@@ -5,17 +5,17 @@
 Some operators have been changed from symbols to text. This frees up these symbols to be used for other and more frequently used patterns. See the changes in the matrix below.
 
 == Matrix ==
-|| *Snow*      || *PHP* ||
-|| and         || &&    ||
-|| or          || `|``|`    ||
-|| _deleted_   || and   ||
-|| _deleted_   || or    ||
-|| mod         || %     ||
-|| a mod= b    || $a %= $b ||
-|| `|`         || .     ||
-|| a |= b      || $a .= $b ||
-|| band        || &        ||
-|| bor         || `|`       ||
-|| bxor        || ^      ||
-|| bleft       || <<     ||
-|| bright      || >>     ||
+|| *PHP*    || *Snow*      ||
+|| &&       || and         ||
+|| `|``|`   || or          ||
+|| and      || _deleted_   ||
+|| or       || _deleted_   ||
+|| %        || mod         ||
+|| $a %= $b || a mod= b    ||
+|| .        || `|`         ||
+|| $a .= $b || a |= b      ||
+|| &        || band        ||
+|| `|`      || bor         ||
+|| ^        || bxor        ||
+|| <<       || bleft       ||
+|| >>       || bright      ||
