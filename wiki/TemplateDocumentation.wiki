@@ -23,13 +23,18 @@ Definition.
         <td>Single line</td>
         <td>Single line</td>
     </tr>
-    
     <tr>
-<td valign="top" cellpadding="0"><code language="php">Multi
-line</code>
+        <td>
+{{{
+Multi-
+line
+}}}
         </td>
-<td valign="top" cellpadding="0"><code language="php">Multi
-line</code>
+        <td>
+{{{
+Multi-
+line
+}}}
         </td>
     </tr>
 </table>
