@@ -2,28 +2,28 @@
 <wiki:toc/>
 
 == Introduction ===
-Classes an objects works the same way as in PHP, but the syntax has been dried
+Classes and objects works the same way as in PHP, but the syntax has been dried
 up and made a lot faster to type and easier to look at.
 
 Some things have new names:
- * The single arrow `->` is replaced by the dot '`.`'.
- * `this.` is now just a single prefixing dot '`.`'.
+ * The single arrow `->` is replaced by the comma '`.`'.
+ * `$this->` is now just a single prefixing comma '`.`'.
  * `self::` is now just two prefixing colons `::`.
- * `public`, `protected`, `private`, `static` and `const` have been shortened to `pub`, `pro`, `pri`, `sta` and `con`.
- * Magic methods `__callStatic`, and `__toString` are now `__call_static`, and `__to_string`
+ * `public`, `protected`, `private`, `static` and `const` have been shortened to
+   `pub`, `pro`, `pri`, `sta` and `con`.
 
 `con`, `pub`, `pro` and `pri` are no longer declared for each class variable but 
 are only used a maximum of one each with variables grouped below. The order of
-them must be `con`, `pub`, `pro` and `pri` and other orderings will throw a
+them must be `con`, `pub`, `pro` and lastly `pri`. Other orderings will throw a
 compile error.
 
 Nested below `con`, `pub`, `pro` and `pri` keywords are an optional `sta` level.
 Below that are groups of variable names optionally nested under similar types.
-The types are written without the "@" like `str`, `flo`, etc.
+The types are written without the `@` like `str`, `flo`, etc.
 
 Common for the grouping of `con`, `pub`, `pro`, `pri`, `sta`, variable type and
 variable name is that when there is only one of a subgroup, the content below
-is moved to the same line.
+must be moved to the same line.
 
 Class variable declarations have access to constructor arguments, e.g. `myvar` 
 and each other, e.g. `.myvar`. Circular dependencies will throw a compile error.
@@ -33,6 +33,7 @@ The constructor `__construct()` method is removed and instead constructor code
 is placed below the `pub`, `pro`, `pri` and `con` keywords and above the first
 method. The arguments to the constructor are moved above the class definition
 and have the same syntax as a normal function.
+
 The destructor method `__destruct()` is unchanged, but should be the last
 method declaration in the class. Any other location will throw a compile error.
 
@@ -55,7 +56,7 @@ $this->num = $this->min - 2;</code></td></tr>
 
 <wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar , ::myconst</code></td>
+echo .myvar | ::myconst</code></td>
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
 echo $this->myvar . self::myconst;</code></td></tr>
@@ -111,7 +112,7 @@ class Foo extends Bar {
 }}}
 </td></tr>
     <tr>
-        <td colspan="2"><strong>Forbidden code</strong></td>
+        <td colspan="2"><strong>Disallowed code</strong></td>
     </tr>
     
 <wiki:comment>Snow example</wiki:comment>
@@ -144,7 +145,7 @@ class Foo
 </td>
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0">
-Cyclical error.
+Cyclical error. `a` and `b` depends on each other.
 </td></tr>
 </table>
 
@@ -177,7 +178,7 @@ class Ftp
 
     # Constructor.
         Tries to connect to server or throws an exception.
-    .conn = ftp_connect(host port timeout) or throw Exception(
+    .conn = ftp_connect(host port timeout) ?! throw Exception(
         "Couldn't connect to host '{host}'")
 
     @str user
@@ -189,7 +190,7 @@ class Ftp
     @int trans_mode = ::OPT_TRANS_AUTO
     fn put
         trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
-        ftp_put(.conn local remote trans_mode) or throw Exception(
+        ftp_put(.conn local remote trans_mode) ?! throw Exception(
             "Couldn't get file '{remote}'")
 
     @str local
@@ -197,7 +198,7 @@ class Ftp
     @int trans_mode = ::OPT_TRANS_AUTO
     fn get
         trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
-        ftp_get(.conn local remote trans_mode) or throw Exception(
+        ftp_get(.conn local remote trans_mode) ?! throw Exception(
             "Couldn't get file '{remote}'")
 
     # Checks whether a file exists on the remote side.
@@ -222,6 +223,6 @@ try
     ftp = Ftp("my.host")
     ftp.login("user" "pass")
     ftp.get("/remote/file" "/local/file")
-catch(Exception e)
+catch Exception e
     e->var_dump
 }}}
