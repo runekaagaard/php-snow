@@ -9,8 +9,7 @@ Some things have new names:
  * The single arrow `->` is replaced by the comma '`.`'.
  * `$this->` is now just a single prefixing comma '`.`'.
  * `self::` is now just two prefixing colons `::`.
- * `public`, `protected`, `private`, `static` and `const` have been shortened
-     to `pub`, `pro`, `pri`, `sta` and `con`.
+ * `public`, `protected`, `private`, `static` and `const` have been shortened to `pub`, `pro`, `pri`, `sta` and `con`.
 
 `con`, `pub`, `pro` and `pri` are no longer declared for each class variable but 
 are only used a maximum of one each with variables grouped below. The order of
