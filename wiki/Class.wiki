@@ -133,13 +133,13 @@ class Foo extends Bar {
      * @param int $x
      *   A positive number below 100.
      * @param int $s
-     *   A positive number below 100.
+     *   A positive number below 10.
      */
     public function __construct($x, $s) {
         if (!(0 < $x && $x < 100)) {
             throw new InvalidArgumentException;
         }
-        if (!(0 < $s && $s < 50)) {
+        if (!(0 < $s && $s < 10)) {
             throw new InvalidArgumentException;
         }
         $this->x = $x;
