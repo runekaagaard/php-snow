@@ -9,7 +9,7 @@ Some operators have been changed from symbols to text. This frees up these symbo
 || &&       || and         ||
 || `|``|`   || or          ||
 || and      || &&&& (Not recommended) ||
-|| or       || |||| (Not recommended) ||
+|| or       || `|``|``|``|` (Not recommended) ||
 || %        || mod         ||
 || $a %= $b || a mod= b    ||
 || .        || `|`         ||
