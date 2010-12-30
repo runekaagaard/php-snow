@@ -1,4 +1,3 @@
-#labels Featured
 <wiki:toc/>
 
 So, what exactly _is_ Snow? How does it work? And why do I need it?
