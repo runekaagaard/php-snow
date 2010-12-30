@@ -86,6 +86,8 @@ class Foo extends Bar
         flo y = get_my_float(.x)
     pri int privar = 23
 
+    # The constructor.
+        Needs two args that bla.
     parent::__construct(x, s)
 
     pri fn output: echo "pure as snow"
@@ -129,6 +131,9 @@ class Foo extends Bar {
     private $privar = 23;
 
     /**
+     * The constructor.
+     * 
+     * Needs two args that bla.
      *
      * @param int $x
      *   A positive number below 100.
