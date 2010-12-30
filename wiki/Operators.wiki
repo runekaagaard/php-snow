@@ -8,8 +8,8 @@ Some operators have been changed from symbols to text. This frees up these symbo
 || *PHP*    || *Snow*      ||
 || &&       || and         ||
 || `|``|`   || or          ||
-|| and      || _and_ (Not recommended) ||
-|| or       || _or_ (Not recommended) ||
+|| and      || `_and_` (Not recommended) ||
+|| or       || `_or_` (Not recommended) ||
 || %        || mod         ||
 || $a %= $b || a mod= b    ||
 || .        || `|`         ||
