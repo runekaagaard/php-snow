@@ -1,4 +1,5 @@
 #summary Summary of features prioritized according to the MoSCow model [1]
+#labels Deprecated
 
 <wiki:toc/>
 
