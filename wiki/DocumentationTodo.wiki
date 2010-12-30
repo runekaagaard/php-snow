@@ -1,4 +1,5 @@
 #summary Todo of whats left to document.
+#labels Deprecated
 <wiki:toc/>
 
 This page is outdated.
