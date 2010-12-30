@@ -4,11 +4,6 @@
 == Introduction ===
 The apply operator `*` tells the parser to apply a function to some variable.
 
-== Definition ==
-{{{
-<apply-operator> ::= "*"
-}}}
-
 == Matrix ==
 <table border="1" cellpadding="5">
     <tr>
