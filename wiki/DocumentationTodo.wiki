@@ -1,6 +1,8 @@
 #summary Todo of whats left to document.
 <wiki:toc/>
 
+This page is outdated.
+
 == Todo ==
  * The use of % as a magic variable [7](90%): Decide if we would like to change <% snowcode %> to <? snowcode ?> to avoid any future problems with %>3 and 3<%<10 first. Then write the docs.
 
@@ -11,13 +13,13 @@
  * Classes.
  * The Basics: [6] and [13].
  * String interpolation and variable variables [17].
+ * Postfix '?? / ?!'s [14].
+ * Multiple assignments [16].
 
 == Suspended ==
  * Support for snow as a template language [10].
  * Import keyword [12].
- * Postfix '||'s [14].
  * Functions with inner functions [15].
- * Multiple assignments [16].
  * Project settings file, a file with compiler settings specific to the project? We will have to fake it with this one in the beginning.
 = References =
  * 1 [Comma]
