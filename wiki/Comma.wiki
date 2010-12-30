@@ -1,11 +1,19 @@
 #summary The use of the comma character - or lack thereof.
 
-The normal use of the comma as a separator in array definitions and function / method calls and definitions is disabled:
+The normal use of the comma as a separator in array definitions and function / 
+method calls and definitions should be omitted unless in cases where it 
+improves readability. Comma must be used or omitted consistently throughout the
+entire construct.
+
+Example:
 {{{
 # Array definition.
 a = [1 2 3]
-# Object definition.
-a = {'a':1 'b':2 'c':3}
+a = [
+    'foo': 'bar',
+    'baz': 'boz',
+    [1:2, 3:4, [1 2 3]]
+]
 # Function call.
 b = foo(1 bar() 3)
 # Function / Method definition.
@@ -14,12 +22,7 @@ fn foo (x y z)
 a b = 3 4
 }}}
 
-Instead the comma character replaces "." as a string concatenator.
+Invalid example:
 {{{
-a = "foo" , "bar"
-echo a
-}}}
-Output:
-{{{
-foobar
+myvar = myfunc('foo' 3, true) # Comma not used or omitted consistently.
 }}}
