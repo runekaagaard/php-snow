@@ -55,7 +55,14 @@ $this->num = $this->min - 2;</code></td></tr>
 
 <wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar | ::MYCONST</code></td>
+echo .myvar | ::my_static_var</code></td>
+<wiki:comment>PHP example</wiki:comment>
+<td valign="top" cellpadding="0"><code language="php">
+echo $this->myvar . self::$my_static_var;</code></td></tr>
+
+<wiki:comment>Snow example</wiki:comment>
+<tr><td valign="top" cellpadding="0"><code language="php">
+echo .myvar | ::$MYCONST</code></td>
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
 echo $this->myvar . self::MYCONST;</code></td></tr>
