@@ -1,8 +1,6 @@
 #labels Featured
 <wiki:toc/>
 
-=This page is a Stub=
-
 So, what exactly _is_ Snow? How does it work? And why do it need it?
 
 ==What Snow is==
