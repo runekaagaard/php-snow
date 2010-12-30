@@ -79,10 +79,10 @@ echo $this->myvar . self::MYCONST;</code></td></tr>
     # A positive number below 10.
     0 < % < 10
 class Foo extends Bar
-    con int BAZ = 35
+    con int $BAZ = 35
         # The bazness.
     pub
-        int foo = 2 * x * ::BAZ
+        int foo = 2 * x * ::$BAZ
             # The fooness.
         int bar = .foo * 2
             # The variable bar.
