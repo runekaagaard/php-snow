@@ -115,3 +115,11 @@ Invalid example:
 {{{
 baz_arr = [1,2 3] # Comma not used or omitted consistently.
 }}}
+
+==Multiple assignements==
+Snow supports multiple assignments as:
+{{{
+a b c = 1 2 3
+arr_a['key'] arr_b['key'] c = ['yo'] ['uber'] get_c()
+}}}
+
