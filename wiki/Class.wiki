@@ -9,7 +9,7 @@ Some things have new names:
  * The single arrow `->` is replaced by the comma '`.`'.
  * `$this->` is now just a single prefixing comma '`.`'.
  * `self::` is now just two prefixing colons `::`.
- * `public`, `protected`, `private`, `static` and `const` have been shortened to `pub`, `pro`, `pri`, `sta` and `con`.
+ * `public`, `protected`, `private`, `static` and `const` have been shortenedto `pub`, `pro`, `pri`, `sta` and `con`.
 
 `con`, `pub`, `pro` and `pri` are no longer declared for each class variable but 
 are only used a maximum of one each with variables grouped below. The order of
@@ -188,8 +188,7 @@ class Ftp
     @str remote
     @int trans_mode = ::OPT_TRANS_AUTO
     fn put
-        if trans_mode == ::OPT_TRANS_AUTO
-            trans_mode = get_trans_mode(local)
+        trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
         ftp_put(.conn local remote trans_mode) ?! throw Exception(
             "Couldn't get file '{remote}'")
 
@@ -197,8 +196,7 @@ class Ftp
     @str remote
     @int trans_mode = ::OPT_TRANS_AUTO
     fn get
-        if trans_mode = get_trans_mode(local)
-            trans_mode == ::OPT_TRANS_AUTO
+        trans_mode = get_trans_mode(local) when trans_mode == ::OPT_TRANS_AUTO
         ftp_get(.conn local remote trans_mode) ?! throw Exception(
             "Couldn't get file '{remote}'")
 
@@ -213,9 +211,9 @@ class Ftp
     @str file
     fn get_trans_mode
         for ext in .ascii_types
-            if file->substr(-ext->strlen) == ext: <- ::OPT_TRANS_ASCII
+            <- ::OPT_TRANS_ASCII when file->substr(-ext->strlen) == ext
         for ext in .binary_types
-            if file->substr(-ext->strlen) == ext: <- ::OPT_TRANS_BINARY
+            <- ::OPT_TRANS_BINARY when file->substr(-ext->strlen) == ext
         <- default_transmode
 
     fn close: <- ftp_close(.conn)
