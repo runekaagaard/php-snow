@@ -1,0 +1,1 @@
+By User:Introvert (Own work) [CC-BY-SA-2.5 (www.creativecommons.org/licenses/by-sa/2.5)], via Wikimedia Commons
