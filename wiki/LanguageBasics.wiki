@@ -123,3 +123,16 @@ a b c = 1 2 3 # a = 1, b = 2 and c = 3.
 arr_a['key'] arr_b['key'] c = ['yo'] ['uber'] get_c()
 }}}
 
+==Compilation target==
+Per default Snow will take the ".snow" file, change the extension to ".php" and create/update a ".php" file in the same directory. Some frameworks however uses other extensions than ".php" and to remedy this Snow has the `@compileto` annotation. It should be placed in the beginning of the ".snow" file and tells the Snow compiler to which file it should compile the PHP code. The location is relative to the ".snow" file. Locations starting with "/" will have absolute paths.
+
+Example:
+{{{
+# In the file mymodule.snow.
+@compileto mymodule.module
+# More code here...
+
+# In the file foo.snow.
+@compileto /home/user/foo/foo.bar # Absolute path.
+# More code here...
+}}}
