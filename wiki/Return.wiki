@@ -76,7 +76,7 @@ fn process_ints(ints)
         if i->empty: <-- HAS_EMPTY
         if i > 50: <-- HAS_OUTOF_RANGE
         []= i->do_stuff_to
-    <- ['return_code': return_code or IS_OK, 'ints': new_ints]
+    <- ['return_code': return_code ?? IS_OK, 'ints': new_ints]
 }}}
         </td>
         <td valign="top" cellpadding="0">
