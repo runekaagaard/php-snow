@@ -70,7 +70,8 @@ if ($b > 3) {
     <tr>
         <td valign="top" cellpadding="0">
 {{{
-fn process_ints(ints)
+@array ints
+fn process_ints
     return_code = for i in ints
         if i->empty: <-- HAS_EMPTY
         if i > 50: <-- HAS_OUTOF_RANGE
