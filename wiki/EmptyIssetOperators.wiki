@@ -131,10 +131,7 @@ status = 42
 get_stuff('foo') ?! throw MyException
 }}}
         </td>
-        <td>
-{{{
-Compile error, magic variable "status" already exists in scope.
-}}}
+        <td>Compile error, magic variable "status" already exists in scope.
         </td>
     </tr>
 </table>
