@@ -124,4 +124,17 @@ if (empty($status)) {
 }}}
         </td>
     </tr>
+    <tr>
+<td>
+{{{
+status = 42
+get_stuff('foo') ?! throw MyException
+}}}
+        </td>
+        <td>
+{{{
+Compile error, magic variable "status" already exists in scope.
+}}}
+        </td>
+    </tr>
 </table>
