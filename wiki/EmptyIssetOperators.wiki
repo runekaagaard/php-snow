@@ -4,7 +4,7 @@
 == Introduction ===
 A common pattern in PHP is checking if a variable or the return of a function is set or is empty and then performing assignments or changing the control flow. The postfix operators `??` and `?!` provides shortcuts for this. `??` and `?!` resembles `isset()` and `!empty()` respectively.
 
-Notice that if you use `??` or `?!` on function calls the Snow compiler will introduce a magic variable named `status` because `isset()` and `empty()` only works on variables.
+Notice that if you use `??` or `?!` _flow control_ on function calls the Snow compiler will introduce a magic variable named `status` because `isset()` and `empty()` only works on variables.
 
 
 == Matrix ==
