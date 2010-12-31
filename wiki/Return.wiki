@@ -95,8 +95,8 @@ function process_ints(ints)
         $new_ints []= do_stuff_to($i);
     }
     return array(
-        'return_code': isset($return_code) ? $return_code : IS_OK,
-        'ints': $new_ints,
+        'return_code' => isset($return_code) ? $return_code : IS_OK,
+        'ints' => $new_ints,
     );
 }}}
         </td>
