@@ -74,7 +74,7 @@ fn process_ints(ints)
     return_code = for i in ints
         if i->empty: <-- HAS_EMPTY
         if i > 50: <-- HAS_OUTOF_RANGE
-        new_ints []= [] % i->do_stuff_to
+        new_ints[] = [] % i->do_stuff_to
     <- ['return_code': return_code ?? IS_OK, 'ints': new_ints]
 }}}
         </td>
@@ -91,7 +91,7 @@ function process_ints(ints)
             $return_code = HAS_OUT_OF_RANGE;
             break;
         }
-        $new_ints []= do_stuff_to($i);
+        $new_ints[] = do_stuff_to($i);
     }
     return array(
         'return_code' => isset($return_code) ? $return_code : IS_OK,
