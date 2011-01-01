@@ -431,8 +431,8 @@ def p_unset_variable(p):
     p[0] = p[1]
 
 def p_function_declaration_statement(p):
-    'function_declaration_statement : FUNCTION is_reference STRING LPAREN parameter_list RPAREN LBRACE inner_statement_list RBRACE'
-    p[0] = ast.Function(p[3], p[5], p[8], p[2], lineno=p.lineno(1))
+    'function_declaration_statement : FN is_reference STRING LPAREN parameter_list RPAREN LBRACE inner_statement_list RBRACE'
+    p[0] = ast.Fn(p[3], p[5], p[8], p[2], lineno=p.lineno(1))
 
 def p_class_declaration_statement(p):
     '''class_declaration_statement : class_entry_type STRING extends_from implements_list LBRACE class_statement_list RBRACE
@@ -484,7 +484,7 @@ def p_class_statement_list(p):
         p[0] = []
 
 def p_class_statement(p):
-    '''class_statement : method_modifiers FUNCTION is_reference STRING LPAREN parameter_list RPAREN method_body
+    '''class_statement : method_modifiers FN is_reference STRING LPAREN parameter_list RPAREN method_body
                        | variable_modifiers class_variable_declaration SEMI
                        | class_constant_declaration SEMI'''
     if len(p) == 9:
@@ -916,7 +916,7 @@ def p_function_call_parameter(p):
         p[0] = ast.Parameter(p[2], True, lineno=p.lineno(1))
 
 def p_expr_function(p):
-    'expr : FUNCTION is_reference LPAREN parameter_list RPAREN lexical_vars LBRACE inner_statement_list RBRACE'
+    'expr : FN is_reference LPAREN parameter_list RPAREN lexical_vars LBRACE inner_statement_list RBRACE'
     p[0] = ast.Closure(p[4], p[6], p[8], p[2], lineno=p.lineno(1))
 
 def p_lexical_vars(p):

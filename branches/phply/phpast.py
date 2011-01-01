@@ -83,7 +83,7 @@ Catch = node('Catch', ['class_', 'var', 'nodes'])
 Throw = node('Throw', ['node'])
 Declare = node('Declare', ['directives', 'node'])
 Directive = node('Directive', ['name', 'node'])
-Function = node('Function', ['name', 'params', 'nodes', 'is_ref'])
+Fn = node('Fn', ['name', 'params', 'nodes', 'is_ref'])
 Method = node('Method', ['name', 'modifiers', 'params', 'nodes', 'is_ref'])
 Closure = node('Closure', ['params', 'vars', 'nodes', 'is_ref'])
 Class = node('Class', ['name', 'type', 'extends', 'implements', 'nodes'])
@@ -146,8 +146,8 @@ def resolve_magic_constants(nodes):
             current['namespace'] = node.name
         elif isinstance(node, Class):
             current['class'] = node.name
-        elif isinstance(node, Function):
-            current['function'] = node.name
+        elif isinstance(node, Fn):
+            current['fn'] = node.name
         elif isinstance(node, Method):
             current['method'] = node.name
         elif isinstance(node, MagicConstant):
