@@ -1,5 +1,4 @@
 <?php
-fn foo:
-
+function foo($yo) {
     return 42;
-
+}
