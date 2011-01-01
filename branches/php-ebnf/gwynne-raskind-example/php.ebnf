@@ -1,0 +1,45 @@
+## Not implemented. ##
+
+not_implemented ::= 'not_implemented'
+static_scalar ::= not_implemented
+function_declaration_statement ::= not_implemented
+class_declaration_statement ::= not_implemented
+else_single ::= not_implemented
+elseif ::= not_implemented
+elseif_2 ::= not_implemented
+else_single_2 ::= not_implemented
+top_statement_list ::= not_implemented
+expr ::= not_implemented
+
+## Tokens. ##
+ws ::= [ \n\r\t]+
+# Removed '#x7f-#xff' because it matches ';'.
+string ::= [a-zA-Z_], [a-zA-Z0-9_]*
+
+## PHP structure. ##
+namespace_name ::= [\\]?, string, ('\\', string)*
+
+# 'as' statement moved outside of ().
+use_declaration ::= 'use', ws+, namespace_name, (ws*, ',', ws*, namespace_name)*, (ws+, 'as', ws+, string)?, ws*, ';'
+
+constant_declaration ::= 'const', ws+, string, ws*, '=', ws*, static_scalar, (ws*, ',', ws*, string, ws*, '=', ws*, static_scalar)*, ws*, ';'
+
+inner_statement ::= (statement / function_declaration_statement / class_declaration_statement)
+
+statement ::= unticked_statement / (string, ':')
+
+unticked_statement ::= 
+    ('{', ws*, inner_statement*, ws*, '}') /
+    ('if', ws*, '(', ws*, expr, ws*, ')', ws*, statement, ws*, elseif*, ws*, else_single?) /
+    ('if', ws*, '(', ws*, expr, ws*, ')', ws*, ':', inner_statement*, elseif_2*, ws*, else_single_2?)
+
+halt_compiler ::= '__halt_compiler', ws*, '(', ws*, ')', ws*, ';'
+
+top_statement ::= inner_statement /
+                 halt_compiler /
+                 ('namespace', ws+, namespace_name, ws*, ';') /
+                 ('namespace', (ws+, namespace_name)?, ws*, '{', ws*, top_statement_list, ws*, '}') /
+                 use_declaration /
+                 constant_declaration
+
+root ::= (top_statement / ws)*
