@@ -10,6 +10,7 @@ import phplex
 import phpast as ast
 import ply.yacc as yacc
 
+
 # Get the token map
 tokens = phplex.tokens
 
@@ -431,8 +432,7 @@ def p_unset_variable(p):
     p[0] = p[1]
 
 def p_function_declaration_statement(p):
-    '''function_declaration_statement : FN is_reference STRING LPAREN parameter_list RPAREN LBRACE inner_statement_list RBRACE 
-        | FN is_reference STRING LBRACE inner_statement_list RBRACE
+    '''function_declaration_statement : FN is_reference STRING ':' INDENT inner_statement_list DEDENT
     '''
     if len(p) == 10:
         p[0] = ast.Fn(p[3], p[5], p[8], p[2], lineno=p.lineno(1))
@@ -961,6 +961,9 @@ def p_expr_assign_op(p):
     p[0] = ast.AssignOp(p[2], p[1], p[3], lineno=p.lineno(2))
 
 def p_expr_binary_op(p):
+    pass
+    
+def p_expr_binary_op2(p):
     '''expr : expr BOOLEAN_AND expr
             | expr BOOLEAN_OR expr
             | expr LOGICAL_AND expr

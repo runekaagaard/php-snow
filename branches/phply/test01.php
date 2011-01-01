@@ -1,4 +1,5 @@
 <?php
-fn foo {
-	return $bar * 2;
-}
+fn foo:
+
+    return 42;
+

@@ -6,6 +6,7 @@
 
 import ply.lex as lex
 import re
+from indent import indent_filter, DEDENT, INDENT
 
 # todo: nowdocs
 # todo: backticks
@@ -67,7 +68,7 @@ tokens = reserved + unparsed + (
     'OBJECT_OPERATOR', 'DOUBLE_ARROW', 'DOUBLE_COLON',
 
     # Delimiters
-    'LPAREN', 'RPAREN', 'LBRACKET', 'RBRACKET', 'LBRACE', 'RBRACE', 'DOLLAR',
+    'LPAREN', 'RPAREN', 'LBRACKET', 'RBRACKET', 'NEWLINE', 'INDENT', 'DEDENT', 'LBRACE', 'RBRACE', 'DOLLAR',
     'COMMA', 'CONCAT', 'QUESTION', 'COLON', 'SEMI', 'AT', 'NS_SEPARATOR',
 
     # Casts
@@ -415,10 +416,11 @@ def peek(lexer):
     except IndexError:
         return ''
 
-class FilteredLexer(object):
+class FilteredLexer():
     def __init__(self, lexer):
         self.lexer = lexer
         self.last_token = None
+        self.token_stream = None
 
     @property
     def lineno(self):
@@ -442,8 +444,10 @@ class FilteredLexer(object):
     def current_state(self):
         return self.lexer.current_state()
 
-    def input(self, input):
+    def input(self, input):        
+        self.lexer.paren_count = 0
         self.lexer.input(input)
+        self.token_stream = indent_filter(self.lexer, True)
 
     def token(self):
         t = self.lexer.token()
