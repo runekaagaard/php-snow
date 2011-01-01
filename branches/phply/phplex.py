@@ -90,7 +90,7 @@ tokens = reserved + unparsed + (
     # Heredocs
     'START_HEREDOC', 'END_HEREDOC',
     
-    'INDENT', 'DEDENT',
+    'INDENT', 'DEDENT', 'NEWLINE'
 )
 
 # Newlines
@@ -451,12 +451,18 @@ class FilteredLexer(object):
     indentation = 0
     def token(self):
         t = self.lexer.token()
-        if t and t.type == 'WHITESPACE' and t.value[0:1] == '\n':
-            new_indentation = len(t.value.replace('\n', ''))
-            assert new_indentation % 4 == 0
-            if new_indentation > self.indentation: t.type = 'INDENT'
-            if new_indentation < self.indentation: t.type = 'DEDENT'
-            self.indentation = new_indentation
+        # if t: print (t.type, t.value, t.lineno, t.lexpos)
+        if t and t.type == 'WHITESPACE':
+            if t.value[0:1] == '\n':
+                new_indentation = len(t.value.replace('\n', ''))
+                assert new_indentation % 4 == 0
+                if new_indentation > self.indentation: t.type = 'INDENT'
+                if new_indentation < self.indentation: t.type = 'DEDENT'
+                if new_indentation == self.indentation:
+                    pass
+                    # t.type = 'NEWLINE'
+                else:
+                    self.indentation = new_indentation
             
         # Filter out tokens that the parser is not expecting.
         while t and t.type in unparsed:
