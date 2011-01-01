@@ -1,0 +1,33 @@
+top_statement
+    constant_declaration
+        string = myconst
+        static_scalar
+            not_implemented
+top_statement
+    use_declaration
+        namespace_name
+            string = MySpace
+top_statement
+    use_declaration
+        namespace_name
+            string = MySpace
+            string = YourSpace
+top_statement
+    use_declaration
+        namespace_name
+            string = MySpace
+            string = YourSpace
+        string = ThySpace
+top_statement
+    inner_statement
+        statement
+            unticked_statement
+                expr
+                    not_implemented
+                statement
+                    unticked_statement
+                        inner_statement
+                            function_declaration_statement
+                                not_implemented
+top_statement
+    halt_compiler
