@@ -431,7 +431,7 @@ def p_unset_variable(p):
     p[0] = p[1]
 
 def p_function_declaration_statement(p):
-    'function_declaration_statement : FUNCTION is_reference STRING LPAREN parameter_list RPAREN LBRACE inner_statement_list RBRACE'
+    'function_declaration_statement : FUNCTION is_reference STRING COLON NEWLINE INDENT inner_statement_list DEDENT'
     p[0] = ast.Function(p[3], p[5], p[8], p[2], lineno=p.lineno(1))
 
 def p_class_declaration_statement(p):

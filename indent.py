@@ -150,8 +150,8 @@ def track_tokens_filter(lexer, tokens):
                 indent = MUST_INDENT
             token.must_indent = False
 
-        elif token.type == "WS":
-            assert token.at_line_start == True
+        elif token.type == "WHITESPACE":
+            #assert token.at_line_start == True
             at_line_start = True
             token.must_indent = False
 
@@ -203,7 +203,8 @@ def indentation_filter(tokens):
         # There may be WS followed by NEWLINE so
         # only track the depth here.  Don't indent/dedent
         # until there's something real.
-        if token.type == "WS":
+        #print token.type
+        if token.type == "WHITESPACE":
             assert depth == 0
             depth = len(token.value)
             prev_was_ws = True
