@@ -452,7 +452,8 @@ class FilteredLexer(object):
     indentation = 0
     def token(self):
         t = self.lexer.token()
-        #if t: print (t.type, t.value, t.lineno, t.lexpos)
+        #print (t.type, t.value, t.lineno, t.lexpos)
+        #return t
         if t and t.type == 'WHITESPACE':
             if t.value[0:1] == '\n':
                 new_indentation = len(t.value.replace('\n', ''))
@@ -461,13 +462,15 @@ class FilteredLexer(object):
                 if new_indentation < self.indentation: t.type = 'DEDENT'
                 if new_indentation == self.indentation:
                     pass
+                    #print ('!!!!!!!!!!!!!!NEWLINE!', t.value, t.lineno, t.lexpos)
+                    # print "NEWLINE"
                     # t.type = 'NEWLINE'
                 else:
                     self.indentation = new_indentation
-            
+            if t: print (t.type, t.value, t.lineno, t.lexpos)        
         # Filter out tokens that the parser is not expecting.
         while t and t.type in unparsed:
-
+            
             # Skip over open tags, but keep track of when we see them.
             if t.type == 'OPEN_TAG':
                 self.last_token = t
@@ -492,8 +495,10 @@ class FilteredLexer(object):
                     break
 
             t = self.lexer.token()
-
+        if t: print (t.type, t.value, t.lineno, t.lexpos)
         self.last_token = t
+        #p(dir(self.lexer)); e();
+
         return t
 
     # Iterator interface
