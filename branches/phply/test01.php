@@ -1,3 +1,3 @@
 <?php
-function foo:
-    return 42
+function foo()
+    return 42;
