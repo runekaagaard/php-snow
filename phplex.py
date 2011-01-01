@@ -7,6 +7,7 @@
 import ply.lex as lex
 import re
 from pprint import pprint as p
+from sys import exit as e
 
 # todo: nowdocs
 # todo: backticks
@@ -451,7 +452,7 @@ class FilteredLexer(object):
     indentation = 0
     def token(self):
         t = self.lexer.token()
-        # if t: print (t.type, t.value, t.lineno, t.lexpos)
+        #if t: print (t.type, t.value, t.lineno, t.lexpos)
         if t and t.type == 'WHITESPACE':
             if t.value[0:1] == '\n':
                 new_indentation = len(t.value.replace('\n', ''))
@@ -508,6 +509,7 @@ class FilteredLexer(object):
     __next__ = next
 
 full_lexer = lex.lex()
+full_lexer.push_state('php')
 lexer = FilteredLexer(full_lexer)
 
 full_tokens = tokens
