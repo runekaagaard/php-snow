@@ -89,6 +89,8 @@ tokens = reserved + unparsed + (
 
     # Heredocs
     'START_HEREDOC', 'END_HEREDOC',
+    
+    'INDENT', 'DEDENT', 'NEWLINE',
 )
 
 # Newlines
@@ -454,7 +456,7 @@ class FilteredLexer(object):
     def token(self):
         try:
             t = self.token_stream.next()
-
+            #print t
             # Filter out tokens that the parser is not expecting.
             while t and t.type in unparsed:
 
@@ -485,8 +487,8 @@ class FilteredLexer(object):
 
             self.last_token = t
             return t
-        except:
-            pass
+        except StopIteration:
+            return None
 
     # Iterator interface
     def __iter__(self):

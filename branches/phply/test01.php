@@ -1,4 +1,3 @@
 <?php
-function foo($yo) {
-    return 42;
-}
+function foo:
+    return 42
