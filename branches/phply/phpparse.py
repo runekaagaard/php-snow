@@ -1332,5 +1332,5 @@ if __name__ == '__main__':
            for item in result:
                if hasattr(item, 'generic'):
                    item = item.generic()
-               pprint.pprint(item)
+               #pprint.pprint(item)
        s = ''
