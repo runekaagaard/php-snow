@@ -431,8 +431,12 @@ def p_unset_variable(p):
     p[0] = p[1]
 
 def p_function_declaration_statement(p):
-    'function_declaration_statement : FUNCTION is_reference STRING LPAREN parameter_list RPAREN INDENT inner_statement_list DEDENT'
-    p[0] = ast.Function(p[3], p[5], p[8], p[2], lineno=p.lineno(1))
+    '''function_declaration_statement : FUNCTION is_reference STRING LPAREN parameter_list RPAREN INDENT inner_statement_list DEDENT
+    | FUNCTION is_reference STRING INDENT inner_statement_list DEDENT'''
+    if len(p) == 10:
+        p[0] = ast.Function(p[3], p[5], p[8], p[2], lineno=p.lineno(1))
+    else:
+        p[0] = ast.Function(p[3], [], p[5], p[2], lineno=p.lineno(1))
 
 def p_class_declaration_statement(p):
     '''class_declaration_statement : class_entry_type STRING extends_from implements_list LBRACE class_statement_list RBRACE
