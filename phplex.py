@@ -5,8 +5,8 @@
 # ----------------------------------------------------------------------
 
 import ply.lex as lex
-from indent import indent_filter
 import re
+from pprint import pprint as p
 
 # todo: nowdocs
 # todo: backticks
@@ -90,7 +90,7 @@ tokens = reserved + unparsed + (
     # Heredocs
     'START_HEREDOC', 'END_HEREDOC',
     
-    'INDENT', 'DEDENT', 'NEWLINE',
+    'INDENT', 'DEDENT',
 )
 
 # Newlines
@@ -422,7 +422,6 @@ class FilteredLexer(object):
     def __init__(self, lexer):
         self.lexer = lexer
         self.last_token = None
-        self.token_stream = None
 
     @property
     def lineno(self):
@@ -447,48 +446,48 @@ class FilteredLexer(object):
         return self.lexer.current_state()
 
     def input(self, input):
-        self.lexer.paren_count = 0
         self.lexer.input(input)
-        self.token_stream = indent_filter(self.lexer)
-        #from pprint import pprint as p
-        #p(self.token_stream)
-
+    
+    indentation = 0
     def token(self):
-        try:
-            t = self.token_stream.next()
-            #print t
-            # Filter out tokens that the parser is not expecting.
-            while t and t.type in unparsed:
+        t = self.lexer.token()
+        if t and t.type == 'WHITESPACE' and t.value[0:1] == '\n':
+            new_indentation = len(t.value.replace('\n', ''))
+            assert new_indentation % 4 == 0
+            if new_indentation > self.indentation: t.type = 'INDENT'
+            if new_indentation < self.indentation: t.type = 'DEDENT'
+            self.indentation = new_indentation
+            
+        # Filter out tokens that the parser is not expecting.
+        while t and t.type in unparsed:
 
-                # Skip over open tags, but keep track of when we see them.
-                if t.type == 'OPEN_TAG':
-                    self.last_token = t
-                    t = self.token_stream.next()
-                    continue
+            # Skip over open tags, but keep track of when we see them.
+            if t.type == 'OPEN_TAG':
+                self.last_token = t
+                t = self.lexer.token()
+                continue
 
-                # Rewrite <?= to yield an "echo" statement.
-                if t.type == 'OPEN_TAG_WITH_ECHO':
-                    t.type = 'ECHO'
+            # Rewrite <?= to yield an "echo" statement.
+            if t.type == 'OPEN_TAG_WITH_ECHO':
+                t.type = 'ECHO'
+                break
+
+            # Insert semicolons in place of close tags where necessary.
+            if t.type == 'CLOSE_TAG':
+                if self.last_token and \
+                       self.last_token.type in ('OPEN_TAG', 'SEMI', 'COLON',
+                                                'LBRACE', 'RBRACE'):
+                    # Dont insert semicolons after these tokens.
+                    pass
+                else:
+                    # Rewrite close tag as a semicolon.
+                    t.type = 'SEMI'
                     break
 
-                # Insert semicolons in place of close tags where necessary.
-                if t.type == 'CLOSE_TAG':
-                    if self.last_token and \
-                           self.last_token.type in ('OPEN_TAG', 'SEMI', 'COLON',
-                                                    'LBRACE', 'RBRACE'):
-                        # Dont insert semicolons after these tokens.
-                        pass
-                    else:
-                        # Rewrite close tag as a semicolon.
-                        t.type = 'SEMI'
-                        break
+            t = self.lexer.token()
 
-                t = self.token_stream.next()
-
-            self.last_token = t
-            return t
-        except StopIteration:
-            return None
+        self.last_token = t
+        return t
 
     # Iterator interface
     def __iter__(self):
