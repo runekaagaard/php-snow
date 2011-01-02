@@ -3,32 +3,15 @@ Parser for the Snow language.
 Based on http://pyparsing.wikispaces.com/file/view/indentedGrammarExample.py.
 """
 
+import sys
 from pyparsing import *
+from json import dumps
 
-data = """\
-fn iamfunction
-  myint = 100
-  myweirdstring = iamstringish
-  dummy
+# Read file
+f = open(sys.argv[1], "r")
+data = f.read()
 
-dummyvar
-
-fn functionwithargs(a,b)
-  fn fnnoargs
-    bba1
-    bba2
-    bba3
-
-dummvar2
-
-fn spam(a,b,c)
-     fn eggs
-         pass
-
-fn amempty
-    pass
-"""
-
+# Parse
 indentStack = [1]
 
 def checkPeerIndent(s,l,t):
@@ -73,11 +56,6 @@ rvalue << (funcCall | identifier | Word(nums))
 assignment = Group(identifier + "=" + rvalue)
 stmt << ( funcDef | assignment | identifier )
 
-# Output
-print "== Code parsed =="
-print data
+# Output json
 parseTree = suite.parseString(data)
-
-print "== ASTish =="
-import pprint
-pprint.pprint( parseTree.asList())
+print dumps( parseTree.asList()[0])
