@@ -7,8 +7,8 @@ OK how to lex Snow? First lets consider the states.
  * Triple single quoted string
  * Triple double quoted string
  * Inline html
- * Inside ()
- * Inside []
+ * Inside `()`
+ * Inside `[]`
  
 == Indentation / Whitespace ==
 Before lexing all lines ending with a single \ should have the next line
@@ -34,4 +34,4 @@ Some keywords are more special and _can_ trigger an indentation.
  * ??
  * ?!
  
-Whitespace works differently when inside () or [].
+Whitespace works differently when inside `()` or `[]`.
