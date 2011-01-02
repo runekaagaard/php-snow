@@ -2,20 +2,20 @@
 OK how to lex Snow? First lets consider the states.
 
  * snow: Default state.
- * `'inside'`
- * `"inside"`
- * `'''inside'''`
- * `"""inside"""`
- * `%>inside<%`
- * `(inside)`
- * `[inside]`
+ * Single singlequotes: `'inside'`
+ * Single doublequotes: `"inside"`
+ * Triple singlequotes: `'''inside'''`
+ * Triple doublequotes: `"""inside"""`
+ * Inline html: `%>inside<%`
+ * Parenthesis: `(inside)`
+ * Square brackets: `[inside]`
  
 == Indentation / Whitespace ==
-Before lexing all lines ending with a single \ should have the next line
+Before lexing all lines ending with a single `\` should have the next line
 appended to it.
 
 The following keywords forces an indentation on the following line. The use 
-thereafter of ':' in the same line cancels that indentation.
+thereafter of `:` in the same line cancels that indentation.
 
  * if
  * else
@@ -35,5 +35,3 @@ Some keywords are more special and _can_ trigger an indentation.
  * ?!
  
 Whitespace works differently when inside `()` or `[]`.
-
-a = b > 3 ? b, 12
