@@ -1,0 +1,37 @@
+== States ==
+OK how to lex Snow? First lets consider the states.
+
+ * Snow: Basic snow code.
+ * Single quoted string
+ * Double quoted string
+ * Triple single quoted string
+ * Triple double quoted string
+ * Inline html
+ * Inside ()
+ * Inside []
+ 
+== Indentation / Whitespace ==
+Before lexing all lines ending with a single \ should have the next line
+appended to it.
+
+The following keywords forces an indentation on the following line. The use 
+thereafter of ':' in the same line cancels that indentation.
+
+ * if
+ * else
+ * elif
+ * for
+ * switch
+ * case
+ * default
+ * fn
+ * class
+ * con / pub / pro / pri / sta
+ * while
+
+Some keywords are more special and _can_ trigger an indentation.
+
+ * ??
+ * ?!
+ 
+Whitespace works differently when inside () or [].
