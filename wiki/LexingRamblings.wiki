@@ -1,14 +1,14 @@
 == States ==
 OK how to lex Snow? First lets consider the states.
 
- * Snow: Basic snow code.
- * Single quoted string
- * Double quoted string
- * Triple single quoted string
- * Triple double quoted string
- * Inline html
- * Inside `()`
- * Inside `[]`
+ * snow: Default state.
+ * `'inside'`
+ * `"inside"`
+ * `'''inside'''`
+ * `"""inside"""`
+ * `%>inside<%`
+ * `(inside)`
+ * `[inside]`
  
 == Indentation / Whitespace ==
 Before lexing all lines ending with a single \ should have the next line
@@ -35,3 +35,5 @@ Some keywords are more special and _can_ trigger an indentation.
  * ?!
  
 Whitespace works differently when inside `()` or `[]`.
+
+a = b > 3 ? b, 12
