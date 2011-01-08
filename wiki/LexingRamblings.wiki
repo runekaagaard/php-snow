@@ -48,6 +48,7 @@ whats going on.
 
 The flow for " could be like (repeat or do magic for """):
 
+{{{
 INITIAL
     t_STRING_BEGIN: '"', pushes state IN_DOUBLEQUOTED_STRING. Pushes an empty
         string to the stack lex.tokens.quoted_string_stack[n+1].
@@ -68,3 +69,4 @@ IN_DOUBLEQUOTED_STRING (exclusive)
 SNOW_IN_DOUBLEQUOTED_STRING (inclusive)
     SNOW_IN_DOUBLEQUOTED_STRING_SNOW_END: "}", pops state and we are back in
         IN_DOUBLEQUOTED_STRING.
+}}}
