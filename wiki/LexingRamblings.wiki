@@ -34,7 +34,7 @@ Some keywords are more special and _can_ trigger an indentation.
  * ??
  * ?!
  
-Whitespace works differently when inside `()` or `[]`.
+Whitespace works differently when inside `()` or `[]`. ..
 
 == Parsing " and """ strings ==
 The current Python lexer operates with both STRING and STRING_CONTINUE tokens.
