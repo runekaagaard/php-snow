@@ -1,0 +1,61 @@
+#summary Applying stuff before and after a loop inside the loop itself
+<wiki:toc/>
+
+This page is a stub.
+
+== Introduction ==
+_The following uses `|` instead of `%` as the before-after operator because
+I'm considering switching those two._
+
+The reasoning behind the before-after is to try to improve the following
+pattern:
+{{{
+@array lines
+def somefunc
+    rows = [get_one(), get_other()]
+    for line in lines
+        rows[] = 42
+        rows[] = line
+    rows[] = get_third()
+    rows[] = get_fourth()
+    <- rows
+}}}
+
+Using the before-after operator that would read:
+{{{
+@array arr
+def somefunc
+    rows = []
+    for line in lines
+        <- rows[] = get_one() get_other() | 42 line | get_third() get_fourth()
+}}}
+
+== Matrix ==
+<table border="1" cellpadding="5">
+    <tr>
+        <td><strong>Snow</strong></td>
+        <td><strong>PHP</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Second headline</strong></td>
+        <td><strong>Second headline</strong></td>
+    </tr>
+    <tr>
+        <td>Single line</td>
+        <td>Single line</td>
+    </tr>
+    <tr>
+        <td>
+{{{
+Multi-
+line
+}}}
+        </td>
+        <td>
+{{{
+Multi-
+line
+}}}
+        </td>
+    </tr>
+</table>
