@@ -1,7 +1,7 @@
 #summary Template for a Snow code documentation page.
 <wiki:toc/>
 
-== Introduction ===
+== Introduction ==
 Introduction to topic. `inline code`.
 
 == Matrix ==
