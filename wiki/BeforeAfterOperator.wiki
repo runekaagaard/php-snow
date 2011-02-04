@@ -10,10 +10,10 @@ I'm considering switching those two._
 The reasoning behind the before-after is to try to improve the following
 pattern:
 {{{
-@array lines
+@array arr
 def somefunc
     rows = [get_one(), get_other()]
-    for line in lines
+    for line in arr
         rows[] = 42
         rows[] = line
     rows[] = get_third()
