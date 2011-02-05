@@ -26,7 +26,7 @@ Using the before-after operator that would read:
 @array arr
 def somefunc
     for line in arr
-        <- rows[] = get_one() get_other() | 42 line | get_third() get_fourth()
+        rows []= <- get_one() get_other() | 42 line | get_third() get_fourth()
 }}}
 
 == Matrix ==
