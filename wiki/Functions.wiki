@@ -175,10 +175,14 @@ omitted for receiver functions calls without arguments.
 === Examples ===
 {{{
 str = "Hello, World!\n"
-str = str->strtolower       # call the function `strtolower` with parameter `str` and assign the result to `str`
-                                When there are no extra arguments, the parentheses must be omitted
-len = str->strlen           # assign the length of `str` to `len`
-hello = str->substr(0 5)    # assign the characters 0-5 of `str` to `hello`
+str = str->strtolower       # Call the function "strtolower" with parameter 
+                              "str" and assign the result to "str".
+                                When there are no extra arguments, the 
+                                parentheses must be omitted
+len = str->strlen           # Assign the length of "str" to "len".
+len = str->strlen()         # ERROR. Trailing parenthesis must be omitted when 
+                              the function does not have any arguments.
+hello = str->substr(0 5)    # Assign the characters 0-5 of "str" to "hello".
 }}}
 The above examples can be written using the standard syntax as follows:
 {{{
