@@ -2,13 +2,12 @@
 <wiki:toc/>
 
 ==Introduction==
-Snow provides several enhancements in both definition and defing of functions:
- * The `function` PHP keyword has been shortened to `fn`.
+Snow provides several enhancements to both defining and calling functions:
+ * The `function` keyword has been shortened to `fn`.
  * For functions without arguments the trailing `()` must be omitted.
  * Adds a new postfix `->` keyword for function receivers.
  * Provides for supereasy argument validation.
  * Removes the duplication of information between the docblocks and the code.
-
 == Matrix ==
 <table border="1" cellpadding="5">
     <tr>
@@ -28,6 +27,21 @@ foo()
 function foo() {
     //;
 }
+foo();
+}}}
+        </td>
+    </tr>
+<tr>
+        <td>
+{{{
+fn foo()
+    pass
+}}}
+        </td>
+        <td>
+{{{
+ERROR. Trailing parenthesis must be omitted when the function does not have any
+arguments.
 foo();
 }}}
         </td>
@@ -119,7 +133,7 @@ trailing parenthesis must be omitted for functions calls without arguments.
 {{{
 str = "Hello, World!\n"
 str = str->strtolower       # call the function `strtolower` with parameter `str` and assign the result to `str`
-                                As there are no extra parameters specified, the parentheses can be omitted
+                                When there are no extra arguments, the parentheses must be omitted
 len = str->strlen           # assign the length of `str` to `len`
 hello = str->substr(0 5)    # assign the characters 0-5 of `str` to `hello`
 }}}
