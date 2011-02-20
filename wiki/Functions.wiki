@@ -50,16 +50,22 @@ function bar($x, $y) {
         <td>
 {{{
 @arr baz
-    # A comment.
+    # Argument comment.
 fn bar
+    # Function comment header.
+        Function comment body.
     pass
 }}}
         </td>
         <td>
 {{{
 /*
+ * Function comment header.
+ *
+ * Function comment body.
+ *
  * @param array $baz
- *   A comment.
+ *   Argument comment.
  */
 function bar($baz) {
     
