@@ -36,33 +36,46 @@ function foo() {
         <td>
 {{{
 @int x
+    # An integer bigger than 0.
     _ < 0
 @int y
+    # An integer bigger than 0 and smaller than $x.
     ['$y must be bigger than 0': _ < 0,
      '$y must be smaller than $x': _ >= x,
+     NotFooException("Not foo!"): !is_foo(_),
     ]
-def foo
-    # I am docblock header.
-        I am docblock body.
+@return int
+def subtract
+    # Subtracts $y from $x.
+        Only works for positive returns.
     <- x - y
 }}}
         </td>
         <td>
 {{{
 /**
- * I am docblock header.
- * 
- * I am docblock body.
+ * Subtracts $y from $x.
+ *
+ * Only works for positive returns.
+ *
+ * @param int $x
+ *   An integer bigger than 0.
+ * @param int $y
+ *   An integer bigger than 0 and smaller than $x.
+ * @return int
  */
-function($x, $y) {
+function subtract($x, $y) {
     if ($x < 0) {
         throw new InvalidArgumentException();
     }
     if ($y < 0) {
-        throw new InvalidArgumentException('y must be bigger than 0');
+        throw new InvalidArgumentException('y must be bigger than 0.');
     }
-    if ($y <= $x) {
-        throw new InvalidArgumentException('y must be smaller than $x');
+    if ($y >= $x) {
+        throw new InvalidArgumentException('y must be smaller than $x.');
+    }
+    if (!is_foo($y)) {
+        throw new NotFooException("Not foo!");
     }
     return $x - $y;
 }
