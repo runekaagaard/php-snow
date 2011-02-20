@@ -166,7 +166,8 @@ A common paradigm in Snow is to use so-called `receiver functions`.
 A receiver function is an expression followed by a single arrow `->` followed by 
 a function name, optionally followed by `(arg2, arg3)` as additional arguments.
 The leading expression will be used as the first argument to the function. 
-Receiver functions can be chained like `myvar->myfunc1(arg2)->myfunc2`.
+Receiver functions can be chained like `myvar->myfunc1(arg2)->myfunc2` where
+`myfunc1(arg2)` will serve as the first argument passed to `myfunc2`.
 
 Unlike the tradition way of calling function the trailing parenthesis must be 
 omitted for receiver functions calls without arguments.
