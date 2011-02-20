@@ -7,7 +7,7 @@ This page is a stub.
 Snow provides several enhancements in both definition and defing of functions:
  * The `function` PHP keyword has been shortened to `fn`.
  * For functions without arguments the trailing `()` must be omitted.
- * Adds a new `->` function call keyword thus making function calls chainable.
+ * Adds a new postfix `->` keyword for function receivers.
  * Provides for supereasy argument validation.
  * Removes the duplication of information between the docblocks and the code.
 
@@ -36,8 +36,9 @@ function foo() {
         <td>
 {{{
 @int x
-    ['x must be bigger than 0': x < 0]
+    _ < 0
 @int y
+    ['$y must be bigger than 0': _ < 0]
 def foo
     # I am docblock header.
         I am docblock body.
@@ -53,7 +54,10 @@ def foo
  */
 function($x, $y) {
     if ($x < 0) {
-        throw new InvalidArgumentException('x must be bigger than 0');
+        throw new InvalidArgumentException();
+    }
+    if ($y < 0) {
+        throw new InvalidArgumentException('y must be bigger than 0');
     }
     return $x - $y;
 }
