@@ -1,8 +1,6 @@
 #summary The usages of function and methods
 <wiki:toc/>
 
-This page is a stub.
-
 ==Introduction==
 Snow provides several enhancements in both definition and defing of functions:
  * The `function` PHP keyword has been shortened to `fn`.
@@ -22,6 +20,7 @@ Snow provides several enhancements in both definition and defing of functions:
 {{{
 fn foo
     pass
+foo()
 }}}
         </td>
         <td>
@@ -29,6 +28,7 @@ fn foo
 function foo() {
     //;
 }
+foo();
 }}}
         </td>
     </tr>
@@ -40,10 +40,9 @@ function foo() {
     _ < 0
 @int y
     # An integer bigger than 0 and smaller than $x.
-    ['$y must be bigger than 0': _ < 0,
-     '$y must be smaller than $x': _ >= x,
-     NotFooException("Not foo!"): !is_foo(_),
-    ]
+    [_ < 0: '$y must be bigger than 0'
+     _ >= x: '$y must be smaller than $x'
+     !is_foo(_): NotFooException("Not foo!")]
 @return int
 def subtract
     # Subtracts $y from $x.
@@ -69,10 +68,10 @@ function subtract($x, $y) {
         throw new InvalidArgumentException();
     }
     if ($y < 0) {
-        throw new InvalidArgumentException('y must be bigger than 0.');
+        throw new InvalidArgumentException('$y must be bigger than 0.');
     }
     if ($y >= $x) {
-        throw new InvalidArgumentException('y must be smaller than $x.');
+        throw new InvalidArgumentException('$y must be smaller than $x.');
     }
     if (!is_foo($y)) {
         throw new NotFooException("Not foo!");
@@ -85,58 +84,38 @@ function subtract($x, $y) {
     <tr>
         <td>
 {{{
-Multi-
-line
+str->ucfirst->strtolower
 }}}
         </td>
         <td>
 {{{
-Multi-
-line
+ucfirst(strtolower($str));
 }}}
         </td>
     </tr>
     <tr>
         <td>
 {{{
-Multi-
-line
+foo->bar(baz);
 }}}
         </td>
         <td>
 {{{
-Multi-
-line
+bar($foo, $baz);
 }}}
         </td>
     </tr>
 </table>
 
-==Standard Syntax==
-===Examples===
-
-Examples without return value:
-{{{
-someFunction()          # function call without specifying parameters
-someOtherFunction(42)   # function call with constant parameter
-a = 42                  # assign the value `42` to the variable `a` 
-someOtherFunction(a)    # pass `a` as parameter to function `someOtherFunction`
-}}}
-
-Examples with return value:
-{{{
-a = someFunction()          # call function `someFunction` and assign its return value to variable `a`
-b = someOtherFunction(42)
-}}}
-
-As you can see, even when no parameters are specified, the trailing parenthesis are mandatory.
-
-==Receiver syntax==
+== Receiver syntax ==
 
 A common paradigm in Snow is to use so-called `receiver functions`.
-It is not so much the functions themselves that differ from normal functions but their way of being called. The trailing parenthesis can be omitted for functions calls without arguments.
 
-===Examples===
+It is not so much the functions themselves that differ from normal functions 
+but their way of being called. Unlike the tradition way of calling function the 
+trailing parenthesis must be omitted for functions calls without arguments.
+
+=== Examples ===
 {{{
 str = "Hello, World!\n"
 str = str->strtolower       # call the function `strtolower` with parameter `str` and assign the result to `str`
