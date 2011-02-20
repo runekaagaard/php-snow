@@ -5,7 +5,7 @@
 Snow provides several enhancements to both defining and calling functions:
  * The `function` keyword has been shortened to `fn`.
  * For functions without arguments the trailing `()` must be omitted.
- * Adds a new postfix `->` keyword for function receivers.
+ * Adds a new postfix `->` keyword for receivers functions.
  * Provides for supereasy argument validation.
  * Removes the duplication of information between the docblocks and the code.
 == Matrix ==
@@ -163,9 +163,13 @@ bar($foo, $baz);
 
 A common paradigm in Snow is to use so-called `receiver functions`.
 
-It is not so much the functions themselves that differ from normal functions 
-but their way of being called. Unlike the tradition way of calling function the 
-trailing parenthesis must be omitted for functions calls without arguments.
+A receiver function is an expression followed by a single arrow `->`followed by 
+a function name, optionally followed by `(arg2, arg3)` as additional arguments.
+The expression will be used as the first argument to the function. Receiver
+functions can be chained as `myvar->myfunc1(arg2)->myfunc2`.
+
+Unlike the tradition way of calling function the trailing parenthesis must be 
+omitted for receiver functions calls without arguments.
 
 === Examples ===
 {{{
