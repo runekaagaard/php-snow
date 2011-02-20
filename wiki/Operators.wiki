@@ -12,7 +12,7 @@ Some operators have been changed from symbols to text. This frees up these symbo
 || or       || `_or_` (Not recommended) ||
 || %        || mod         ||
 || $a %= $b || a mod= b    ||
-|| .        || `|`         ||
+|| .        || `%`         ||
 || $a .= $b || a |= b      ||
 || &        || band        ||
 || `|`      || bor         ||

@@ -55,14 +55,14 @@ $this->num = $this->min - 2;</code></td></tr>
 
 <wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar | ::my_static_var</code></td>
+echo .myvar % ::my_static_var</code></td>
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
 echo $this->myvar . self::$my_static_var;</code></td></tr>
 
 <wiki:comment>Snow example</wiki:comment>
 <tr><td valign="top" cellpadding="0"><code language="php">
-echo .myvar | ::$MYCONST</code></td>
+echo .myvar % ::$MYCONST</code></td>
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0"><code language="php">
 echo $this->myvar . self::MYCONST;</code></td></tr>
@@ -74,10 +74,10 @@ echo $this->myvar . self::MYCONST;</code></td></tr>
     Description about the class Foo.
 @int x
     # A positive number below 100.
-    0 < % < 100
+    0 < _ < 100
 @str s
     # A positive number below 10.
-    0 < % < 10
+    0 < _ < 10
 class Foo extends Bar
     con int $BAZ = 35
         # The bazness.
@@ -196,8 +196,8 @@ The order must be `con`, `pub`, `pro` and `pri`.
 class Foo
     pub
         str
-            a = .b | "abc"
-            b = .a | "def"
+            a = .b % "abc"
+            b = .a % "def"
 }}}
 </td>
 <wiki:comment>PHP example</wiki:comment>
@@ -214,13 +214,13 @@ Below is an example of a FTP class.
     upload/download, etc.
 @str host
     # The ftp host to connect to.
-    !%->empty
+    !_->empty
 @int port=21
     # The port to connect to.
-    0 < % < 65536
+    0 < _ < 65536
 @int timeout=30
     # Connect timeout, bail out if exceeded. 0 means wait forever.
-    0 <= %
+    0 <= _
 class Ftp
     con int
         OPT_TRANS_ASCII = FTP_ASCII
@@ -261,7 +261,7 @@ class Ftp
     # Checks whether a file exists on the remote side.
     @str file
         # The filename to check for.
-        !%->empty
+        !_->empty
     fn file_exists
         <- .conn->ftp_nlist(file->dirname)->in_array(file->basename)
 

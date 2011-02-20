@@ -94,7 +94,7 @@ if (empty($b)) {
 {{{
 authors['fans'] ??
     for fan in get_fans()
-        authors['fans'] |= '<ul>' % "<li>{fan}</li>" % '</ul>'
+        authors['fans'] %= '<ul>' | "<li>{fan}</li>" | '</ul>'
 }}}
         </td>
         <td>

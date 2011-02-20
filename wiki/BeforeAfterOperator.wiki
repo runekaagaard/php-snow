@@ -4,8 +4,6 @@
 This page is a stub.
 
 == Introduction ==
-_The following uses `|` instead of `%` as the before-after operator because
-I'm considering switching those two._
 
 The reasoning behind the before-after is to try to improve the following
 pattern:
