@@ -169,7 +169,7 @@ The leading expression will be used as the first argument to the function.
 Receiver functions can be chained like `myvar->myfunc1(arg2)->myfunc2` where
 `myfunc1(arg2)` will serve as the first argument passed to `myfunc2`.
 
-Unlike the tradition way of calling function the trailing parenthesis must be 
+Unlike the tradition way of calling functions the trailing parenthesis must be 
 omitted for receiver functions calls without arguments.
 
 === Examples ===
@@ -178,7 +178,7 @@ str = "Hello, World!\n"
 str = str->strtolower       # Call the function "strtolower" with parameter 
                               "str" and assign the result to "str".
                                 When there are no extra arguments, the 
-                                parentheses must be omitted
+                                parentheses must be omitted.
 len = str->strlen           # Assign the length of "str" to "len".
 len = str->strlen()         # ERROR. Trailing parenthesis must be omitted when 
                               the function does not have any arguments.
