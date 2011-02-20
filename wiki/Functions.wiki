@@ -4,7 +4,7 @@
 ==Introduction==
 Snow provides several enhancements to both defining and calling functions:
  * The `function` keyword has been shortened to `fn`.
- * For functions without arguments the trailing `()` must be omitted.
+ * For function definitions without arguments the trailing `()` must be omitted.
  * Adds a new postfix `->` keyword for receivers functions.
  * Provides for supereasy argument validation.
  * Removes the duplication of information between the docblocks and the code.
