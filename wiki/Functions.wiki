@@ -25,9 +25,24 @@ foo()
         <td>
 {{{
 function foo() {
-    //;
+    // Stub.
 }
 foo();
+}}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+{{{
+fn bar(x y)
+    pass
+}}}
+        </td>
+        <td>
+{{{
+function bar($x, $y) {
+    // Stub.
+}
 }}}
         </td>
     </tr>
