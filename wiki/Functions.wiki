@@ -38,12 +38,8 @@ fn foo()
     pass
 }}}
         </td>
-        <td>
-{{{
-ERROR. Trailing parenthesis must be omitted when the function does not have any
-arguments.
-foo();
-}}}
+        <td>ERROR. Trailing parenthesis must be omitted when the function does 
+        not have any arguments.
         </td>
     </tr>
     <tr>
