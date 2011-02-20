@@ -46,7 +46,28 @@ function bar($x, $y) {
 }}}
         </td>
     </tr>
-<tr>
+    <tr>
+        <td>
+{{{
+@arr baz
+    # A comment.
+fn bar
+    pass
+}}}
+        </td>
+        <td>
+{{{
+/*
+ * @param array $baz
+ *   A comment.
+ */
+function bar($baz) {
+    
+}
+}}}
+        </td>
+    </tr>
+    <tr>
         <td>
 {{{
 fn foo()
