@@ -178,7 +178,7 @@ will be thrown.
 Example:
 {{{
 @int myvariable_name
-    !_->empty
+    _->empty
 fn foo
     pass
 }}}
@@ -196,7 +196,7 @@ three things:
 Example:
 {{{
 @int myvariable_name
-    [!_->empty: "Must not be empty".
+    [_->empty: "Must not be empty".
      _ > 3: CustomException("Message...")
      _: <- ERROR_CODE
     ]
