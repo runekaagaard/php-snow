@@ -38,7 +38,9 @@ function foo() {
 @int x
     _ < 0
 @int y
-    ['$y must be bigger than 0': _ < 0]
+    ['$y must be bigger than 0': _ < 0,
+     '$y must be smaller than $x': _ >= x,
+    ]
 def foo
     # I am docblock header.
         I am docblock body.
@@ -58,6 +60,9 @@ function($x, $y) {
     }
     if ($y < 0) {
         throw new InvalidArgumentException('y must be bigger than 0');
+    }
+    if ($y <= $x) {
+        throw new InvalidArgumentException('y must be smaller than $x');
     }
     return $x - $y;
 }
