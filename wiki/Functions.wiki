@@ -1,8 +1,94 @@
-#summary One-sentence summary of this page.
+#summary The usages of function and methods
 <wiki:toc/>
 
+This page is a stub.
+
 ==Introduction==
-Like in most languages, in Snow functions are basic building blocks. Listed below are the two different syntaxes for calling functions in Snow.
+Snow provides several enhancements in both definition and defing of functions:
+ * The `function` PHP keyword has been shortened to `fn`.
+ * For functions without arguments the trailing `()` must be omitted.
+ * Adds a new `->` function call keyword thus making function calls chainable.
+ * Provides for supereasy argument validation.
+ * Removes the duplication of information between the docblocks and the code.
+
+== Matrix ==
+<table border="1" cellpadding="5">
+    <tr>
+        <td><strong>Snow</strong></td>
+        <td><strong>PHP</strong></td>
+    </tr>
+    <tr>
+        <td>
+{{{
+fn foo
+    pass
+}}}
+        </td>
+        <td>
+{{{
+function foo() {
+    //;
+}
+}}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+{{{
+@int x
+    ['x must be bigger than 0': x < 0]
+@int y
+def foo
+    # I am docblock header.
+        I am docblock body.
+    <- x - y
+}}}
+        </td>
+        <td>
+{{{
+/**
+ * I am docblock header.
+ * 
+ * I am docblock body.
+ */
+function($x, $y) {
+    if ($x < 0) {
+        throw new InvalidArgumentException('x must be bigger than 0');
+    }
+    return $x - $y;
+}
+}}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+{{{
+Multi-
+line
+}}}
+        </td>
+        <td>
+{{{
+Multi-
+line
+}}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+{{{
+Multi-
+line
+}}}
+        </td>
+        <td>
+{{{
+Multi-
+line
+}}}
+        </td>
+    </tr>
+</table>
 
 ==Standard Syntax==
 ===Examples===
