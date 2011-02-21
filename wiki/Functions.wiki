@@ -88,7 +88,7 @@ fn foo()
     <tr>
         <td>
 {{{
-@arr x
+@int x
     x > 0
 fn bar
     pass
@@ -96,6 +96,9 @@ fn bar
         </td>
         <td>
 {{{
+/**
+ * @param int $x
+ */
 function bar($x) {
     if (!($x > 0)) {
         throw new InvalidArgumentException();
