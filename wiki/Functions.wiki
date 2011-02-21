@@ -7,7 +7,8 @@ Snow provides several enhancements to both defining and calling functions:
  * For function definitions without arguments the trailing `()` must be omitted.
  * Adds a new postfix `->` keyword for receivers functions.
  * Provides for supereasy argument validation.
- * Removes the duplication of information between the docblocks and the code.
+ * Removes duplication of information between docblocks and function definition.
+ 
 == Matrix ==
 <table border="1" cellpadding="5">
     <tr>
@@ -82,6 +83,25 @@ fn foo()
         </td>
         <td>ERROR. Trailing parenthesis must be omitted when the function does 
         not have any arguments.
+        </td>
+    </tr>
+    <tr>
+        <td>
+{{{
+@arr x
+    x > 0
+fn bar
+    pass
+}}}
+        </td>
+        <td>
+{{{
+function bar($x) {
+    if (!($x > 0)) {
+        throw new InvalidArgumentException();
+    }
+}
+}}}
         </td>
     </tr>
     <tr>
