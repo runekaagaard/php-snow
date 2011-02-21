@@ -95,8 +95,8 @@ fn foo()
     [0 < _: '$y must be bigger than 0.'
      _ < x: '$y must be smaller than $x.'
      is_foo(_): NotFooException("Not foo!")
-     is_y_ish(_): <- false 
-    ]
+     is_y_ish(_): <- false
+     is_crazy(_)]
 @return int
 def subtract
     # Subtracts $y from $x.
@@ -118,13 +118,13 @@ def subtract
  * @return int
  */
 function subtract($x, $y) {
-    if ($x < 0) {
+    if (!(0 < $x)) {
         throw new InvalidArgumentException();
     }
-    if ($y < 0) {
+    if (!(0 < $y)) {
         throw new InvalidArgumentException('$y must be bigger than 0.');
     }
-    if ($y >= $x) {
+    if (!($y < $x)) {
         throw new InvalidArgumentException('$y must be smaller than $x.');
     }
     if (!is_foo($y)) {
@@ -132,6 +132,9 @@ function subtract($x, $y) {
     }
     if (!is_y_ish($y) {
         return false;
+    }
+    if (!is_crazy($y) {
+        throw new InvalidArgumentException();
     }
     return $x - $y;
 }
@@ -172,7 +175,7 @@ single underscore `_` can be used as a shortcut to the argument variable.
 
 === Single expression argument validation ===
 A single expression can be put on an indented line to validate the argument
-passed to the function. If the expression is false an InvalidArgumentException
+passed to the function. If the expression is false an !InvalidArgumentException
 will be thrown.
 
 Example:
@@ -188,16 +191,21 @@ A passed argument can be validated by multiple expressions by adding an array
 on an indented line after the argument definition. The keys in the array are
 the expressions to validate for trueness. The values can be one of
 three things:
- * string: Will throw a an InvalidArgumentException with the string as the message.
+
+ * string: Will throw a an !InvalidArgumentException with the string as the message.
  * Exception: Will throw the given exception.
  * return: Will return whats after `<-`.
+
+If the key is omitted an !InvalidArgumentException with an empty message will
+be thrown.
 
 Example:
 {{{
 @int myvariable_name
-    [!_->empty: "Must not be empty".
-     _ > 3: CustomException("Message...")
+    [!_->empty: "Must not be empty."
+     _ > 3: CustomException("Custom message.")
      _ != 3: <- ERROR_CODE
+     _ !== 2 # Message will be empty.
     ]
 fn foo
     pass
