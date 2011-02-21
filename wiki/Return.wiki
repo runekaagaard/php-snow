@@ -3,7 +3,10 @@
 <wiki:toc/>
 
 == Introduction ===
-Snow renames the return keyword to `<-` and introduces `<--` as an inner return that works inside all control structures. The inner return allows for an control structure to return a value which can either be stored to a variable or returned from the function.
+Snow renames the return keyword to `<-` and introduces `<--` as an inner return 
+that works inside all control structures. The inner return allows for an control 
+structure to return a value which can either be stored to a variable or returned 
+from the function.
 
 == Matrix ==
 <table border="1" cellpadding="5">
@@ -75,7 +78,7 @@ fn process_ints
     return_code = for i in ints
         if i->empty: <-- HAS_EMPTY
         if i > 50: <-- HAS_OUTOF_RANGE
-        new_ints[] =[] i->do_stuff_to
+        new_ints[] = [] | i->do_stuff_to | null
     <- ['return_code': return_code ?? IS_OK, 'ints': new_ints]
 }}}
         </td>
