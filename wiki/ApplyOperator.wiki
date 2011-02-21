@@ -2,7 +2,14 @@
 <wiki:toc/>
 
 == Introduction ===
-The apply operator `*` tells the parser to apply a function to some variable.
+The apply operator `*` is a shortcut for the pattern:
+{{{
+# Normal syntax.
+foo = foo->somefunc
+# Apply operator syntax.
+*foo->somefunc
+}}}
+So far it only works with receiver functions.
 
 == Matrix ==
 <table border="1" cellpadding="5">

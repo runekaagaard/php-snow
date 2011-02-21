@@ -13,7 +13,7 @@ Some operators have been changed from symbols to text. This frees up these symbo
 || %        || mod         ||
 || $a %= $b || a mod= b    ||
 || .        || `%`         ||
-|| $a .= $b || a |= b      ||
+|| $a .= $b || a %= b      ||
 || &        || band        ||
 || `|`      || bor         ||
 || ^        || bxor        ||
