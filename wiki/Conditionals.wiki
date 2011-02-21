@@ -32,30 +32,36 @@ The elif-part can be infinitely repeated and gets evaluated only when `<expr>` e
 The else block is the last resort, when no `if` or `elif` evaluates to true.
 
 ==switch==
-The `switch` statement is like a bunch `if`/`elif` statements. It's basic form is:
+The `switch` statement is like a bunch `if`/`elif` statements. It's basic form 
+is:
 {{{
 switch <expr>
-    case 0
+    0
         statement
-    case 1
+    1
         statement
+    'shortform': statement
     default
         statement
 }}}
-Note that a `break` statement is not necessary. It is the standard. In fact, the keyword is unsupported.
-We now have the `fallthru` keyword, it's effect is exactly the opposite of `break`.
+Notice that the case keyword has been removed.
 
-Instead of specifying where to stop evaluation of the following statements, you tell the parser explicitly to 'fall through' to the next `case`.
+Also new is that each case statement per default has an implied `break` statement 
+added in the end. To revert this behaviour use the `fallthru` keyword, it's 
+effect is exactly the opposite of `break`. Instead of specifying where to stop 
+evaluation of the following statements, you tell the parser explicitly to 'fall 
+through' to the next `case`. The `break` keyword can still be used normally, 
+e.g. to break early in a condition.
 
 {{{
 # Example #1:
 a = 1
 switch a
-    case 0
+    0
         echo 0
-    case 1
+    1
         echo 1
-    case 2
+    2
         echo 2
 # prints: 1
 }}}
@@ -63,13 +69,13 @@ switch a
 # Example #2:
 a = 1
 switch a
-    case 0
+    0
         echo 0
         fallthru
-    case 1
+    1
         echo 1
         fallthru
-    case 2
+    2
         echo 2
         fallthru
 # prints: 12
@@ -99,5 +105,3 @@ if ($c = $d) {
         </td>
     </tr>    
 </table>
-
-
