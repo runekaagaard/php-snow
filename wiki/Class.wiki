@@ -170,7 +170,7 @@ class Foo extends Bar {
 }}}
 </td></tr>
     <tr>
-        <td colspan="2"><strong>Disallowed code</strong></td>
+        <td colspan="2"><strong>Invalid syntax</strong></td>
     </tr>
     
 <wiki:comment>Snow example</wiki:comment>
@@ -189,6 +189,32 @@ class Foo
 <wiki:comment>PHP example</wiki:comment>
 <td valign="top" cellpadding="0">
 The order must be `con`, `pub`, `pro` and `pri`.
+</td></tr>
+
+<tr><td valign="top" cellpadding="0">
+{{{
+class Foo
+    pri
+        int foo
+        int bar
+}}}
+</td>
+<wiki:comment>PHP example</wiki:comment>
+<td valign="top" cellpadding="0">
+More than one of the same type must be nested.
+</td></tr>
+
+<tr><td valign="top" cellpadding="0">
+{{{
+class Foo
+    pri
+        int 
+            foo
+}}}
+</td>
+<wiki:comment>PHP example</wiki:comment>
+<td valign="top" cellpadding="0">
+When there is only one type it must be collapsed.
 </td></tr>
 
 <wiki:comment>Snow example</wiki:comment>
