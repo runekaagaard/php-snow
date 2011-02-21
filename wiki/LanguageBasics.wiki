@@ -55,6 +55,38 @@ else
    echo "a is wrong"
 }}}
 
+== Comma ==
+The normal use of the comma as a separator in array definitions and function / 
+method calls and definitions should be omitted unless in cases where it 
+improves readability. Comma must be used or omitted consistently throughout the
+entire construct.
+
+Examples:
+{{{
+# Array definition.
+a = [1 2 3]
+a = [1,2, 3]
+a = [
+    'foo': 'bar',
+    'baz': 'boz',
+    [1:2, 3:4, [1 2 3]]
+]
+# Function call.
+b = foo(1 bar() 3)
+b = foo(1, bar(), 3)
+# Function / Method definition.
+fn foo (x y z)
+fn foo (x, y, z)
+# Multiple variable assignment.
+a b = 3 4
+a, b = 3, 4
+}}}
+
+Invalid example:
+{{{
+myvar = myfunc('foo' 3, true) # Comma not used or omitted consistently.
+}}}
+
 == Variables ==
 Snow variables are defined without the prefixed `$` known and hated from PHP:
 {{{

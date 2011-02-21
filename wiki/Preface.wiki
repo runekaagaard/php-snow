@@ -21,7 +21,8 @@ Source: Wikipedia
 }}}
 
 Basically what it boils down to is that we have created a new syntax for a 
-metalanguage that compiles down to PHP.
+metalanguage that compiles down to PHP. Snow is to PHP what Coffescript is to
+Javascript.
 
 The main objectives designing Snow are:
  * De-ugly-fy PHP's syntax

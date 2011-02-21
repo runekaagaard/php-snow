@@ -2,7 +2,6 @@
 #labels Featured
  * [Preface]
  * [LanguageBasics Language basics]
-   * [Comma]
  * [Functions]
  * [Class]
  * !ControlStructures
