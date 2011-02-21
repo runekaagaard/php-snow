@@ -122,10 +122,12 @@ function subtract($x, $y) {
         throw new InvalidArgumentException();
     }
     if (!(0 < $y)) {
-        throw new InvalidArgumentException('$y must be bigger than 0.');
+        throw new InvalidArgumentException(
+            '$y must be bigger than 0.');
     }
     if (!($y < $x)) {
-        throw new InvalidArgumentException('$y must be smaller than $x.');
+        throw new InvalidArgumentException(
+            '$y must be smaller than $x.');
     }
     if (!is_foo($y)) {
         throw new NotFooException("Not foo!");
