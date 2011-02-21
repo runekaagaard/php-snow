@@ -109,19 +109,43 @@ $I_AM_CONSTANT = 42
 echo $I_AM_CONSTANT
 }}}
 
-==Quotation==
+== Strings ==
+Snow introduces two new string types: triple double quoted strings `"""` and
+triple single quoted strings `'''`. The use of heredoc and nowdoc strings is
+still supported but not recommended.
+
+A noteworthy change for all string types except nowdoc and heredocs is that
+whitespace before current indentation level is stripped.
+
+=== Quotation ===
 Snow uses PHP's default quotation rules:
- * Single quotes (') don't have variable expansion
- * Double quotes (") have variable expansion
- * Heredoc (<<<LABEL or <<<"LABEL") have variable expansion
- * Nowdoc (<<<'LABEL') doesn't have variable expansion
+ * Single quotes (') don't have variable expansion.
+ * Double quotes (") have variable expansion.
+ * Heredoc (<<<LABEL or <<<"LABEL") have variable expansion.
+ * Nowdoc (<<<'LABEL') doesn't have variable expansion.
 
 Backslash (\) is the universal escape character.
 
 Details can be viewed at: http://php.net/manual/en/language.types.string.php
 
-== Variable expansion ==
-Inside Double quotes and Heredoc various code enclosed in curly brackets will 
+Example:
+{{{
+def foo
+    <- """
+    <div>
+       It snows!
+    </div> 
+    """
+}}}
+Output:
+{{{
+<div>
+    It snows!
+</div>
+}}}
+
+=== Variable expansion ===
+Inside double quotes and heredoc various code enclosed in curly brackets will 
 add their value to the string. This is true for variables, constants, function 
 calls and method calls:
 {{{
