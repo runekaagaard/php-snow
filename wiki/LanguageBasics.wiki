@@ -44,6 +44,9 @@ comment lines.
 Valid syntax example:
 {{{
 if a = 42
+    # First comment must start correctly.
+      Second an do what it want.
+      Etc.
     echo "a is 42"
 else
     echo "a is wrong"
