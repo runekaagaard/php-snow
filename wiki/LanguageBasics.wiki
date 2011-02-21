@@ -8,14 +8,12 @@ All Snow files starts off in Snow mode. To escape to HTML mode you can use
 `%>` and subsequently `<%` to enter Snow mode again.
 
 Example:
-
-`example.snow`
 {{{
-# This is snow code
+echo 'This is Snow code, '
 %> 
-Now we're talking HTML!
+now we're talking HTML,
 <%
-echo 'And back to snow again...'
+echo ' and were back in Snow again.'
 }}}
 
 The details of using Snow as a template language are not yet defined.
@@ -44,9 +42,9 @@ comment lines.
 Valid syntax example:
 {{{
 if a = 42
-    # First comment must start correctly.
-      Second an do what it want.
-      Etc.
+    # First comment line must start correctly
+      but second and onwards can do what it want,
+      etc.
     echo "a is 42"
 else
     echo "a is wrong"
@@ -54,6 +52,7 @@ else
 Invalid syntax example:
 {{{
 if a = 42
+  # Comment.
    echo "a is 42"
 else
    echo "a is wrong"
@@ -139,10 +138,10 @@ Notice the removed whitespace.
 
 === Quotation ===
 Snow uses PHP's default quotation rules:
- * Single quotes (' and ''') don't have variable expansion.
- * Double quotes (" and """) have variable expansion.
- * Heredoc (<<<LABEL or <<<"LABEL") have variable expansion.
- * Nowdoc (<<<'LABEL') doesn't have variable expansion.
+ * Double quotes - `"` and `"""` - have variable expansion.
+ * Single quotes - `'` and `'''` - doesn't have variable expansion.
+ * Heredoc - `<<<LABEL` and `<<<"LABEL"` - have variable expansion.
+ * Nowdoc - `<<<'LABEL'` - doesn't have variable expansion.
 
 Backslash (\) is the universal escape character.
 
