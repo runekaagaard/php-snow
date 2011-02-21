@@ -1,29 +1,18 @@
 <wiki:toc/>
 
-So, what exactly _is_ Snow? How does it work? And why do I need it?
-
-== What Snow is ==
+== What is Snow? ==
 Snow is a language that compiles to PHP or for those familiar with 
 [http://jashkenas.github.com/coffee-script/ Coffescript] you could say that
 Snow is to PHP what Coffeescript is to Javascript.
 
-The main objectives designing Snow are:
- * De-ugly-fy PHP's syntax
- * Create a syntax that allows for greater expressive power
- * Create a syntax that is more concise
+The main objectives of Snow are:
+ * De-uglify PHP's syntax.
+ * Create a language with greater expressive power.
+ * Save keystrokes and lines.
+ * Make PHP fun again.
 
-How did we go about doing that? We looked at several languages we deemed 
+How did we go about doing that? We looked at several languages we found 
 interesting. Most notably: [http://www.python.org/ Python], 
 [http://www.ruby-lang.org/en/ Ruby], [http://www.scala-lang.org/ Scala] and 
 [http://golang.org/ Go]. We took bits and pieces of each them, threw in some
-of our own inventions and created a syntax that we like way better than PHP.
-
-The best part of using Snow is that it still fits in the PHP paradigm, 
-the complete PHP landscape is still applicable (think serverstack, 
-documentation, community etc.), there is just one thin layer added which is the 
-Snow compiler.
-
-== Why we have created Snow ==
-We have created Snow because PHP's syntax is ugly and it makes our eyes bleed. 
-Sure, the language itself is fine; it has a very gradual learning curve 
-while still allowing for serious webdevelopment.
+of our own inventions and created a language that we like much better than PHP.
