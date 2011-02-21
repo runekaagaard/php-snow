@@ -4,7 +4,7 @@
 =Basics=
 
 ==Toggling Snow/HTML mode==
-All Snow files are implied to contain only code. To escape Snow mode you can use 
+All Snow files starts off in Snow mode. To escape to HTML mode you can use 
 `%>` and subsequently `<%` to enter Snow mode again.
 
 Example:
@@ -36,9 +36,10 @@ echo "Hello, " echo "World!\n"
 
 ==Whitespace==
 Snow, as does python, operates with significant whitespace, meaning that
-the grouping of code is managed by indenting/dedenting and not by using brackets
+the code structure is managed by indenting/dedenting and not by using brackets
 `{}`. The indentation size is fixed to 4 spaces and all lines must start with
-a number of spaces to which 4 is a divisor.
+a number of spaces to which 4 is a divisor. The only exception to this rule is
+comment lines.
 
 Valid syntax example:
 {{{
@@ -114,21 +115,9 @@ Snow introduces two new string types: triple double quoted strings `"""` and
 triple single quoted strings `'''`. The use of heredoc and nowdoc strings is
 still supported but not recommended.
 
-A noteworthy change for all string types except nowdoc and heredocs is that
-whitespace before current indentation level is stripped.
+A noteworthy change for all string types is that whitespace before the current 
+indentation level is stripped:
 
-=== Quotation ===
-Snow uses PHP's default quotation rules:
- * Single quotes (') don't have variable expansion.
- * Double quotes (") have variable expansion.
- * Heredoc (<<<LABEL or <<<"LABEL") have variable expansion.
- * Nowdoc (<<<'LABEL') doesn't have variable expansion.
-
-Backslash (\) is the universal escape character.
-
-Details can be viewed at: http://php.net/manual/en/language.types.string.php
-
-Example:
 {{{
 def foo
     <- """
@@ -145,18 +134,30 @@ Output:
 }}}
 Notice the removed whitespace.
 
+=== Quotation ===
+Snow uses PHP's default quotation rules:
+ * Single quotes (' and ''') don't have variable expansion.
+ * Double quotes (" and """) have variable expansion.
+ * Heredoc (<<<LABEL or <<<"LABEL") have variable expansion.
+ * Nowdoc (<<<'LABEL') doesn't have variable expansion.
+
+Backslash (\) is the universal escape character.
+
+Details can be viewed at: http://php.net/manual/en/language.types.string.php
+
 === Variable expansion ===
 Inside double quotes and heredoc various code enclosed in curly brackets will 
 add their value to the string. This is true for variables, constants, function 
 calls and method calls:
 {{{
-mystring = "I am {$A_CONSTANT} with {a_string} and {obj.method()} and {obj::static_method()} and a {func_tion()}"
+mystring = "I am {$A_CONSTANT} with {a_string} and {obj.method()} 
+            and {obj::static_method()} and a {func_tion()}"
 }}}
 
 ==Arrays==
 Arrays can be created only by defining keys and and values separated by a colon 
-inside square brackets. The use of comma between array elements is optional but
-must stay the same for the entire array.
+inside square brackets `[]`. The use of comma between array elements is optional 
+but must stay the same for the entire array.
 
 Example:
 {{{
@@ -181,7 +182,13 @@ arr_a['key'] arr_b['key'] c = ['yo'] ['uber'] get_c()
 }}}
 
 ==Compilation target==
-Per default Snow will take the ".snow" file, change the extension to ".php" and create/update a ".php" file in the same directory. Some frameworks however uses other extensions than ".php" and to remedy this Snow has the `@compileto` annotation. It should be placed in the beginning of the ".snow" file and tells the Snow compiler to which file it should compile the PHP code. The location is relative to the ".snow" file. Locations starting with "/" will have absolute paths.
+Per default Snow will take the ".snow" file, change the extension to ".php" and 
+create/update a ".php" file in the same directory. Some frameworks however uses 
+other extensions than ".php" and to remedy this Snow has the `@compileto` 
+annotation. It should be placed in the beginning of the ".snow" file and tells 
+the Snow compiler to which file it should compile the PHP code. The location is 
+relative to the ".snow" file. Locations starting with "/" will have absolute 
+paths.
 
 Example:
 {{{
