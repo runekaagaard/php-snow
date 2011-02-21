@@ -82,10 +82,11 @@ class Foo extends Bar
     con int $BAZ = 35
         # The bazness.
     pub
-        int foo = 2 * x * ::$BAZ
-            # The fooness.
-        int bar = .foo * 2
-            # The variable bar.
+        int 
+            foo = 2 * x * ::$BAZ
+                # The fooness.
+            bar = .foo * 2
+                # The variable bar.
         str s = s
             # A string.
     pro
