@@ -64,7 +64,7 @@ used inside a loop to assign content to a variable before and after the loop.
         <td>
 {{{
 for k v in array
-    text |= 'before' % "{k}: {v}" % 'after' 
+    text %= 'before' | "{k}: {v}" | 'after' 
 }}}        
         </td>
         <td>
@@ -114,9 +114,9 @@ Factorial implementation.
 {{{
 fn factorial(int n)
     <- 1 when n == 0
-    a = n
-    for i=n downto 2: a *= i
-    <- a
+    for i = n downto 2: 
+        x *= n | i | null
+    <- x
 echo fn(5)
 }}}
 Output:
