@@ -1,6 +1,38 @@
 #summary Description of the use of conditionals in Snow
 <wiki:toc/>
 
+This page is a stub.
+
+== Introduction ==
+Conditionals has been overhauled, specifically:
+ 
+ * Parenthesis `()` are no longer required around the expression.
+ * The `case` keyword is removed in the `switch` statement.
+ * `break` is the default behaviour in a `case` block and can be reversed by the new keyword `fallthru`.
+ * `when` is introduced as a postfix `if` sentence.
+
+== Matrix ==
+<table border="1" cellpadding="5">
+    <tr>
+        <td><strong>Snow</strong></td>
+        <td><strong>PHP</strong></td>
+    </tr>
+    <tr>
+        <td>
+{{{
+a = b when c = d
+}}}        
+        </td>
+        <td>
+{{{
+if ($c = $d) {
+    $a = $b;
+}
+}}}        
+        </td>
+    </tr>    
+</table>
+
 ==if==
 The `if` controlstructure follows the basic pattern of:
 {{{
@@ -83,25 +115,3 @@ switch a
 
 ==When==
 Snow introduces a new keyword `when` that works as a postfix `if` sentence.
-
-===Matrix===
-<table border="1" cellpadding="5">
-    <tr>
-        <td><strong>Snow</strong></td>
-        <td><strong>PHP</strong></td>
-    </tr>
-    <tr>
-        <td>
-{{{
-a = b when c = d
-}}}        
-        </td>
-        <td>
-{{{
-if ($c = $d) {
-    $a = $b;
-}
-}}}        
-        </td>
-    </tr>    
-</table>
