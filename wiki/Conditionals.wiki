@@ -1,7 +1,7 @@
 #summary Description of the use of conditionals in Snow
 <wiki:toc/>
 
-This page is a stub.
+This page is currently being reconstructed.
 
 == Introduction ==
 Conditionals has been overhauled, specifically:
@@ -16,6 +16,45 @@ Conditionals has been overhauled, specifically:
     <tr>
         <td><strong>Snow</strong></td>
         <td><strong>PHP</strong></td>
+    </tr>
+    <tr>
+        <td>
+{{{
+if a > 0
+    echo "a is positive."
+elif a == 0
+    echo "a is zero."
+else
+    echo "a is negative."
+}}}        
+        </td>
+        <td>
+{{{
+if ($a > 0) {
+    echo "a is positive.";
+} elseif ($a == 0) {
+    echo "a is zero.";
+} else {
+    echo "a is negative.";
+}
+}}}        
+        </td>
+    </tr>
+        <tr>
+        <td>
+{{{
+if (a_very_long_variable_name->and_a_very_long_function_name and
+                    also_a_very_long_variable_name->normal_func_name)
+    pass
+}}}        
+        </td>
+        <td>
+{{{
+if (and_a_very_long_function_name and($a_very_long_variable_name) &&
+normal_func_name($also_a_very_long_variable_name)) {
+    // Stub.
+}
+}}}        </td>
     </tr>
     <tr>
         <td>
