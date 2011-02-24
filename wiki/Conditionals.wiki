@@ -54,7 +54,8 @@ if (and_a_very_long_function_name and($a_very_long_variable_name) &&
 normal_func_name($also_a_very_long_variable_name)) {
     // Stub.
 }
-}}}        </td>
+}}}        
+        </td>
     </tr>
     <tr>
         <td>
