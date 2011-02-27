@@ -1,6 +1,5 @@
 #summary Table of contents.
 #labels Featured
- * [Preface]
  * [LanguageBasics Language basics]
  * [Functions]
  * [Class]
