@@ -78,7 +78,7 @@ if (empty($a)) {
     <tr>
 <td>
 {{{
-b ?! throw InvalidArgumentException
+b ?!: throw InvalidArgumentException
 }}}
         </td>
         <td>
@@ -112,7 +112,7 @@ if (!isset($authors['fans'])) {
     <tr>
 <td>
 {{{
-get_stuff('foo') ?! throw MyException
+get_stuff('foo') ?!: throw MyException
 }}}
         </td>
         <td>
@@ -128,7 +128,7 @@ if (empty($status)) {
 <td>
 {{{
 status = 42
-get_stuff('foo') ?! throw MyException
+get_stuff('foo') ?!: throw MyException
 }}}
         </td>
         <td>Compile error, magic variable "status" already exists in scope.
