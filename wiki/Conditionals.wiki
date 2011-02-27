@@ -27,6 +27,12 @@ elif a == 0
     echo "a is zero."
 else
     echo "a is negative."
+    
+# Or:
+
+if a > 0: echo "a is positive."
+elif a == 0: echo "a is zero."
+else: echo "a is negative."
 }}}        
         </td>
         <td>
