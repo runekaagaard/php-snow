@@ -36,8 +36,9 @@ echo "Hello, " echo "World!\n"
 Snow, as does python, operates with significant whitespace, meaning that
 the code structure is managed by indenting/dedenting and not by using brackets
 `{}`. The indentation size is fixed to 4 spaces and all lines must start with
-a number of spaces to which 4 is a divisor. The only exception to this rule is
-comment lines.
+a number of spaces to which 4 is a divisor. The only exceptions to this rule are
+comment lines, inside multiline strings and inside brackets (`()`, `{}` and 
+`[]`).
 
 Valid syntax example:
 {{{

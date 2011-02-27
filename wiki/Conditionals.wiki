@@ -10,7 +10,8 @@ Conditionals has been overhauled, specifically:
  * The `case` keyword is removed in the `switch` statement.
  * `break` is the default behaviour in a `case` block and can be reversed by the new keyword `fallthru`.
  * `when` is introduced as a postfix `if` sentence.
-
+ * `elseif` and `else if` has been changed to `elif`.
+ 
 == Matrix ==
 <table border="1" cellpadding="5">
     <tr>
@@ -57,6 +58,31 @@ normal_func_name($also_a_very_long_variable_name)) {
 }}}        
         </td>
     </tr>
+            <tr>
+        <td>
+{{{
+a = switch foo
+    'bar': <- 32
+    'baz': fallthru
+    'boz': <- 42
+    default: <- 52
+}}}        
+        </td>
+        <td>
+{{{
+switch ($foo) {
+    case 'bar': 
+        $a = 32;
+        break;
+    case 'baz':
+    case 'boz':
+        $a = 42;
+    default:
+        $a = 52;
+}
+}}}        
+        </td>
+    </tr>
     <tr>
         <td>
 {{{
@@ -73,43 +99,15 @@ if ($c = $d) {
     </tr>    
 </table>
 
-==if==
-The `if` controlstructure follows the basic pattern of:
-{{{
-if <expr>
-    statement
-}}}
-
-Where `<expr>` can be any statement that gets evaluated to a boolean. The codeblock `statement` gets executed when `<expr>` evaluates to `true`.
-
-==if shorthand ==
-`if` can also be abbreviated to the form:
-{{{
-if <expr>: statement
-}}}
-This way only one statement is allowed (no code block) and the `:` (colon) is mandatory.
-
-==elif / else==
-_Elseif/else_ construct. Follows the form:
-{{{
-if <expr>
-    statement
-elif <expr2>
-    statement2
-else
-    statement3
-}}}
-
-The elif-part can be infinitely repeated and gets evaluated only when `<expr>` evaluates to false.
-The else block is the last resort, when no `if` or `elif` evaluates to true.
-
 ==switch==
-The `switch` statement is like a bunch `if`/`elif` statements. It's basic form 
+The basic form of switch is
 is:
 {{{
 switch <expr>
     0
         statement
+    -1
+        fallthru
     1
         statement
     'shortform': statement
