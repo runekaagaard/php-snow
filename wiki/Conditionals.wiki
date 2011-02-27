@@ -106,19 +106,18 @@ if ($c = $d) {
 </table>
 
 ==switch==
-The basic form of switch is
-is:
+The following is an example of using switch in Snow:
 {{{
-switch <expr>
+switch myvar
     0
-        statement
+        echo "a is 0".
     -1
         fallthru
     1
-        statement
-    'shortform': statement
+        echo "a is -1 or 1.".
+    'shortform': echo "a is 'shortform'."
     default
-        statement
+        echo "a is neither 0, -1 or 1."
 }}}
 Notice that the case keyword has been removed.
 
