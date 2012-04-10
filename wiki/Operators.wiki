@@ -7,6 +7,7 @@ Some operators have been changed from symbols to text. This frees up these symbo
 == Matrix ==
 || *PHP*    || *Snow*      ||
 || &&       || and         ||
+|| !        || not         ||
 || `|``|`   || or          ||
 || and      || `_and_` (Not recommended) ||
 || or       || `_or_` (Not recommended) ||
