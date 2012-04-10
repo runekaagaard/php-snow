@@ -19,3 +19,4 @@ Some operators have been changed from symbols to text. This frees up these symbo
 || ^        || bxor        ||
 || <<       || bleft       ||
 || >>       || bright      ||
+|| ~        || bnot        ||
